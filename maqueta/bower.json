@@ -1,0 +1,27 @@
+{
+  "name": "numv",
+  "description": "Theme Desarrollado para NUMV",
+  "main": "",
+  "authors": [
+    "Adanzilla"
+  ],
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+        "bootstrap": "4.3.1",
+        "jquery-validation": "^1.19.1",
+        "components-font-awesome": "^5.9.0"
+    }
+}
