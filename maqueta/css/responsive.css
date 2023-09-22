@@ -1,0 +1,66 @@
+@media (max-width: 575px) {
+  /* line 20, ../sass/responsive.scss */
+  * body header#masthead.static nav {
+    height: 80px;
+  }
+  /* line 23, ../sass/responsive.scss */
+  * body header#masthead.static nav .logo img {
+    margin-top: 0;
+  }
+  /* line 30, ../sass/responsive.scss */
+  * body header#masthead nav {
+    height: auto;
+  }
+  /* line 34, ../sass/responsive.scss */
+  * body header#masthead nav .z-index-movil {
+    z-index: 2;
+  }
+  /* line 38, ../sass/responsive.scss */
+  * body header#masthead nav button {
+    border: 0;
+  }
+  /* line 43, ../sass/responsive.scss */
+  * body header#masthead nav .logo img {
+    max-height: 50px;
+  }
+  /* line 55, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary {
+    width: 100%;
+    background-color: #EDEDED;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  /* line 65, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul {
+    padding-top: 0;
+    text-align: center;
+    height: 100vh;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  /* line 74, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li {
+    padding-left: 0;
+    margin: 1rem auto;
+    padding: 0 0 0 0;
+    width: 100%;
+  }
+  /* line 81, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li.active a:after {
+    position: relative;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1rem;
+  }
+  /* line 91, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li a {
+    font-size: 20px;
+    color: light;
+  }
+}

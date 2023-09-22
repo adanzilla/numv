@@ -1,0 +1,70 @@
+/* line 8, ../sass/numv.scss */
+* body {
+  background-color: #f8f8f8;
+}
+/* line 12, ../sass/numv.scss */
+* body header {
+  width: 100%;
+}
+/* line 17, ../sass/numv.scss */
+* body header#masthead nav {
+  height: 104px;
+}
+/* line 23, ../sass/numv.scss */
+* body header#masthead nav a.logo:after {
+  border: 0;
+}
+/* line 31, ../sass/numv.scss */
+* body header#masthead nav #menu-primary ul li {
+  padding: 0 0 0 1rem;
+}
+/* line 36, ../sass/numv.scss */
+* body header#masthead nav #menu-primary ul li:hover a, * body header#masthead nav #menu-primary ul li.active a {
+  font-weight: 700;
+}
+/* line 40, ../sass/numv.scss */
+* body header#masthead nav #menu-primary ul li a {
+  color: #000000;
+  font-size: 16px;
+  font-size: 1.3vw;
+  line-height: 1.1;
+  font-family: "Helvetica";
+  text-decoration: none;
+}
+/* line 48, ../sass/numv.scss */
+* body header#masthead nav #menu-primary ul li a::after {
+  display: none;
+}
+/* line 63, ../sass/numv.scss */
+* body section.hero h1 {
+  font-size: 36px;
+  font-size: 2.7vw;
+}
+/* line 69, ../sass/numv.scss */
+* body section.hero p.excerpt {
+  font-size: 20px;
+  font-size: 1.6vw;
+}
+/* line 75, ../sass/numv.scss */
+* body section.hero .card {
+  border: 0;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+}
+/* line 82, ../sass/numv.scss */
+* body section.hero .card p.title {
+  font-size: 24px;
+  font-size: 1.4vw;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* line 90, ../sass/numv.scss */
+* body section.hero .card p.subtitle {
+  font-size: 16px;
+  font-size: 1vw;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 0;
+}
