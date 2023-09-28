@@ -1,5 +1,6 @@
 $primary : #28A1B7;
 $dark: #1D1D1B;
+$grey: #606060;
 $light: #ffffff;
 $alegreya: 'Alegreya', serif;
 $figtree: 'Figtree', sans-serif;
@@ -231,6 +232,110 @@ $inter: 'Inter', sans-serif;
 					font-family: $figtree;
 					letter-spacing: -0.88px;
 				}
+			}
+
+
+			&#reportes {
+				h4 {
+					font-family: $figtree;
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 150%; /* 27px */
+					letter-spacing: -0.342px;
+				}
+
+				.row {
+					&.ver-todos {
+
+						min-height: 95px;
+						p {
+							a {
+								color: $primary;
+								font-family: $alegreya;
+								font-size: 18px;
+								font-style: normal;
+								font-weight: 500;
+								line-height: normal;
+							}
+						}
+					}
+					&.bordered {
+						border-bottom: 1px solid #B4B4B4;
+						min-height: 95px;
+
+						p {
+							&.title {
+								a {
+
+									color: $grey;
+									font-family: $figtree;
+									font-size: 20px;
+									font-style: normal;
+									font-weight: 600;
+									line-height: 150%; /* 30px */
+									letter-spacing: -0.38px;
+									span {
+										color: $grey;
+										font-family: $alegreya;
+										font-size: 18px;
+										font-style: normal;
+										font-weight: 400;
+										line-height: 150%; /* 27px */
+										letter-spacing: -0.342px;
+									}
+
+								}
+							}
+
+							
+
+						}
+
+					}
+				}
+
+				.card {
+					img {
+
+					}
+
+					p {
+
+						&.tag {
+							font-family: $alegreya;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: normal;
+							letter-spacing: -0.352px;
+						}
+
+						
+						&.title {
+							font-family: $figtree;
+							font-size: 24px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: normal;
+							letter-spacing: -0.528px;
+						}
+
+						
+						&.extract {
+							color: $grey;
+							font-family: $alegreya;
+							font-size: 18px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: normal;
+							letter-spacing: -0.342px;
+						}
+
+					}
+
+				}
+
 			}
 
 		}

@@ -1,20 +1,20 @@
-/* line 9, ../sass/numv.scss */
+/* line 10, ../sass/numv.scss */
 * {
   font-family: "Alegreya", serif;
   color: #1D1D1B;
 }
-/* line 14, ../sass/numv.scss */
+/* line 15, ../sass/numv.scss */
 * body {
   background-color: #F3F6F6;
 }
-/* line 18, ../sass/numv.scss */
+/* line 19, ../sass/numv.scss */
 * body p {
   font-size: 20px;
   font-size: 1.6vw;
   font-weight: 400;
   letter-spacing: -0.44px;
 }
-/* line 25, ../sass/numv.scss */
+/* line 26, ../sass/numv.scss */
 * body .btn-primary {
   border-radius: 8px;
   border: 1px solid var(--base-dark, #1D1D1B);
@@ -25,33 +25,33 @@
   line-height: 1.5;
   font-family: "Alegreya", serif;
 }
-/* line 35, ../sass/numv.scss */
+/* line 36, ../sass/numv.scss */
 * body .btn-primary img {
   margin-bottom: 2px;
   margin-left: 5px;
 }
-/* line 41, ../sass/numv.scss */
+/* line 42, ../sass/numv.scss */
 * body header {
   width: 100%;
 }
-/* line 46, ../sass/numv.scss */
+/* line 47, ../sass/numv.scss */
 * body header#masthead nav {
   height: 104px;
 }
-/* line 52, ../sass/numv.scss */
+/* line 53, ../sass/numv.scss */
 * body header#masthead nav a.logo:after {
   border: 0;
 }
-/* line 60, ../sass/numv.scss */
+/* line 61, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li {
   padding: 0 0 0 1rem;
 }
-/* line 65, ../sass/numv.scss */
+/* line 66, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li:hover a, * body header#masthead nav #menu-primary ul li.active a {
   font-weight: 700;
   color: #28A1B7;
 }
-/* line 70, ../sass/numv.scss */
+/* line 71, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a {
   color: #1D1D1B;
   font-size: 16px;
@@ -61,11 +61,11 @@
   line-height: 1.1;
   text-decoration: none;
 }
-/* line 79, ../sass/numv.scss */
+/* line 80, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a::after {
   display: none;
 }
-/* line 94, ../sass/numv.scss */
+/* line 95, ../sass/numv.scss */
 * body section#inicio h1 {
   font-size: 36px;
   font-size: 2.7vw;
@@ -73,14 +73,14 @@
   font-weight: 700;
   letter-spacing: -0.792px;
 }
-/* line 106, ../sass/numv.scss */
+/* line 107, ../sass/numv.scss */
 * body section#inicio .card {
   border: 0;
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 113, ../sass/numv.scss */
+/* line 114, ../sass/numv.scss */
 * body section#inicio .card p.title {
   font-size: 24px;
   font-size: 1.4vw;
@@ -89,7 +89,7 @@
   text-align: center;
   margin-bottom: 0;
 }
-/* line 122, ../sass/numv.scss */
+/* line 123, ../sass/numv.scss */
 * body section#inicio .card p.subtitle {
   font-size: 16px;
   font-size: 1.1vw;
@@ -100,7 +100,7 @@
   width: 80%;
   margin: 0 auto;
 }
-/* line 138, ../sass/numv.scss */
+/* line 139, ../sass/numv.scss */
 * body section#cifras h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -108,18 +108,18 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 147, ../sass/numv.scss */
+/* line 148, ../sass/numv.scss */
 * body section#cifras .cards .card {
   border-radius: 8px;
   background-color: #ffffff;
 }
-/* line 150, ../sass/numv.scss */
+/* line 151, ../sass/numv.scss */
 * body section#cifras .cards .card img {
   width: 29px;
   height: 30px;
   flex-shrink: 0;
 }
-/* line 156, ../sass/numv.scss */
+/* line 157, ../sass/numv.scss */
 * body section#cifras .cards .card p.title {
   font-size: 18px;
   font-style: normal;
@@ -127,7 +127,7 @@
   line-height: normal;
   letter-spacing: -0.342px;
 }
-/* line 163, ../sass/numv.scss */
+/* line 164, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras {
   margin-bottom: 0;
   font-size: 48px;
@@ -138,7 +138,7 @@
   line-height: normal;
   letter-spacing: -1.056px;
 }
-/* line 172, ../sass/numv.scss */
+/* line 173, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span {
   color: #DD4040;
   text-align: center;
@@ -151,22 +151,22 @@
   /* 24px */
   letter-spacing: -0.304px;
 }
-/* line 182, ../sass/numv.scss */
+/* line 183, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span i.fa {
   color: inherit;
 }
-/* line 194, ../sass/numv.scss */
+/* line 195, ../sass/numv.scss */
 * body section#graficas h3 {
   font-size: 20px;
   font-family: "Alegreya", serif;
   font-weight: 700;
 }
-/* line 202, ../sass/numv.scss */
+/* line 203, ../sass/numv.scss */
 * body section#banner .card {
   border-radius: 8px;
   background: #FFF;
 }
-/* line 206, ../sass/numv.scss */
+/* line 207, ../sass/numv.scss */
 * body section#banner .card p {
   font-size: 24px;
   font-size: 1.9vw;
@@ -176,7 +176,7 @@
   /* 36px */
   letter-spacing: -0.456px;
 }
-/* line 213, ../sass/numv.scss */
+/* line 214, ../sass/numv.scss */
 * body section#banner .card p b {
   font-size: 24px;
   font-size: 1.9vw;
@@ -185,11 +185,89 @@
   line-height: 150%;
   letter-spacing: -0.456px;
 }
-/* line 227, ../sass/numv.scss */
+/* line 228, ../sass/numv.scss */
 * body section#mapa h2 {
   font-size: 40px;
   font-size: 3.1vw;
   font-weight: 700;
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
+}
+/* line 239, ../sass/numv.scss */
+* body section#reportes h4 {
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 27px */
+  letter-spacing: -0.342px;
+}
+/* line 249, ../sass/numv.scss */
+* body section#reportes .row.ver-todos {
+  min-height: 95px;
+}
+/* line 253, ../sass/numv.scss */
+* body section#reportes .row.ver-todos p a {
+  color: #28A1B7;
+  font-family: "Alegreya", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* line 263, ../sass/numv.scss */
+* body section#reportes .row.bordered {
+  border-bottom: 1px solid #B4B4B4;
+  min-height: 95px;
+}
+/* line 269, ../sass/numv.scss */
+* body section#reportes .row.bordered p.title a {
+  color: #606060;
+  font-family: "Figtree", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 30px */
+  letter-spacing: -0.38px;
+}
+/* line 278, ../sass/numv.scss */
+* body section#reportes .row.bordered p.title a span {
+  color: #606060;
+  font-family: "Alegreya", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 27px */
+  letter-spacing: -0.342px;
+}
+/* line 305, ../sass/numv.scss */
+* body section#reportes .card p.tag {
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.352px;
+}
+/* line 315, ../sass/numv.scss */
+* body section#reportes .card p.title {
+  font-family: "Figtree", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.528px;
+}
+/* line 325, ../sass/numv.scss */
+* body section#reportes .card p.extract {
+  color: #606060;
+  font-family: "Alegreya", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.342px;
 }
