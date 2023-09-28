@@ -20,9 +20,17 @@ jQuery(document).ready(function($) {
 	            prevEl: ".swiper-button-prev",
 	        },        
 	        breakpoints: {
-	        	// 780: {
-	        	// 	slidesPerView: 2
-	        	// },
+	        	780: {
+	        		slidesPerView: 1
+	        	},
+
+	        	980: {
+	        		slidesPerView: 2
+	        	},
+
+	        	1500: {
+	        		slidesPerView: 3
+	        	},
 	        }        
 	    });
 
