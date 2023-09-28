@@ -185,3 +185,11 @@
   line-height: 150%;
   letter-spacing: -0.456px;
 }
+/* line 227, ../sass/numv.scss */
+* body section#mapa h2 {
+  font-size: 40px;
+  font-size: 3.1vw;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
+  letter-spacing: -0.88px;
+}
