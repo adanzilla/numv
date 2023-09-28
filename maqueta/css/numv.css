@@ -365,7 +365,13 @@
   line-height: normal;
   display: block;
 }
-/* line 441, ../sass/numv.scss */
+/* line 438, ../sass/numv.scss */
+* body section#en-memoria .swiper-slide .card {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+}
+/* line 444, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.name {
   text-align: center;
   font-family: "Figtree", sans-serif;
@@ -375,7 +381,7 @@
   line-height: 110%;
   /* 23.475px */
 }
-/* line 450, ../sass/numv.scss */
+/* line 453, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.position {
   font-family: "Figtree", sans-serif;
   font-size: 10.671px;
@@ -384,7 +390,7 @@
   line-height: 110%;
   /* 11.738px */
 }
-/* line 458, ../sass/numv.scss */
+/* line 461, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.text {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;

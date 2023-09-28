@@ -436,6 +436,9 @@ $inter: 'Inter', sans-serif;
 
 				.swiper-slide {
 					.card {
+						border-radius: 8px;
+						background: #FFF;
+						box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 						p {
 							
 							&.name {
