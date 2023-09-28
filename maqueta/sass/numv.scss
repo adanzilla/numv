@@ -23,6 +23,22 @@ $inter: 'Inter', sans-serif;
 			letter-spacing: -0.44px;
 		}
 
+		.swiper {
+			max-width: 80%!important;
+		}
+		.swiper-button-prev {
+			left: 5%!important;
+			&:after {
+				display: none;
+			}
+		}
+		.swiper-button-next {
+			right: 5%!important;
+			&:after {
+				display: none;
+			}
+		}
+
 		.btn-primary {
 			border-radius: 8px;
 			border: 1px solid var(--base-dark, #1D1D1B);
@@ -409,6 +425,42 @@ $inter: 'Inter', sans-serif;
 										display: block;
 									}
 								}
+							}
+						}
+					}
+				}
+
+			}
+
+			&#en-memoria {
+
+				.swiper-slide {
+					.card {
+						p {
+							
+							&.name {
+								text-align: center;
+								font-family: $figtree;
+								font-size: 21.341px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: 110%; /* 23.475px */
+							}
+							
+							&.position {
+								font-family: $figtree;
+								font-size: 10.671px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: 110%; /* 11.738px */
+							}
+							
+							&.text {
+								font-family: $alegreya;
+								font-size: 18px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
 							}
 						}
 					}
