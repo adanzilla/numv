@@ -262,7 +262,7 @@ $inter: 'Inter', sans-serif;
 					}
 					&.bordered {
 						border-bottom: 1px solid #B4B4B4;
-						min-height: 95px;
+						min-height: 100px;
 
 						p {
 							&.title {
@@ -336,6 +336,33 @@ $inter: 'Inter', sans-serif;
 
 				}
 
+			}
+
+			&#quienes-somos {
+				.card {
+					border-radius: 8px;
+					background: #FFF;
+					box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+					p {
+						&.name {
+							font-family: $figtree;
+							font-size: 21.341px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 110%; /* 23.475px */
+							width: 60%;
+							margin-bottom: 10px;
+						}
+						&.position {
+							color: $grey;
+							font-family: $alegreya;
+							font-size: 18px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 110%; /* 19.8px */
+						}
+					}
+				}
 			}
 
 		}

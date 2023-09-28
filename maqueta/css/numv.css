@@ -219,7 +219,7 @@
 /* line 263, ../sass/numv.scss */
 * body section#reportes .row.bordered {
   border-bottom: 1px solid #B4B4B4;
-  min-height: 95px;
+  min-height: 100px;
 }
 /* line 269, ../sass/numv.scss */
 * body section#reportes .row.bordered p.title a {
@@ -270,4 +270,31 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.342px;
+}
+/* line 342, ../sass/numv.scss */
+* body section#quienes-somos .card {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+}
+/* line 347, ../sass/numv.scss */
+* body section#quienes-somos .card p.name {
+  font-family: "Figtree", sans-serif;
+  font-size: 21.341px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  /* 23.475px */
+  width: 60%;
+  margin-bottom: 10px;
+}
+/* line 356, ../sass/numv.scss */
+* body section#quienes-somos .card p.position {
+  color: #606060;
+  font-family: "Alegreya Sans", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  /* 19.8px */
 }
