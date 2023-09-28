@@ -30,6 +30,7 @@ $inter: 'Inter', sans-serif;
 			font-weight: 700;
 			font-size: 1.4vw;
 			line-height: 1.5;
+			font-family: $alegreya;
 
 			img {
 				margin-bottom: 2px;
@@ -194,6 +195,31 @@ $inter: 'Inter', sans-serif;
 					font-size: 20px;
 					font-family: $alegreya;
 					font-weight: 700;
+				}
+			}
+
+			&#banner {
+				.card {
+					border-radius: 8px;
+					background: #FFF;
+
+					p {
+						font-size: 24px;
+						font-size: 1.9vw;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 150%; /* 36px */
+						letter-spacing: -0.456px;
+						b {
+							font-size: 24px;
+							font-size: 1.9vw;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 150%;
+							letter-spacing: -0.456px;
+						}
+					}
+
 				}
 			}
 

@@ -23,34 +23,35 @@
   font-weight: 700;
   font-size: 1.4vw;
   line-height: 1.5;
+  font-family: "Alegreya", serif;
 }
-/* line 34, ../sass/numv.scss */
+/* line 35, ../sass/numv.scss */
 * body .btn-primary img {
   margin-bottom: 2px;
   margin-left: 5px;
 }
-/* line 40, ../sass/numv.scss */
+/* line 41, ../sass/numv.scss */
 * body header {
   width: 100%;
 }
-/* line 45, ../sass/numv.scss */
+/* line 46, ../sass/numv.scss */
 * body header#masthead nav {
   height: 104px;
 }
-/* line 51, ../sass/numv.scss */
+/* line 52, ../sass/numv.scss */
 * body header#masthead nav a.logo:after {
   border: 0;
 }
-/* line 59, ../sass/numv.scss */
+/* line 60, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li {
   padding: 0 0 0 1rem;
 }
-/* line 64, ../sass/numv.scss */
+/* line 65, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li:hover a, * body header#masthead nav #menu-primary ul li.active a {
   font-weight: 700;
   color: #28A1B7;
 }
-/* line 69, ../sass/numv.scss */
+/* line 70, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a {
   color: #1D1D1B;
   font-size: 16px;
@@ -60,11 +61,11 @@
   line-height: 1.1;
   text-decoration: none;
 }
-/* line 78, ../sass/numv.scss */
+/* line 79, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a::after {
   display: none;
 }
-/* line 93, ../sass/numv.scss */
+/* line 94, ../sass/numv.scss */
 * body section#inicio h1 {
   font-size: 36px;
   font-size: 2.7vw;
@@ -72,14 +73,14 @@
   font-weight: 700;
   letter-spacing: -0.792px;
 }
-/* line 105, ../sass/numv.scss */
+/* line 106, ../sass/numv.scss */
 * body section#inicio .card {
   border: 0;
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 112, ../sass/numv.scss */
+/* line 113, ../sass/numv.scss */
 * body section#inicio .card p.title {
   font-size: 24px;
   font-size: 1.4vw;
@@ -88,7 +89,7 @@
   text-align: center;
   margin-bottom: 0;
 }
-/* line 121, ../sass/numv.scss */
+/* line 122, ../sass/numv.scss */
 * body section#inicio .card p.subtitle {
   font-size: 16px;
   font-size: 1.1vw;
@@ -99,7 +100,7 @@
   width: 80%;
   margin: 0 auto;
 }
-/* line 137, ../sass/numv.scss */
+/* line 138, ../sass/numv.scss */
 * body section#cifras h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -107,18 +108,18 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 146, ../sass/numv.scss */
+/* line 147, ../sass/numv.scss */
 * body section#cifras .cards .card {
   border-radius: 8px;
   background-color: #ffffff;
 }
-/* line 149, ../sass/numv.scss */
+/* line 150, ../sass/numv.scss */
 * body section#cifras .cards .card img {
   width: 29px;
   height: 30px;
   flex-shrink: 0;
 }
-/* line 155, ../sass/numv.scss */
+/* line 156, ../sass/numv.scss */
 * body section#cifras .cards .card p.title {
   font-size: 18px;
   font-style: normal;
@@ -126,7 +127,7 @@
   line-height: normal;
   letter-spacing: -0.342px;
 }
-/* line 162, ../sass/numv.scss */
+/* line 163, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras {
   margin-bottom: 0;
   font-size: 48px;
@@ -137,7 +138,7 @@
   line-height: normal;
   letter-spacing: -1.056px;
 }
-/* line 171, ../sass/numv.scss */
+/* line 172, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span {
   color: #DD4040;
   text-align: center;
@@ -150,13 +151,37 @@
   /* 24px */
   letter-spacing: -0.304px;
 }
-/* line 181, ../sass/numv.scss */
+/* line 182, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span i.fa {
   color: inherit;
 }
-/* line 193, ../sass/numv.scss */
+/* line 194, ../sass/numv.scss */
 * body section#graficas h3 {
   font-size: 20px;
   font-family: "Alegreya", serif;
   font-weight: 700;
+}
+/* line 202, ../sass/numv.scss */
+* body section#banner .card {
+  border-radius: 8px;
+  background: #FFF;
+}
+/* line 206, ../sass/numv.scss */
+* body section#banner .card p {
+  font-size: 24px;
+  font-size: 1.9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 36px */
+  letter-spacing: -0.456px;
+}
+/* line 213, ../sass/numv.scss */
+* body section#banner .card p b {
+  font-size: 24px;
+  font-size: 1.9vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.456px;
 }
