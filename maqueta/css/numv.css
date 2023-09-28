@@ -1,70 +1,162 @@
-/* line 8, ../sass/numv.scss */
-* body {
-  background-color: #f8f8f8;
+/* line 9, ../sass/numv.scss */
+* {
+  font-family: "Alegreya", serif;
+  color: #1D1D1B;
 }
-/* line 12, ../sass/numv.scss */
+/* line 14, ../sass/numv.scss */
+* body {
+  background-color: #F3F6F6;
+}
+/* line 18, ../sass/numv.scss */
+* body p {
+  font-size: 20px;
+  font-size: 1.6vw;
+  font-weight: 400;
+  letter-spacing: -0.44px;
+}
+/* line 25, ../sass/numv.scss */
+* body .btn-primary {
+  border-radius: 8px;
+  border: 1px solid var(--base-dark, #1D1D1B);
+  background: var(--base-dark, #1D1D1B);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+  font-size: 1.4vw;
+  line-height: 1.5;
+}
+/* line 34, ../sass/numv.scss */
+* body .btn-primary img {
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+/* line 40, ../sass/numv.scss */
 * body header {
   width: 100%;
 }
-/* line 17, ../sass/numv.scss */
+/* line 45, ../sass/numv.scss */
 * body header#masthead nav {
   height: 104px;
 }
-/* line 23, ../sass/numv.scss */
+/* line 51, ../sass/numv.scss */
 * body header#masthead nav a.logo:after {
   border: 0;
 }
-/* line 31, ../sass/numv.scss */
+/* line 59, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li {
   padding: 0 0 0 1rem;
 }
-/* line 36, ../sass/numv.scss */
+/* line 64, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li:hover a, * body header#masthead nav #menu-primary ul li.active a {
   font-weight: 700;
+  color: #28A1B7;
 }
-/* line 40, ../sass/numv.scss */
+/* line 69, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a {
-  color: #000000;
+  color: #1D1D1B;
   font-size: 16px;
   font-size: 1.3vw;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
   line-height: 1.1;
-  font-family: "Helvetica";
   text-decoration: none;
 }
-/* line 48, ../sass/numv.scss */
+/* line 78, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a::after {
   display: none;
 }
-/* line 63, ../sass/numv.scss */
-* body section.hero h1 {
+/* line 93, ../sass/numv.scss */
+* body section#inicio h1 {
   font-size: 36px;
   font-size: 2.7vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.792px;
 }
-/* line 69, ../sass/numv.scss */
-* body section.hero p.excerpt {
-  font-size: 20px;
-  font-size: 1.6vw;
-}
-/* line 75, ../sass/numv.scss */
-* body section.hero .card {
+/* line 105, ../sass/numv.scss */
+* body section#inicio .card {
   border: 0;
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 82, ../sass/numv.scss */
-* body section.hero .card p.title {
+/* line 112, ../sass/numv.scss */
+* body section#inicio .card p.title {
   font-size: 24px;
   font-size: 1.4vw;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
   text-align: center;
   margin-bottom: 0;
 }
-/* line 90, ../sass/numv.scss */
-* body section.hero .card p.subtitle {
+/* line 121, ../sass/numv.scss */
+* body section#inicio .card p.subtitle {
   font-size: 16px;
-  font-size: 1vw;
-  font-weight: 300;
+  font-size: 1.1vw;
+  font-weight: 400;
+  font-family: "Alegreya", serif;
   text-align: center;
   margin-bottom: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 137, ../sass/numv.scss */
+* body section#cifras h2 {
+  font-size: 40px;
+  font-size: 3.1vw;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
+  letter-spacing: -0.88px;
+}
+/* line 146, ../sass/numv.scss */
+* body section#cifras .cards .card {
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+/* line 149, ../sass/numv.scss */
+* body section#cifras .cards .card img {
+  width: 29px;
+  height: 30px;
+  flex-shrink: 0;
+}
+/* line 155, ../sass/numv.scss */
+* body section#cifras .cards .card p.title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.342px;
+}
+/* line 162, ../sass/numv.scss */
+* body section#cifras .cards .card p.cifras {
+  margin-bottom: 0;
+  font-size: 48px;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
+  line-height: normal;
+  letter-spacing: -1.056px;
+}
+/* line 171, ../sass/numv.scss */
+* body section#cifras .cards .card p.cifras span {
+  color: #DD4040;
+  text-align: center;
+  font-family: Figtree;
+  font-size: 16px;
+  font-size: 1.3vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: -0.304px;
+}
+/* line 181, ../sass/numv.scss */
+* body section#cifras .cards .card p.cifras span i.fa {
+  color: inherit;
+}
+/* line 193, ../sass/numv.scss */
+* body section#graficas h3 {
+  font-size: 20px;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
 }

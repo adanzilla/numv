@@ -12,6 +12,18 @@ $font-medium: 'Helvetica';
 
 		body {
 
+			p {
+				font-size: 16px;
+			}
+
+			.btn-primary {
+				
+				font-size: 16px;
+
+				img {
+				}
+			}
+
 			header {
 				
 				&#masthead {
@@ -54,7 +66,7 @@ $font-medium: 'Helvetica';
 
 						#menu-primary {
 							width: 100%;
-						    background-color: #EDEDED;
+						    background-color: #F3F6F6;
 						    position: fixed;
 						    top: 0;
 						    bottom: 0;
@@ -98,6 +110,71 @@ $font-medium: 'Helvetica';
 					}
 				}
 			}
+
+			section {
+
+				&#inicio {
+					
+					h1 {
+						font-size: 24px;
+					}
+
+					
+
+					
+
+					.card {
+
+						p {
+							&.title {
+								font-size: 18px;
+							}
+
+							&.subtitle {
+								font-size: 12px;
+							}
+
+						}
+					}
+				}
+
+				&#cifras {
+					h2 {
+						font-size: 22px;
+					}
+
+					.cards {
+						.card {
+							img {
+							}
+							p {
+								font-size: 14px;
+								&.title {
+									font-size: 14px;
+								}
+								&.cifras {
+									font-size: 34px;
+									span {
+										font-size: 14px;
+										i.fa {
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				&#graficas {
+					h3 {
+						font-size: 14px;
+					}
+				}
+
+			}
+
+
 		}
 	}
 }
