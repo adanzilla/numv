@@ -398,3 +398,42 @@
   font-weight: 400;
   line-height: normal;
 }
+/* line 476, ../sass/numv.scss */
+* body footer {
+  background-image: url("../img/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 482, ../sass/numv.scss */
+* body footer form .form-group {
+  position: relative;
+}
+/* line 485, ../sass/numv.scss */
+* body footer form .form-group label.error {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 499, ../sass/numv.scss */
+* body footer h3 {
+  font-family: "Alegreya Sans", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 24px */
+}
+/* line 508, ../sass/numv.scss */
+* body footer p a {
+  color: #352F28;
+  font-family: "Figtree", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

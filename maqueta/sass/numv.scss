@@ -473,5 +473,49 @@ $inter: 'Inter', sans-serif;
 
 		}
 
+		footer {
+			background-image: url('../img/footer-bg.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			form {
+				.form-group {
+					position: relative;
+					label {
+						&.error {
+							background-color: #000000;
+							color: #ffffff;
+							font-size: 10px;
+							padding: 3px 10px;
+							border-radius: 8px;
+							position: absolute;
+							top: 0;
+							right: 0;
+						}
+					}
+				}
+			}
+
+			h3 {
+				font-family: $alegreya;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 150%; /* 24px */
+			}
+
+			p {
+				a {
+					color: #352F28;
+					font-family: $figtree;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+			}
+
+		}
+
 	}
 }
