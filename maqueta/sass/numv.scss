@@ -365,6 +365,57 @@ $inter: 'Inter', sans-serif;
 				}
 			}
 
+			&#nuestra-historia {
+
+				.left-column {
+					p {
+						font-family: $alegreya;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+				}
+				
+				.right-column {
+					.caption-box {
+						margin-top: -50px;
+						.caption-body {
+							border-radius: 8px;
+							background: #000;
+							box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+							p {
+								color: #FFF;
+								font-family: $alegreya;
+								font-size: 18px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+								margin-bottom: 0;
+								&.years {
+									font-family: $figtree;
+									font-size: 48px;
+									font-style: normal;
+									font-weight: 700;
+									line-height: normal;
+									letter-spacing: -1.056px;
+									span {
+										font-family: $figtree;
+										color: $light;
+										font-size: 16px;
+										font-style: normal;
+										font-weight: 400;
+										line-height: normal;
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+
 		}
 
 	}
