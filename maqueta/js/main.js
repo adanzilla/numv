@@ -20,6 +20,11 @@ jQuery(document).ready(function($) {
 	            prevEl: ".swiper-button-prev",
 	        },        
 	        breakpoints: {
+
+	        	320: {
+	        		slidesPerView: 1
+	        	},
+
 	        	780: {
 	        		slidesPerView: 1
 	        	},

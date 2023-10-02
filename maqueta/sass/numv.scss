@@ -16,6 +16,10 @@ $inter: 'Inter', sans-serif;
 
 		background-color: #F3F6F6;
 
+		background-image: url('../img/bg-left-1.svg'), url('../img/bg-left-2.svg'), url('../img/bg-right-1.svg');
+		background-repeat: no-repeat;
+		background-position: 0% 0%, 0% 75%, 100% 65%;
+
 		p {
 			font-size: 20px;
 			font-size: 1.6vw;
