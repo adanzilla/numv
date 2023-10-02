@@ -1,5 +1,50 @@
 jQuery(document).ready(function($) {
 
+	if( jQuery('#pie-chat') ){
+		const data = {
+		  labels: [
+		    "Velocidad",
+		    "Alcohol",
+		    "Sin conductor"
+		  ],
+		  datasets: [{
+		    label: '',
+		    data: [20,25,40],
+		    backgroundColor: [
+		      '#8596E7',
+		      '#EEA43B',
+		      '#91D7A7'
+		    ],
+		    hoverOffset: 4
+		  }]
+		};
+
+		const config = {
+			type: 'pie',
+			data: data,
+			options: {
+		        plugins: {
+		            legend : {
+		            	align: 'start',
+		            	labels : {
+		            		color: '#000000',
+		            		padding : 10,
+		            		usePointStyle: true,
+		            		font: {
+		            			size: 12
+		            		},
+		            		boxHeight: 100
+		            	}
+		            }
+		        }
+		    }
+		};
+
+		 const myChart = new Chart( 
+			 document.getElementById('pie-chart'),
+			 config 
+		);	
+	}
 
 	if ( jQuery('#top10-estados-mas-incidentes') ) {
 		const data = {
