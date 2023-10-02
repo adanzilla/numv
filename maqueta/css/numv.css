@@ -440,3 +440,8 @@
   font-weight: 400;
   line-height: normal;
 }
+/* line 523, ../sass/numv.scss */
+* body footer a i.fab {
+  font-size: 24px;
+  font-size: 1.9vw;
+}
