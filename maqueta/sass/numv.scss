@@ -4,7 +4,6 @@ $grey: #606060;
 $light: #ffffff;
 $alegreya: 'Alegreya Sans', serif;
 $figtree: 'Figtree', sans-serif;
-$inter: 'Inter', sans-serif;
 
 
 * {
@@ -19,6 +18,14 @@ $inter: 'Inter', sans-serif;
 		background-image: url('../img/bg-left-1.svg'), url('../img/bg-left-2.svg'), url('../img/bg-right-1.svg');
 		background-repeat: no-repeat;
 		background-position: 0% 0%, 0% 75%, 100% 65%;
+
+
+		.card {
+			border-radius: 8px!important;
+			border:0;
+			background: #FFF!important;
+			box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05)!important;
+		}
 
 		p {
 			font-size: 20px;
@@ -52,6 +59,12 @@ $inter: 'Inter', sans-serif;
 			font-size: 1.4vw;
 			line-height: 1.5;
 			font-family: $alegreya;
+
+			&:hover {
+				background-color: $primary;
+				color: $light;
+				border-color: $primary;
+			}
 
 			img {
 				margin-bottom: 2px;
@@ -115,7 +128,7 @@ $inter: 'Inter', sans-serif;
 				h1 {
 					font-size: 36px;
 					font-size: 2.7vw;
-					font-family: $inter;
+					font-family: $figtree;
 					font-weight: 700;
 					letter-spacing: -0.792px;
 				}
@@ -167,6 +180,7 @@ $inter: 'Inter', sans-serif;
 				.cards {
 					.card {
 						border-radius: 8px;
+						border: 0;
 						background-color: $light;
 						img {
 							width: 29px;
@@ -212,16 +226,24 @@ $inter: 'Inter', sans-serif;
 			}
 
 			&#graficas {
-				h3 {
-					font-size: 20px;
-					font-family: $alegreya;
-					font-weight: 700;
+
+				.card {
+					border-radius: 8px;
+					border: 0;
+					h3 {
+						font-size: 20px;
+						font-family: $alegreya;
+						font-weight: 700;
+					}
+
 				}
+
 			}
 
 			&#banner {
 				.card {
 					border-radius: 8px;
+					border: 0;
 					background: #FFF;
 
 					p {
@@ -245,6 +267,14 @@ $inter: 'Inter', sans-serif;
 			}
 
 			&#mapa {
+
+				#map {
+					border-radius: 8px!important;
+					border:0;
+					background: #FFF!important;
+					box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05)!important;
+				}
+
 				h2 {
 					font-size: 40px;
 					font-size: 3.1vw;
@@ -256,6 +286,13 @@ $inter: 'Inter', sans-serif;
 
 
 			&#reportes {
+				h2 {
+					font-size: 40px;
+					font-size: 3.1vw;
+					font-weight: 700;
+					font-family: $figtree;
+					letter-spacing: -0.88px;
+				}
 				h4 {
 					font-family: $figtree;
 					font-size: 18px;
@@ -359,11 +396,32 @@ $inter: 'Inter', sans-serif;
 			}
 
 			&#quienes-somos {
+				h2 {
+					font-size: 40px;
+					font-size: 3.1vw;
+					font-weight: 700;
+					font-family: $figtree;
+					letter-spacing: -0.88px;
+				}
+				p {
+					&.text-center {
+						font-family: $alegreya;
+						line-height: 1.4;
+						margin-bottom: 10px;
+						&:last-child {
+							font-weight: 500;
+						}
+					}
+				}
 				.card {
 					border-radius: 8px;
+					border: 0;
 					background: #FFF;
 					box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 					p {
+
+
+
 						&.name {
 							font-family: $figtree;
 							font-size: 21.341px;
@@ -386,6 +444,13 @@ $inter: 'Inter', sans-serif;
 			}
 
 			&#nuestra-historia {
+				h2 {
+					font-size: 40px;
+					font-size: 3.1vw;
+					font-weight: 700;
+					font-family: $figtree;
+					letter-spacing: -0.88px;
+				}
 
 				.left-column {
 					p {
@@ -393,7 +458,7 @@ $inter: 'Inter', sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 400;
-						line-height: normal;
+						line-height: 1.4;
 					}
 				}
 				
@@ -437,6 +502,14 @@ $inter: 'Inter', sans-serif;
 			}
 
 			&#en-memoria {
+
+				h2 {
+					font-size: 40px;
+					font-size: 3.1vw;
+					font-weight: 700;
+					font-family: $figtree;
+					letter-spacing: -0.88px;
+				}
 
 				.swiper-slide {
 					.card {

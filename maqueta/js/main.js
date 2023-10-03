@@ -100,6 +100,7 @@ jQuery(document).ready(function($) {
 					legend : {
 						align: 'start',
 						labels : {
+							boxHeight: 50,
 							color: '#000000',
 							padding : 10,
 							usePointStyle: true,
