@@ -300,6 +300,12 @@
                         <div class="col-12 text-center">
                             <!-- <img src="img/mapa.png" alt="" class="img-fluid"> -->
                             <div id="map" style="height: 65vh; width: 100%;"></div>
+                            <select id="type" onchange="filterMarkers(this.value);">
+                                <option value="">Selecciona un tipo de Incidente vial</option>
+                                <option value="Peatón">Peatón</option>
+                                <option value="Ciclista">Ciclista</option>
+                                <option value="Motociclista">Motociclista</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -749,7 +755,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries=&v=weekly"></script>
     <!-- mapa -->
 
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

@@ -13,6 +13,18 @@ $figtree: 'Figtree', sans-serif;
 	
 	body {
 
+		select#type {
+		    position: absolute;
+		    bottom: 42px;
+		    z-index: 9999999999999999;
+		    left: 25px;
+		    border: 0;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		    border: 3px solid #28A1B7;
+		    border-radius: 8px;
+		}
+
 		background-color: #F3F6F6;
 
 		background-image: url('../img/bg-left-1.svg'), url('../img/bg-left-2.svg'), url('../img/bg-right-1.svg');
@@ -25,6 +37,14 @@ $figtree: 'Figtree', sans-serif;
 			border:0;
 			background: #FFF!important;
 			box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05)!important;
+		}
+
+		.info-window {
+			p {
+				font-size: 14px;
+				text-align: left;
+				margin-bottom: 0;
+			}
 		}
 
 		p {
