@@ -25,6 +25,17 @@ $figtree: 'Figtree', sans-serif;
 		    border-radius: 8px;
 		}
 
+		a {
+			color: $primary;
+			text-decoration: underline solid transparent;
+			transition: text-decoration .3s ease;
+
+			&:hover{
+				color: $primary;
+				text-decoration: underline solid CurrentColor;
+			}
+		}
+
 		background-color: #F3F6F6;
 
 		background-image: url('../img/bg-left-1.svg'), url('../img/bg-left-2.svg'), url('../img/bg-right-1.svg');
@@ -302,6 +313,14 @@ $figtree: 'Figtree', sans-serif;
 					font-family: $figtree;
 					letter-spacing: -0.88px;
 				}
+
+				p {
+					font-family: $alegreya;
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 1.4;
+				}
 			}
 
 
@@ -423,16 +442,21 @@ $figtree: 'Figtree', sans-serif;
 					font-family: $figtree;
 					letter-spacing: -0.88px;
 				}
+	
+
 				p {
 					&.text-center {
 						font-family: $alegreya;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 400;
 						line-height: 1.4;
-						margin-bottom: 10px;
 						&:last-child {
 							font-weight: 500;
 						}
 					}
 				}
+
 				.card {
 					border-radius: 8px;
 					border: 0;
