@@ -1,4 +1,5 @@
 let map;
+var gmarkers1 = [];
 
 function initMap() {
 
@@ -12,16 +13,156 @@ function initMap() {
 
 
 	const map = new google.maps.Map(document.getElementById("map"), {
-		zoom: 6,
+		zoom: 9,
 		center: center,
 		mapTypeControlOptions: {
 			mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "NUMV"],
 		},
 	});
 
+	var numv = {
+		template : 'http://numv.local/maqueta/',
+		locations : [
+			{
+				images: "2350",
+				images_src: [],
+				latitud: 19.4159322,
+				leyenda: "Leyenda",
+				longitud: -99.1581775,
+				nombre: "Nombre",
+				pin: "http://numv.local/maqueta/img/pin-amarillo.svg",
+				icon: "http://numv.local/maqueta/img/icon-amarillo.svg",
+				tipo: "Peatón",
+			},
+			{
+				images: "2351",
+				images_src: [],
+				latitud: 19.4079963,
+				leyenda: "Casa Cleo",
+				longitud: -99.173461,
+				nombre: "Casa Cleo",
+				pin: "http://numv.local/maqueta/img/pin-morado.svg",
+				icon: "http://numv.local/maqueta/img/icon-morado.svg",
+				tipo: "Ciclista",
+			},
+			{
+				images: "2352",
+				images_src: [],
+				latitud: 19.411151,
+				leyenda: "The Amsterdam",
+				longitud: -99.17399,
+				nombre: "The Amsterdam",
+				pin: "http://numv.local/maqueta/img/pin-verde.svg",
+				icon: "http://numv.local/maqueta/img/icon-verde.svg",
+				tipo: "Motociclista",
+			}
+		]
+	};
+
+
+
+	for (let i = 0; i < numv.locations.length; i++) {
+		
+		const location = numv.locations[i];
+		var category = numv.locations[i].tipo;
+		
+		var args = {
+			position: { lat: location['latitud'], lng: location['longitud'] },
+			icon: location['pin'],
+			map,
+			category: category,
+			title: location['nombre'],
+			label: {
+				//text: location['nombre'],
+				className: "marker-label-regular",
+			},
+			optimized: false,
+		}
+		
+
+
+		const marker = new google.maps.Marker( args );
+
+		gmarkers1.push(marker);
+
+		const contentString = '<div class="row no-gutters info-window">'+
+							    '<div class="col-12">'+
+							        '<p class="title"><img src="'+ location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
+							        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
+							        '<p><span style="font-weight: 600;">Género:</span> H</p>'+
+							        '<p><span style="font-weight: 600;">Edad:</span> 39 </p>'+
+							        '<p><span style="font-weight: 600;">Vehículo:</span> 23-jun-23</p>'+
+							        '<hr>'+
+							        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
+							        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
+							        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
+							        '<hr>'+
+							        '<p><span style="font-weight: 600;">Dónde</span></p>'+
+							        '<p><span style="font-weight: 600;">Ciudad:</span> Culiacán</p>'+
+							        '<p><span style="font-weight: 600;">Estado:</span> Sinaloa</p>'+
+							        '<p><span style="font-weight: 600;">Municipio:</span> Culiacán</p>'+
+							        '<p><span style="font-weight: 600;">Entorno:</span> No urbano</p>'+
+							        '<p><span style="font-weight: 600;">Tipo de calle:</span> Autopista</p>'+
+							    '</div>'+
+							'</div>';
+
+
+		marker.addListener("click", () => {
+			
+			infowindow.setOptions({
+		        content: contentString,
+		        maxWidth:300
+		    });
+		    
+
+			infowindow.open({
+				anchor: marker,
+				map,
+				shouldFocus: true,
+			});
+
+		});
+
+
+		
+
+
+		// marker.addListener("click", () => {
+
+		// });
+	}
+
+
+
 	
 
 	map.mapTypes.set("NUMV", numv_style);
 	map.setMapTypeId("NUMV");
 
+
+
 }
+
+/**
+ * Function to filter markers by category
+ */
+
+filterMarkers = function (category) {
+    for (i = 0; i < gmarkers1.length; i++) {
+        marker = gmarkers1[i];
+
+		console.log(marker.category);
+        // If is same category or category not picked
+        if (marker.category == category || category.length === 0) {
+            marker.setVisible(true);
+        }
+        // Categories don't match 
+        else {
+            marker.setVisible(false);
+        }
+    }
+}
+
+		
+
+
