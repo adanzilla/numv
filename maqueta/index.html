@@ -242,7 +242,7 @@
             <div class="row no-gutters">
                 <div class="col-12 col-md-8 pr-md-2">
                     <div class="card p-3">
-                        <h3>Top 10 Estados con más incidentes (2022 vs 2023)</h3>
+                        <h3>Top 10 Estados con más incidentes</h3>
                         <!-- <img src="img/graph/bar-fill-vertical.png" alt="" class="w-100"> -->
                         <canvas id="top10-estados-mas-incidentes"></canvas>
                     </div>
@@ -300,12 +300,45 @@
                         <div class="col-12 text-center">
                             <!-- <img src="img/mapa.png" alt="" class="img-fluid"> -->
                             <div id="map" style="height: 65vh; width: 100%;"></div>
-                            <select id="type" onchange="filterMarkers(this.value);">
-                                <option value="">Selecciona un tipo de Incidente vial</option>
-                                <option value="Peatón">Peatón</option>
-                                <option value="Ciclista">Ciclista</option>
-                                <option value="Motociclista">Motociclista</option>
-                            </select>
+                            <div id="map-filters">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card p-3">
+                                            <form id="filters">
+                                                
+                                                <!-- <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Todos" name="todos" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-todos.svg" alt=""> Todos
+                                                  </label>
+                                                </div> -->
+
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Peatón" name="peatones" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-amarillo.svg" alt=""> Peatones
+                                                  </label>
+                                                </div>
+                                                
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Motociclista" name="motociclistas" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-verde.svg" alt=""> Motociclistas
+                                                  </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Ciclista" name="ciclistas" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-morado.svg" alt=""> Ciclistas
+                                                  </label>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -752,7 +785,7 @@
     <script src="js/googlemap.js"></script>
 
     <!-- mapa -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries=&v=weekly"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries"></script>
     <!-- mapa -->
 
     <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
