@@ -13,17 +13,6 @@ $figtree: 'Figtree', sans-serif;
 	
 	body {
 
-		select#type {
-		    position: absolute;
-		    bottom: 42px;
-		    z-index: 9999999999999999;
-		    left: 25px;
-		    border: 0;
-		    font-size: 14px;
-		    text-transform: uppercase;
-		    border: 3px solid #28A1B7;
-		    border-radius: 8px;
-		}
 
 		a {
 			color: $primary;
@@ -298,6 +287,16 @@ $figtree: 'Figtree', sans-serif;
 			}
 
 			&#mapa {
+
+				#map-filters {
+				    position: absolute;
+				    bottom: 42px;
+				    z-index: 9999999999999999;
+				    left: 25px;
+				    .form-check {
+				    	text-align: left;
+				    }
+				}
 
 				#map {
 					border-radius: 8px!important;

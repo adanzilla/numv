@@ -13,7 +13,8 @@ function initMap() {
 
 
 	const map = new google.maps.Map(document.getElementById("map"), {
-		zoom: 9,
+		//zoom: 9,
+		zoom: 14,
 		center: center,
 		mapTypeControlOptions: {
 			mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "NUMV"],
@@ -143,25 +144,37 @@ function initMap() {
 
 }
 
-/**
- * Function to filter markers by category
- */
+jQuery('#map-filters').on('change', 'form', function(event) {
+	event.preventDefault();
 
-filterMarkers = function (category) {
-    for (i = 0; i < gmarkers1.length; i++) {
+	var filter = [];
+	
+	$.each( jQuery(this).serializeArray(), function(i, field) {
+		var input = $('input[name='+field.name+']');
+		field.value = $.trim(field.value);
+
+		filter.push( field.value );
+
+
+
+	});
+
+	console.log( filter );
+	
+
+	for (i = 0; i < gmarkers1.length; i++) {
         marker = gmarkers1[i];
 
-		console.log(marker.category);
-        // If is same category or category not picked
-        if (marker.category == category || category.length === 0) {
+        if ( jQuery,$.inArray( marker.category, filter) >= 0 ) {
             marker.setVisible(true);
         }
-        // Categories don't match 
         else {
             marker.setVisible(false);
         }
     }
-}
+
+});
+
 
 		
 

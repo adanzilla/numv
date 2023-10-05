@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 
+
+	
+
 	if( jQuery('#pie-chat') ){
 		const data = {
 		  labels: [
@@ -23,6 +26,7 @@ jQuery(document).ready(function($) {
 			type: 'pie',
 			data: data,
 			options: {
+				responsive: true,
 		        plugins: {
 		            legend : {
 		            	align: 'start',
@@ -112,7 +116,7 @@ jQuery(document).ready(function($) {
 					}
 				},
 			    
-				responsive: false,
+				responsive: true,
 				legend: {
 					position: 'right' 
 				},
