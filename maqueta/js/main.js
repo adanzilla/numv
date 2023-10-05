@@ -53,8 +53,8 @@ jQuery(document).ready(function($) {
 	if ( jQuery('#top10-estados-mas-incidentes') ) {
 		const data = {
 			labels: [
-			'Ciudad de México',
-		  	'Estado de México',
+			'CDMX',
+		  	'EdoMex',
 		  	'Nayarit',
 		  	'Michoacán',
 		  	'Guanajuato',
@@ -121,12 +121,22 @@ jQuery(document).ready(function($) {
 					position: 'right' 
 				},
 				scales: {
-				      x: {
+					x: {
 				        stacked: true,
-				      },
-				      y: {
-				        stacked: true
-				      }
+				        ticks: {
+                            font: {
+                                size: 10
+                            }
+                        }
+                    },
+                    y: {
+				      	stacked: true,
+  					        ticks: {
+  	                            font: {
+  	                                size: 10
+  	                            }
+  	                        }
+  	                    }
 				    }
 			}
 		};
