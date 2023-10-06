@@ -208,6 +208,17 @@ jQuery(document).ready(function($) {
         });
     }
 
+    jQuery('#menu-primary').on('click', '.nav-link', function(event) {
+    	event.preventDefault();
+    	var destination = jQuery(this).attr('href');
+    	console.log(destination);
+
+    	$('html,body').animate({
+		    scrollTop: jQuery( destination ).offset().top
+		},'slow');
+
+    });
+
     jQuery('form#contacto').on('click', 'label.btn', function(event) {
     	event.preventDefault();
     	jQuery('form#contacto').find('label').each(function(index, el) {
