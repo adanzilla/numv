@@ -59,14 +59,38 @@ $figtree: 'Figtree', sans-serif;
 		}
 		.swiper-button-prev {
 			left: 5%!important;
+			height: auto;
+			width: auto;
 			&:after {
 				display: none;
+			}
+			&:hover {
+				background-image: url('../img/left-arrow-dark-hover.svg');
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: contain;
+				img {
+					opacity: 0;
+
+				}
 			}
 		}
 		.swiper-button-next {
 			right: 5%!important;
+			height: auto;
+			width: auto;
 			&:after {
 				display: none;
+			}
+			&:hover {
+				background-image: url('../img/right-arrow-dark-hover.svg');
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: contain;
+				img {
+					opacity: 0;
+
+				}
 			}
 		}
 
@@ -79,6 +103,49 @@ $figtree: 'Figtree', sans-serif;
 			font-size: 1.4vw;
 			line-height: 1.5;
 			font-family: $alegreya;
+
+			&.transparent {
+				text-align: right;
+				padding-right: 0px;
+				background-color: transparent;
+				color: $primary;
+				border-color: transparent;
+				box-shadow: none;
+				img {
+					margin-left: 0;
+				}
+
+				&:hover {
+					background-color: transparent;
+					border-color: transparent;
+					color: $primary;
+					text-decoration: underline;
+				}
+			}
+
+			&:hover {
+				background-color: $primary;
+				color: $light;
+				border-color: $primary;
+			}
+
+			img {
+				margin-bottom: 2px;
+				margin-left: 5px;
+			}
+		}
+
+		.btn-transparent {
+			border-radius: 8px;
+			border: 1px solid transparent;
+			background: transparent;
+			box-shadow: none;
+			font-weight: 700;
+			font-size: 1.4vw;
+			line-height: 1.5;
+			font-family: $alegreya;
+			color: $primary;
+			padding: 0;
 
 			&:hover {
 				background-color: $primary;
@@ -166,7 +233,7 @@ $figtree: 'Figtree', sans-serif;
 					p {
 						&.title {
 							font-size: 24px;
-							font-size: 1.4vw;
+							font-size: 1.9vw;
 							font-weight: 700;
 							font-family: $figtree;
 							text-align: center;
@@ -355,9 +422,36 @@ $figtree: 'Figtree', sans-serif;
 							}
 						}
 					}
+					.ver-todo {
+						&:hover {
+							background-image: url('../img/btn-ver-todo-hover.svg');
+							background-repeat: no-repeat;
+							background-position: right;
+							background-size: contain;
+							img {
+								opacity: 0;
+
+							}
+						}
+					}
 					&.bordered {
 						border-bottom: 1px solid #B4B4B4;
 						min-height: 100px;
+
+						a {
+							&.my-auto {
+								&:hover {
+									background-image: url('../img/right-arrow-dark-hover.svg');
+									background-repeat: no-repeat;
+									background-position: right;
+									background-size: contain;
+									img {
+										opacity: 0;
+
+									}
+								}
+							}
+						}
 
 						p {
 							&.title {
@@ -612,6 +706,22 @@ $figtree: 'Figtree', sans-serif;
 							top: 0;
 							right: 0;
 						}
+					}
+				}
+			}
+
+			#scroll-top {
+				height: auto;
+				width: auto;
+				display: block;
+				&:hover {
+					background-image: url('../img/rounded-top-arrow-dark-hover.svg');
+					background-repeat: no-repeat;
+					background-position: right;
+					background-size: contain;
+					img {
+						opacity: 0;
+
 					}
 				}
 			}
