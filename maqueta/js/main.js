@@ -191,24 +191,35 @@ jQuery(document).ready(function($) {
 		console.log(error)
 	}
 
-		if ( jQuery('form#contacto').length ) {
-	        jQuery('form#contacto').validate({
-	            rules: {
-	                'name': { required : true },
-	                'email'    : { required : true, email : true }
-	            },
-	            submitHandler: function(form) {
-	                jQuery('button[type="submit"]').attr({
-	                    disabled: true,
-	                    text: "Enviando..."
-	                });
-	                
-	              
-	            }
-	        });
-	    }
+	if ( jQuery('form#contacto').length ) {
+        jQuery('form#contacto').validate({
+            rules: {
+                'name': { required : true },
+                'email'    : { required : true, email : true }
+            },
+            submitHandler: function(form) {
 
-	    jQuery.extend(jQuery.validator.messages, {
+                jQuery('button[type="submit"]').attr({
+                    disabled: true
+                }).html("Enviando...");
+
+                console.log( form );
+            }
+        });
+    }
+
+    jQuery('form#contacto').on('click', 'label.btn', function(event) {
+    	event.preventDefault();
+    	jQuery('form#contacto').find('label').each(function(index, el) {
+    		if( jQuery( el ).hasClass('active') ){
+    			jQuery( el ).find('input').attr({ "checked" : false });
+    		}else{
+    			jQuery( el ).find('input').attr({ "checked" : true });
+    		}
+    	});
+    });
+
+    jQuery.extend(jQuery.validator.messages, {
         required: "Es requerido",
         number: "Debe ser un número",
         email: "Debe ser un email válido",

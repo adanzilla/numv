@@ -135,6 +135,8 @@ $figtree: 'Figtree', sans-serif;
 			}
 		}
 
+
+
 		.btn-transparent {
 			border-radius: 8px;
 			border: 1px solid transparent;
@@ -707,6 +709,27 @@ $figtree: 'Figtree', sans-serif;
 							right: 0;
 						}
 					}
+
+					.btn-group {
+						.btn-primary {
+							background-color: $light;
+							border-color: $dark;
+							color: $dark;
+							&:not(:disabled):not(.disabled).active,
+							&:not(:disabled):not(.disabled):active {
+								background-color: $dark;
+								color: $light;
+								border-color: $dark;
+							}
+							
+						}
+						.show>.btn-primary.dropdown-toggle {
+								background-color: $dark;
+								color: $light;
+								border-color: $dark;
+							}
+					}
+
 				}
 			}
 

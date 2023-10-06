@@ -25,37 +25,37 @@ function initMap() {
 		template : 'http://numv.local/maqueta/',
 		locations : [
 			{
-				images: "2350",
-				images_src: [],
-				latitud: 19.4159322,
-				leyenda: "Leyenda",
-				longitud: -99.1581775,
-				nombre: "Nombre",
-				pin: "http://numv.local/maqueta/img/pin-amarillo.svg",
-				icon: "http://numv.local/maqueta/img/icon-amarillo.svg",
-				tipo: "Peatón",
+				'images': "2350",
+				'images_src': "",
+				'latitud': 19.4159322,
+				'leyenda': "Leyenda",
+				'longitud': -99.1581775,
+				'nombre': "Nombre",
+				'pin': "http://numv.local/maqueta/img/pin-amarillo.svg",
+				'icon': "http://numv.local/maqueta/img/icon-amarillo.svg",
+				'tipo': "Peatón",
 			},
 			{
-				images: "2351",
-				images_src: [],
-				latitud: 19.4079963,
-				leyenda: "Casa Cleo",
-				longitud: -99.173461,
-				nombre: "Casa Cleo",
-				pin: "http://numv.local/maqueta/img/pin-morado.svg",
-				icon: "http://numv.local/maqueta/img/icon-morado.svg",
-				tipo: "Ciclista",
+				"images": "2351",
+				"images_src": "",
+				"latitud": 19.4079963,
+				"leyenda": "Casa Cleo",
+				"longitud": -99.173461,
+				"nombre": "Casa Cleo",
+				"pin": "http://numv.local/maqueta/img/pin-morado.svg",
+				"icon": "http://numv.local/maqueta/img/icon-morado.svg",
+				"tipo": "Ciclista",
 			},
 			{
-				images: "2352",
-				images_src: [],
-				latitud: 19.411151,
-				leyenda: "The Amsterdam",
-				longitud: -99.17399,
-				nombre: "The Amsterdam",
-				pin: "http://numv.local/maqueta/img/pin-verde.svg",
-				icon: "http://numv.local/maqueta/img/icon-verde.svg",
-				tipo: "Motociclista",
+				"images": "2352",
+				"images_src": "",
+				"latitud": 19.411151,
+				"leyenda": "The Amsterdam",
+				"longitud": -99.17399,
+				"nombre": "The Amsterdam",
+				"pin": "http://numv.local/maqueta/img/pin-verde.svg",
+				"icon": "http://numv.local/maqueta/img/icon-verde.svg",
+				"tipo": "Motociclista",
 			}
 		]
 	};
@@ -68,16 +68,13 @@ function initMap() {
 		var category = numv.locations[i].tipo;
 		
 		var args = {
-			position: { lat: location['latitud'], lng: location['longitud'] },
-			icon: location['pin'],
+			"position": { lat: location['latitud'], lng: location['longitud'] },
+			"icon": location['pin'],
 			map,
-			category: category,
-			title: location['nombre'],
-			label: {
-				//text: location['nombre'],
-				className: "marker-label-regular",
-			},
-			optimized: false,
+			"category": category,
+			"title": location['nombre'],
+			
+			"optimized": false,
 		}
 		
 
