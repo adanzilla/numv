@@ -552,6 +552,11 @@ $figtree: 'Figtree', sans-serif;
 					}
 				}
 
+
+				.swiper-button-disabled {
+					display: none;
+				}
+
 				.card {
 					border-radius: 8px;
 					border: 0;

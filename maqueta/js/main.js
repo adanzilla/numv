@@ -191,6 +191,43 @@ jQuery(document).ready(function($) {
 		console.log(error)
 	}
 
+	try{
+
+	    var swiper = new Swiper(".mySwiperTeam", {
+	        slidesPerView: 5,
+	        spaceBetween: 10,
+	        centeredSlides: false,
+
+	        loop: false,
+	        navigation: {
+	            nextEl: ".swiper-button-next",
+	            prevEl: ".swiper-button-prev",
+	        },        
+	        breakpoints: {
+
+	        	320: {
+	        		slidesPerView: 1
+	        	},
+
+	        	780: {
+	        		slidesPerView: 1
+	        	},
+
+	        	980: {
+	        		slidesPerView: 3
+	        	},
+
+	        	1024: {
+	        		slidesPerView: 5
+	        	},
+	        }        
+	    });
+
+	}
+	catch(error) {
+		console.log(error)
+	}
+
 	if ( jQuery('form#contacto').length ) {
         jQuery('form#contacto').validate({
             rules: {
