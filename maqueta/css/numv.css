@@ -88,6 +88,28 @@
   opacity: 0;
 }
 /* line 97, ../sass/numv.scss */
+* body .btn-light {
+  border-radius: 8px;
+  border: 1px solid var(--base-dark, #ffffff);
+  background: var(--base-dark, #ffffff);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+  font-size: 1.4vw;
+  line-height: 1.5;
+  font-family: "Alegreya Sans", serif;
+}
+/* line 107, ../sass/numv.scss */
+* body .btn-light:hover {
+  background-color: #1D1D1B;
+  color: #ffffff;
+  border-color: #1D1D1B;
+}
+/* line 113, ../sass/numv.scss */
+* body .btn-light img {
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+/* line 119, ../sass/numv.scss */
 * body .btn-primary {
   border-radius: 8px;
   border: 1px solid var(--base-dark, #1D1D1B);
@@ -98,7 +120,7 @@
   line-height: 1.5;
   font-family: "Alegreya Sans", serif;
 }
-/* line 107, ../sass/numv.scss */
+/* line 129, ../sass/numv.scss */
 * body .btn-primary.transparent {
   text-align: right;
   padding-right: 0px;
@@ -107,29 +129,29 @@
   border-color: transparent;
   box-shadow: none;
 }
-/* line 114, ../sass/numv.scss */
+/* line 136, ../sass/numv.scss */
 * body .btn-primary.transparent img {
   margin-left: 0;
 }
-/* line 118, ../sass/numv.scss */
+/* line 140, ../sass/numv.scss */
 * body .btn-primary.transparent:hover {
   background-color: transparent;
   border-color: transparent;
   color: #28A1B7;
   text-decoration: underline;
 }
-/* line 126, ../sass/numv.scss */
+/* line 148, ../sass/numv.scss */
 * body .btn-primary:hover {
   background-color: #28A1B7;
   color: #ffffff;
   border-color: #28A1B7;
 }
-/* line 132, ../sass/numv.scss */
+/* line 154, ../sass/numv.scss */
 * body .btn-primary img {
   margin-bottom: 2px;
   margin-left: 5px;
 }
-/* line 140, ../sass/numv.scss */
+/* line 162, ../sass/numv.scss */
 * body .btn-transparent {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -142,39 +164,39 @@
   color: #28A1B7;
   padding: 0;
 }
-/* line 152, ../sass/numv.scss */
+/* line 174, ../sass/numv.scss */
 * body .btn-transparent:hover {
   background-color: #28A1B7;
   color: #ffffff;
   border-color: #28A1B7;
 }
-/* line 158, ../sass/numv.scss */
+/* line 180, ../sass/numv.scss */
 * body .btn-transparent img {
   margin-bottom: 2px;
   margin-left: 5px;
 }
-/* line 164, ../sass/numv.scss */
+/* line 186, ../sass/numv.scss */
 * body header {
   width: 100%;
 }
-/* line 169, ../sass/numv.scss */
+/* line 191, ../sass/numv.scss */
 * body header#masthead nav {
   height: 104px;
 }
-/* line 175, ../sass/numv.scss */
+/* line 197, ../sass/numv.scss */
 * body header#masthead nav a.logo:after {
   border: 0;
 }
-/* line 183, ../sass/numv.scss */
+/* line 205, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li {
   padding: 0 0 0 1rem;
 }
-/* line 188, ../sass/numv.scss */
+/* line 210, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li:hover a, * body header#masthead nav #menu-primary ul li.active a {
   font-weight: 700;
   color: #28A1B7;
 }
-/* line 193, ../sass/numv.scss */
+/* line 215, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a {
   color: #1D1D1B;
   font-size: 16px;
@@ -184,11 +206,61 @@
   line-height: 1.1;
   text-decoration: none;
 }
-/* line 202, ../sass/numv.scss */
+/* line 224, ../sass/numv.scss */
 * body header#masthead nav #menu-primary ul li a::after {
   display: none;
 }
-/* line 217, ../sass/numv.scss */
+/* line 239, ../sass/numv.scss */
+* body section.dashboard.header h1 {
+  font-family: "Figtree", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.704px;
+}
+/* line 250, ../sass/numv.scss */
+* body section.dashboard.badges p {
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 1rem;
+}
+/* line 254, ../sass/numv.scss */
+* body section.dashboard.badges a {
+  padding: 2px 12px;
+  align-items: center;
+  border-radius: 11px;
+  background: #E8E8E8;
+  color: #1D1D1B;
+  font-family: "Figtree", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 138.462% */
+}
+/* line 268, ../sass/numv.scss */
+* body section.dashboard.badges a.badge-pill img {
+  margin-left: 8px;
+}
+/* line 273, ../sass/numv.scss */
+* body section.dashboard.badges a:hover {
+  background-color: #ffffff;
+  color: #ededed;
+}
+/* line 281, ../sass/numv.scss */
+* body section.dashboard.graficas {
+  height: 65vh;
+}
+/* line 283, ../sass/numv.scss */
+* body section.dashboard.graficas h3 {
+  font-family: "Figtree", sans-serif;
+  font-size: 17.006px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 18.707px */
+}
+/* line 300, ../sass/numv.scss */
 * body section#inicio h1 {
   font-size: 36px;
   font-size: 2.7vw;
@@ -196,14 +268,14 @@
   font-weight: 700;
   letter-spacing: -0.792px;
 }
-/* line 229, ../sass/numv.scss */
+/* line 312, ../sass/numv.scss */
 * body section#inicio .card {
   border: 0;
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 236, ../sass/numv.scss */
+/* line 319, ../sass/numv.scss */
 * body section#inicio .card p.title {
   font-size: 24px;
   font-size: 1.9vw;
@@ -212,7 +284,7 @@
   text-align: center;
   margin-bottom: 0;
 }
-/* line 245, ../sass/numv.scss */
+/* line 328, ../sass/numv.scss */
 * body section#inicio .card p.subtitle {
   font-size: 16px;
   font-size: 1.1vw;
@@ -223,7 +295,7 @@
   width: 80%;
   margin: 0 auto;
 }
-/* line 261, ../sass/numv.scss */
+/* line 344, ../sass/numv.scss */
 * body section#cifras h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -231,19 +303,19 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 270, ../sass/numv.scss */
+/* line 353, ../sass/numv.scss */
 * body section#cifras .cards .card {
   border-radius: 8px;
   border: 0;
   background-color: #ffffff;
 }
-/* line 274, ../sass/numv.scss */
+/* line 357, ../sass/numv.scss */
 * body section#cifras .cards .card img {
   width: 29px;
   height: 30px;
   flex-shrink: 0;
 }
-/* line 280, ../sass/numv.scss */
+/* line 363, ../sass/numv.scss */
 * body section#cifras .cards .card p.title {
   font-size: 18px;
   font-style: normal;
@@ -251,7 +323,7 @@
   line-height: normal;
   letter-spacing: -0.342px;
 }
-/* line 287, ../sass/numv.scss */
+/* line 370, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras {
   margin-bottom: 0;
   font-size: 48px;
@@ -262,7 +334,7 @@
   line-height: normal;
   letter-spacing: -1.056px;
 }
-/* line 296, ../sass/numv.scss */
+/* line 379, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span {
   color: #DD4040;
   text-align: center;
@@ -275,28 +347,28 @@
   /* 24px */
   letter-spacing: -0.304px;
 }
-/* line 306, ../sass/numv.scss */
+/* line 389, ../sass/numv.scss */
 * body section#cifras .cards .card p.cifras span i.fa {
   color: inherit;
 }
-/* line 319, ../sass/numv.scss */
+/* line 402, ../sass/numv.scss */
 * body section#graficas .card {
   border-radius: 8px;
   border: 0;
 }
-/* line 322, ../sass/numv.scss */
+/* line 405, ../sass/numv.scss */
 * body section#graficas .card h3 {
   font-size: 20px;
   font-family: "Alegreya Sans", serif;
   font-weight: 700;
 }
-/* line 333, ../sass/numv.scss */
+/* line 416, ../sass/numv.scss */
 * body section#banner .card {
   border-radius: 8px;
   border: 0;
   background: #FFF;
 }
-/* line 338, ../sass/numv.scss */
+/* line 421, ../sass/numv.scss */
 * body section#banner .card p {
   font-size: 24px;
   font-size: 1.9vw;
@@ -306,7 +378,7 @@
   /* 36px */
   letter-spacing: -0.456px;
 }
-/* line 345, ../sass/numv.scss */
+/* line 428, ../sass/numv.scss */
 * body section#banner .card p b {
   font-size: 24px;
   font-size: 1.9vw;
@@ -315,25 +387,25 @@
   line-height: 150%;
   letter-spacing: -0.456px;
 }
-/* line 360, ../sass/numv.scss */
+/* line 443, ../sass/numv.scss */
 * body section#mapa #map-filters {
   position: absolute;
   bottom: 42px;
   z-index: 9999999999999999;
   left: 25px;
 }
-/* line 365, ../sass/numv.scss */
+/* line 448, ../sass/numv.scss */
 * body section#mapa #map-filters .form-check {
   text-align: left;
 }
-/* line 370, ../sass/numv.scss */
+/* line 453, ../sass/numv.scss */
 * body section#mapa #map {
   border-radius: 8px !important;
   border: 0;
   background: #FFF !important;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05) !important;
 }
-/* line 377, ../sass/numv.scss */
+/* line 460, ../sass/numv.scss */
 * body section#mapa h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -341,7 +413,7 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 385, ../sass/numv.scss */
+/* line 468, ../sass/numv.scss */
 * body section#mapa p {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -349,7 +421,7 @@
   font-weight: 400;
   line-height: 1.4;
 }
-/* line 396, ../sass/numv.scss */
+/* line 479, ../sass/numv.scss */
 * body section#reportes h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -357,7 +429,7 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 403, ../sass/numv.scss */
+/* line 486, ../sass/numv.scss */
 * body section#reportes h4 {
   font-family: "Figtree", sans-serif;
   font-size: 18px;
@@ -367,11 +439,11 @@
   /* 27px */
   letter-spacing: -0.342px;
 }
-/* line 413, ../sass/numv.scss */
+/* line 496, ../sass/numv.scss */
 * body section#reportes .row.ver-todos {
   min-height: 95px;
 }
-/* line 417, ../sass/numv.scss */
+/* line 500, ../sass/numv.scss */
 * body section#reportes .row.ver-todos p a {
   color: #28A1B7;
   font-family: "Alegreya Sans", serif;
@@ -380,34 +452,34 @@
   font-weight: 500;
   line-height: normal;
 }
-/* line 428, ../sass/numv.scss */
+/* line 511, ../sass/numv.scss */
 * body section#reportes .row .ver-todo:hover {
   background-image: url("../img/btn-ver-todo-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
-/* line 433, ../sass/numv.scss */
+/* line 516, ../sass/numv.scss */
 * body section#reportes .row .ver-todo:hover img {
   opacity: 0;
 }
-/* line 439, ../sass/numv.scss */
+/* line 522, ../sass/numv.scss */
 * body section#reportes .row.bordered {
   border-bottom: 1px solid #B4B4B4;
   min-height: 100px;
 }
-/* line 445, ../sass/numv.scss */
+/* line 528, ../sass/numv.scss */
 * body section#reportes .row.bordered a.my-auto:hover {
   background-image: url("../img/right-arrow-dark-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
-/* line 450, ../sass/numv.scss */
+/* line 533, ../sass/numv.scss */
 * body section#reportes .row.bordered a.my-auto:hover img {
   opacity: 0;
 }
-/* line 460, ../sass/numv.scss */
+/* line 543, ../sass/numv.scss */
 * body section#reportes .row.bordered p.title a {
   color: #606060;
   font-family: "Figtree", sans-serif;
@@ -418,7 +490,7 @@
   /* 30px */
   letter-spacing: -0.38px;
 }
-/* line 469, ../sass/numv.scss */
+/* line 552, ../sass/numv.scss */
 * body section#reportes .row.bordered p.title a span {
   color: #606060;
   font-family: "Alegreya Sans", serif;
@@ -429,7 +501,7 @@
   /* 27px */
   letter-spacing: -0.342px;
 }
-/* line 496, ../sass/numv.scss */
+/* line 579, ../sass/numv.scss */
 * body section#reportes .card p.tag {
   font-family: "Alegreya Sans", serif;
   font-size: 16px;
@@ -438,7 +510,7 @@
   line-height: normal;
   letter-spacing: -0.352px;
 }
-/* line 506, ../sass/numv.scss */
+/* line 589, ../sass/numv.scss */
 * body section#reportes .card p.title {
   font-family: "Figtree", sans-serif;
   font-size: 24px;
@@ -447,7 +519,7 @@
   line-height: normal;
   letter-spacing: -0.528px;
 }
-/* line 516, ../sass/numv.scss */
+/* line 599, ../sass/numv.scss */
 * body section#reportes .card p.extract {
   color: #606060;
   font-family: "Alegreya Sans", serif;
@@ -457,7 +529,7 @@
   line-height: normal;
   letter-spacing: -0.342px;
 }
-/* line 533, ../sass/numv.scss */
+/* line 616, ../sass/numv.scss */
 * body section#quienes-somos h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -465,7 +537,7 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 543, ../sass/numv.scss */
+/* line 626, ../sass/numv.scss */
 * body section#quienes-somos p.text-center {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -473,22 +545,22 @@
   font-weight: 400;
   line-height: 1.4;
 }
-/* line 549, ../sass/numv.scss */
+/* line 632, ../sass/numv.scss */
 * body section#quienes-somos p.text-center:last-child {
   font-weight: 500;
 }
-/* line 556, ../sass/numv.scss */
+/* line 639, ../sass/numv.scss */
 * body section#quienes-somos .swiper-button-disabled {
   display: none;
 }
-/* line 560, ../sass/numv.scss */
+/* line 643, ../sass/numv.scss */
 * body section#quienes-somos .card {
   border-radius: 8px;
   border: 0;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 569, ../sass/numv.scss */
+/* line 652, ../sass/numv.scss */
 * body section#quienes-somos .card p.name {
   font-family: "Figtree", sans-serif;
   font-size: 21.341px;
@@ -499,7 +571,7 @@
   width: 60%;
   margin-bottom: 10px;
 }
-/* line 578, ../sass/numv.scss */
+/* line 661, ../sass/numv.scss */
 * body section#quienes-somos .card p.position {
   color: #606060;
   font-family: "Alegreya Sans", serif;
@@ -509,7 +581,7 @@
   line-height: 110%;
   /* 19.8px */
 }
-/* line 591, ../sass/numv.scss */
+/* line 674, ../sass/numv.scss */
 * body section#nuestra-historia h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -517,7 +589,7 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 600, ../sass/numv.scss */
+/* line 683, ../sass/numv.scss */
 * body section#nuestra-historia .left-column p {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -525,17 +597,17 @@
   font-weight: 400;
   line-height: 1.4;
 }
-/* line 610, ../sass/numv.scss */
+/* line 693, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box {
   margin-top: -50px;
 }
-/* line 612, ../sass/numv.scss */
+/* line 695, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body {
   border-radius: 8px;
   background: #000;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 616, ../sass/numv.scss */
+/* line 699, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p {
   color: #FFF;
   font-family: "Alegreya Sans", serif;
@@ -545,7 +617,7 @@
   line-height: normal;
   margin-bottom: 0;
 }
-/* line 624, ../sass/numv.scss */
+/* line 707, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p.years {
   font-family: "Figtree", sans-serif;
   font-size: 48px;
@@ -554,7 +626,7 @@
   line-height: normal;
   letter-spacing: -1.056px;
 }
-/* line 631, ../sass/numv.scss */
+/* line 714, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p.years span {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
@@ -564,7 +636,7 @@
   line-height: normal;
   display: block;
 }
-/* line 650, ../sass/numv.scss */
+/* line 733, ../sass/numv.scss */
 * body section#en-memoria h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -572,13 +644,13 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 659, ../sass/numv.scss */
+/* line 742, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card {
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 665, ../sass/numv.scss */
+/* line 748, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.name {
   text-align: center;
   font-family: "Figtree", sans-serif;
@@ -588,7 +660,7 @@
   line-height: 110%;
   /* 23.475px */
 }
-/* line 674, ../sass/numv.scss */
+/* line 757, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.position {
   font-family: "Figtree", sans-serif;
   font-size: 10.671px;
@@ -597,7 +669,7 @@
   line-height: 110%;
   /* 11.738px */
 }
-/* line 682, ../sass/numv.scss */
+/* line 765, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.text {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -605,17 +677,27 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 697, ../sass/numv.scss */
+/* line 780, ../sass/numv.scss */
 * body footer {
   background-image: url("../img/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 703, ../sass/numv.scss */
+/* line 786, ../sass/numv.scss */
+* body footer.dashboard p {
+  color: var(--base-dark, #1D1D1B);
+  font-family: "Alegreya Sans", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+}
+/* line 797, ../sass/numv.scss */
 * body footer form .form-group {
   position: relative;
 }
-/* line 706, ../sass/numv.scss */
+/* line 800, ../sass/numv.scss */
 * body footer form .form-group label.error {
   background-color: #000000;
   color: #ffffff;
@@ -626,42 +708,42 @@
   top: 0;
   right: 0;
 }
-/* line 719, ../sass/numv.scss */
+/* line 813, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary {
   background-color: #ffffff;
   border-color: #1D1D1B;
   color: #1D1D1B;
 }
-/* line 723, ../sass/numv.scss */
+/* line 817, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled).active, * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled):active {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 731, ../sass/numv.scss */
+/* line 825, ../sass/numv.scss */
 * body footer form .form-group .btn-group .show > .btn-primary.dropdown-toggle {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 741, ../sass/numv.scss */
+/* line 835, ../sass/numv.scss */
 * body footer #scroll-top {
   height: auto;
   width: auto;
   display: block;
 }
-/* line 745, ../sass/numv.scss */
+/* line 839, ../sass/numv.scss */
 * body footer #scroll-top:hover {
   background-image: url("../img/rounded-top-arrow-dark-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
-/* line 750, ../sass/numv.scss */
+/* line 844, ../sass/numv.scss */
 * body footer #scroll-top:hover img {
   opacity: 0;
 }
-/* line 757, ../sass/numv.scss */
+/* line 851, ../sass/numv.scss */
 * body footer h3 {
   font-family: "Alegreya Sans", serif;
   font-size: 16px;
@@ -670,7 +752,7 @@
   line-height: 150%;
   /* 24px */
 }
-/* line 766, ../sass/numv.scss */
+/* line 860, ../sass/numv.scss */
 * body footer p a {
   color: #352F28;
   font-family: "Figtree", sans-serif;
@@ -679,7 +761,7 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 777, ../sass/numv.scss */
+/* line 871, ../sass/numv.scss */
 * body footer a i.fab {
   font-size: 24px;
   font-size: 1.9vw;

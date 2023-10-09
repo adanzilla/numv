@@ -3,7 +3,99 @@ jQuery(document).ready(function($) {
 
 	
 
-	if( jQuery('#pie-chat') ){
+	if( jQuery('#pie-chart-iii').length ){
+		const data = {
+		  labels: [
+		    "Fugado",
+		    "No identificado",
+		    "Detenido"
+		  ],
+		  datasets: [{
+		    label: '',
+		    data: [20,25,40],
+		    backgroundColor: [
+		      '#8596E7',
+		      '#EEA43B',
+		      '#91D7A7'
+		    ],
+		    hoverOffset: 4
+		  }]
+		};
+
+		const config = {
+			type: 'pie',
+			data: data,
+			options: {
+				responsive: true,
+		        plugins: {
+		            legend : {
+		            	align: 'start',
+		            	labels : {
+		            		color: '#000000',
+		            		padding : 10,
+		            		usePointStyle: true,
+		            		font: {
+		            			size: 12
+		            		},
+		            		boxHeight: 100
+		            	}
+		            }
+		        }
+		    }
+		};
+
+		 const myChart = new Chart( 
+			 document.getElementById('pie-chart-iii'),
+			 config 
+		);	
+	}
+
+	if( jQuery('#pie-chart-ii').length ){
+		const data = {
+		  labels: [
+		    "Hombre",
+		    "Mujer"
+		  ],
+		  datasets: [{
+		    label: '',
+		    data: [20,25],
+		    backgroundColor: [
+		      '#8596E7',
+		      '#EEA43B'
+		    ],
+		    hoverOffset: 4
+		  }]
+		};
+
+		const config = {
+			type: 'pie',
+			data: data,
+			options: {
+				responsive: true,
+		        plugins: {
+		            legend : {
+		            	align: 'start',
+		            	labels : {
+		            		color: '#000000',
+		            		padding : 10,
+		            		usePointStyle: true,
+		            		font: {
+		            			size: 12
+		            		},
+		            		boxHeight: 100
+		            	}
+		            }
+		        }
+		    }
+		};
+
+		 const myChart = new Chart( 
+			 document.getElementById('pie-chart-ii'),
+			 config 
+		);	
+	}
+
+	if( jQuery('#pie-chart').length ){
 		const data = {
 		  labels: [
 		    "Velocidad",
@@ -50,7 +142,7 @@ jQuery(document).ready(function($) {
 		);	
 	}
 
-	if ( jQuery('#top10-estados-mas-incidentes') ) {
+	if ( jQuery('#top10-estados-mas-incidentes').length ) {
 		const data = {
 			labels: [
 			'CDMX',
@@ -143,6 +235,104 @@ jQuery(document).ready(function($) {
 
 		 const myChart = new Chart( 
 			 document.getElementById('top10-estados-mas-incidentes'),
+			 config 
+		);	
+	}
+
+	if ( jQuery('#bars-chart').length ) {
+		const data = {
+			labels: [
+			'CDMX',
+		  	'EdoMex',
+		  	'Nayarit',
+		  	'Michoacán',
+		  	'Guanajuato',
+		  	'Jalisco',
+		  	'Durango',
+		  	'Sinaloa',
+		  	'Puebla',
+		  	'Queretaro'
+		  	],
+		  	datasets: [
+		  		{
+			  		label: [
+			  			"Peatones"
+			  		],
+			  		data: [
+			  			2,3,4,5,6,7,3,4,2,3
+			  		],
+			  		backgroundColor: '#FFCC14'
+			  	},
+			  	{
+			  		label: [
+			  			"Motociclistas"
+			  		],
+			  		data: [
+			  			1,2,3,1,2,3,1,2,3,1
+			  		],
+			  		backgroundColor: '#64D3C3'
+			  	},
+			  	{
+			  		label: [
+			  			"Ciclistas"
+			  		],
+			  		data: [
+			  			1,4,2,6,2,7,2,5,2,1
+			  		],
+			  		backgroundColor: '#A073C3'
+			  	},
+			]
+		};
+
+		const config = {
+			type: 'bar',
+			data: data,
+			options: {
+				responsive: true,
+				    //maintainAspectRatio: false,
+				plugins: {
+					legend : {
+						align: 'start',
+						labels : {
+							boxHeight: 50,
+							color: '#000000',
+							padding : 10,
+							usePointStyle: true,
+							font: {
+								size: 12
+							},
+							boxHeight: 100
+						}
+					}
+				},
+			    
+				responsive: true,
+				legend: {
+					position: 'right' 
+				},
+				scales: {
+					x: {
+				        stacked: true,
+				        ticks: {
+                            font: {
+                                size: 10
+                            }
+                        }
+                    },
+                    y: {
+				      	stacked: true,
+  					        ticks: {
+  	                            font: {
+  	                                size: 10
+  	                            }
+  	                        }
+  	                    }
+				    }
+			}
+		};
+
+		 const myChart = new Chart( 
+			 document.getElementById('bars-chart'),
 			 config 
 		);	
 	}
