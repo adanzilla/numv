@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ni una muerte vial</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,57 +11,70 @@
     <meta property="og:type" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Figtree:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/numv.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
     <header id="masthead" class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container">
                 <div class="row no-gutters mx-auto w-100">
-                    <div class="col-12 col-lg-4 col-xl-5 pl-0 d-flex flex-column z-index-movil">
+                    <div class="col-12 col-sm-3 col-lg-4 col-xl-3 pl-0 d-flex flex-column z-index-movil">
                         <div class="row my-auto">
-                            <div class="col-10">
+                            <div class="col-9">
                                 <a href="index.html" class="logo primary">
                                     <img src="img/logo.svg" class="img-fluid">
                                 </a>
                             </div>
-                            <div class="col-2 d-flex flex-column p-0">
+                            <div class="col-3 d-flex flex-column p-0">
                                 <button class="navbar-toggler my-auto p-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <img src="img/hamburguesa.svg" alt="">
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-8 col-xl-7 d-flex flex-column">
+                    <div class="col-12 col-sm-9 col-lg-8 col-xl-9 d-flex flex-column">
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div id="menu-primary" class="ml-auto">
-                                <ul id="main-menu" class="navbar-nav mx-auto pt-0 pt-md-4 pt-sm-1">
-                                    <li class="menu-item">
-                                        <a href="nuestro-despacho.html" class="nav-link">Nuestro despacho</a>
+                                <ul id="main-menu" class="navbar-nav mx-auto pt-0">
+                                    <li class="menu-item active">
+                                        <a href="#inicio" class="nav-link">Inicio</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="areas-de-practica.html" class="nav-link">Áreas de práctica</a>
+                                        <a href="#cifras" class="nav-link">Cifras</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="nuestro-equipo.html" class="nav-link">Nuestro Equipo</a>
+                                        <a href="#mapa" class="nav-link">Mapa</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="contacto.html" class="nav-link">Contacto</a>
+                                        <a href="#reportes" class="nav-link">Reportes</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="contacto.html" class="nav-link">Contacto</a>
+                                        <a href="#quienes-somos" class="nav-link">Quiénes somos</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="contacto.html" class="nav-link">Contacto</a>
+                                        <a href="#footer" class="nav-link">Contacto</a>
                                     </li>
                                 </ul>
                             </div>
@@ -71,12 +84,743 @@
             </div>
         </nav>
     </header><!-- #masthead -->
+
+
+    <section class="mt-3 mb-5" id="inicio">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-5">
+                    
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h1>
+                                Conoce los índices de muertes viales en peatones, ciclistas y motociclistas en México
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters">
+                        <div class="col pr-2 d-flex">
+                            <div class="card px-1 py-3">
+                                <p class="title">16,000</p>
+                                <p class="subtitle">Mexicanos fallecidos en 2022</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex">
+                            <div class="card px-1 py-3">
+                                <p class="title">2 de cada 3</p>
+                                <p class="subtitle">Responsables se dan a la fuga</p>
+                            </div>
+                        </div>
+                        <div class="col pl-2 d-flex">
+                            <div class="card px-1 py-3">
+                                <p class="title">84%</p>
+                                <p class="subtitle">de las victimas son peatones</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters mt-4">
+                        <div class="col-12">
+                            <p class="excerpt">
+                                Somos un proyecto que se dedica a reunir cifras para visibilizar a las víctimas de tránsito.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters my-2">
+                        <div class="col-12">
+                            <a href="" class="btn btn-primary">
+                                Conoce las cifras <img src="img/right-arrow.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-7 pl-4 mt-5 mt-md-0 d-flex flex-column">
+                    <img src="img/hero.svg" alt="" class="w-100 my-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="cifras">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-9 mx-auto">
+        
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="col-12">
+                        <h2 class="text-center">Cifras recolectadas de fallecidos en 2023</h2>
+                        <p class="text-center">Estas cifras  son obtenidas de distintos medios de comunicación  y  validadas por el equipo  de Céntrico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters justify-content-center cards my-3">
+                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/muertes-totales.png">
+                        </div>
+                        <div class="col-9 d-flex flex-column">
+                            <p class="my-auto">
+                                Muertes totales
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p class="cifras">
+                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/ciclistas.png">
+                        </div>
+                        <div class="col-9 d-flex flex-column">
+                            <p class="my-auto">
+                                Ciclistas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p class="cifras">
+                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/peatones.png">
+                        </div>
+                        <div class="col-9 d-flex flex-column">
+                            <p class="my-auto">
+                                Peatones
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p class="cifras">
+                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/motociclistas.png">
+                        </div>
+                        <div class="col-9 d-flex flex-column">
+                            <p class="my-auto">
+                                Motociclistas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p class="cifras">
+                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="graficas">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-8 pr-md-2">
+                    <div class="card p-3">
+                        <h3>Top 10 Estados con más incidentes</h3>
+                        <!-- <img src="img/graph/bar-fill-vertical.png" alt="" class="w-100"> -->
+                        <canvas id="top10-estados-mas-incidentes"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 pl-md-2 mt-4 mt-md-0 d-flex">
+                    <div class="card p-3">
+                        <h3>Factores de riesgo</h3>
+                        <!-- <img src="img/graph/chart-pie.png" alt="" class="mt-3 w-100"> -->
+                        <canvas id="pie-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 pb-5" id="banner">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-11 col-md-11 col-lg-10 mx-auto">
+                    <div class="card px-5 py-2 w-100">
+                        <div class="row no-gutters">
+                            <div class="col-4 text-center">
+                                <img src="img/banner-hero.svg" alt="" class="img-fluid my-auto">
+                            </div>
+                            <div class="col-8 d-flex flex-column">
+                                <p class="my-auto">
+                                    ¿Estás buscando cifras específicas con distintos enfoques?  <br>
+                                    <b>Consulta resultados por estado, municipio, entre otros</b><br>
+                                    <a href="" class="btn btn-primary mt-3">
+                                        Conoce las cifras <img src="img/right-arrow.svg" alt="">
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 p" id="mapa">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-11 mx-auto">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <h2 class="text-center">Las vialidades más peligrosas</h2>
+                            <p class="text-center">Encuentra todos los incidentes geográficamente colocándote sobre el mapa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row no-gutters my-3">
+                    <div class="col-12">
+                        <div class="col-12 text-center">
+                            <!-- <img src="img/mapa.png" alt="" class="img-fluid"> -->
+                            <div id="map" style="height: 65vh; width: 100%;"></div>
+                            <div id="map-filters">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card p-3">
+                                            <form id="filters">
+                                                
+                                                <!-- <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Todos" name="todos" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-todos.svg" alt=""> Todos
+                                                  </label>
+                                                </div> -->
+
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Peatón" name="peatones" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-amarillo.svg" alt=""> Peatones
+                                                  </label>
+                                                </div>
+                                                
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Motociclista" name="motociclistas" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-verde.svg" alt=""> Motociclistas
+                                                  </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="Ciclista" name="ciclistas" checked>
+                                                  <label class="form-check-label" for="flexCheckDefault">
+                                                    <img src="img/icon-morado.svg" alt=""> Ciclistas
+                                                  </label>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 p" id="reportes">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-9 mx-auto">
+        
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        
+                        <h2 class="text-center">Reportes anuales</h2>
+                        <p class="text-center">Compilación de resultados y datos relevantes de años previos</p>
+                    
+                    </div>
+                </div>
+
+                <div class="row no-gutters my-5">
+                    <div class="col-12 col-md-6">
+                        
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <h4>Últimas publicaciones</h4>
+                            </div>
+                        </div>
+
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-6 pr-1">
+                                <div class="card p-3">
+                                    <img src="img/thumbnail.png" alt="" class="mb-3">
+                                    <p class="tag mb-1">Datos 2020-2021</p>
+                                    <p class="title">Las 15 vías más peligrosas</p>
+                                    <p class="extract">
+                                        El desafío de convertir zonas de riesgo en entornos seguros
+                                    </p>
+                                    <p>
+                                        <a href="" class="btn btn-block btn-primary mt-3">
+                                            Consultar reporte <img src="img/right-arrow.svg" alt="">
+                                        </a>
+                                    </p>
+                                </div>      
+                            </div>
+                            <div class="col-12 col-md-6 pl-1">
+                                <div class="card p-3">
+                                    <img src="img/thumbnail.png" alt="" class="mb-3">
+                                    <p class="tag mb-1">Datos 2020-2021</p>
+                                    <p class="title">Reporte anual 2019-2020</p>
+                                    <p class="extract">
+                                        El desafío de convertir zonas de riesgo en entornos seguros
+                                    </p>
+                                    <p>
+                                        <a href="" class="btn btn-block btn-primary mt-3">
+                                            Consultar reporte <img src="img/right-arrow.svg" alt="">
+                                        </a>
+                                    </p>
+                                </div>      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 pl-md-5">
+                        
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <h4>Recolección de datos y análisis anual</h4>
+                            </div>
+                        </div>
+
+                        
+                            <div class="row no-gutters bordered">
+                                <div class="col-10 d-flex flex-column">
+                                    <p class="title my-auto">
+                                        <a href="javascript:void(0);">
+                                            Reporte anual 2019-2020
+                                            <span class="d-block mt-2">Texto sobre</span>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col-2 d-flex flex-column text-right">
+                                    <a href="javascript:(0);" class="my-auto">
+                                        <img src="img/right-arrow-dark.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row no-gutters bordered">
+                                <div class="col-10 d-flex flex-column">
+                                    <p class="title my-auto">
+                                        <a href="javascript:void(0);">
+                                            Reporte anual 2019-2020
+                                            <span class="d-block mt-2">Texto sobre</span>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col-2 d-flex flex-column text-right">
+                                    <a href="javascript:(0);" class="my-auto">
+                                        <img src="img/right-arrow-dark.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row no-gutters bordered">
+                                <div class="col-10 d-flex flex-column">
+                                    <p class="title my-auto">
+                                        <a href="javascript:void(0);">
+                                            Reporte anual 2019-2020
+                                            <span class="d-block mt-2">Texto sobre</span>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col-2 d-flex flex-column text-right">
+                                    <a href="javascript:(0);" class="my-auto">
+                                        <img src="img/right-arrow-dark.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="row no-gutters ver-todos">
+                                <div class="col-4 d-flex flex-column text-right pr-0 ml-auto">
+                                    <a href="" class="btn btn-block btn-primary mt-3 transparent">
+                                        Ver todo <img src="img/right-arrow-primary.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="my-5 p" id="quienes-somos">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-9 mx-auto">
+        
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        
+                        <h2 class="text-center">Quienes somos</h2>
+                        <p class="text-center">Céntrico es un equipo de especialistas apasionadas de las ciudades, la movilidad, y la seguridad vial. Non enfocamos en la implementación de proyectos de movilidad sustentable, así como en el desarrollo de políticas públicas que eleven las condiciones de la movilidad en el país.</p>
+                        <p class="text-center">Si deseas saber más sobre Céntrico, visita <a href="https://www.centrico.mx">www.centrico.mx</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-10 col-lg-12 mx-auto">
+
+                <div class="row no-gutters my-5">
+                    <div class="col-12">
+                        <div class="swiper mySwiperTeam">
+                           
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Alejandra
+                                            Leal
+                                        </p>
+                                        <p class="position">
+                                            Política Pública
+                                        </p>
+                                        <img src="img/alejandra-leal.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Xavier
+                                            Treviño
+                                        </p>
+                                        <p class="position">
+                                            Datos
+                                        </p>
+                                        <img src="img/xavier-trevino.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Patricio
+                                            Ruiz
+                                        </p>
+                                        <p class="position">
+                                            Arquitecto
+                                        </p>
+                                        <img src="img/patricio-ruiz.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Héctor
+                                            Garrido
+                                        </p>
+                                        <p class="position">
+                                            Consultor de datos
+                                        </p>
+                                        <img src="img/hector-garrido.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Norber
+                                            Sánchez
+                                        </p>
+                                        <p class="position">
+                                            Datos
+                                        </p>
+                                        <img src="img/norber-sanchez.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card py-4 px-3">
+                                        <p class="name">
+                                            Norber
+                                            Sánchez
+                                        </p>
+                                        <p class="position">
+                                            Datos
+                                        </p>
+                                        <img src="img/norber-sanchez.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="img/rounded-left-arrow-dark.svg" alt="">
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="img/rounded-right-arrow-dark.svg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 pb-5" id="nuestra-historia">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-11 mx-auto">
+        
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-7 left-column pr-md-5">
+                        
+                        <h2 class="text-left mb-4">Nuestra historia</h2>
+                        
+                        <p>Ni Una Muerte Vial surge en noviembre de 2018, a partir del atropellamiento de Manuel Vara, especialista en movilidad, en Puebla. Decidimos que para honrar la memoria de las víctimas de siniestros de tránsito, nos abocaríamos a reconocer y visibilizar a los peatones y ciclistas atropellados en el país. Eventualmente decidimos integrar datos de motociclistas.</p>
+                        <p>En 2020, con apoyo Reacciona por la vida, publicamos el primer informe “Ni una muerte vial 2019”, donde proponemos que la narrativa de </p>
+                        <p>A principios de 2023 publicamos Las 150 vialidades más peligrosas, un ranking de las calles donde más mueren peatones y ciclistas por atropellamiento  a nivel nacional, resultante del análisis de 5 años de datos generados por nuestra iniciativa.</p>
+                        <p><b>Ahora, con apoyo de fondation Botnar, a través de la Alianza global por la seguridad vial (GRSP) y la Cruz Roja Internacional (IFRC) dentro del marco de la última etapa del Reto por la seguridad vial infantil (Botnar Child Road Safety Challenge)</b>, hemos sido capaces de mejorar la interfaz de esta página así como integrar un panel dinámico de datos que nos permite ofrecer mejores visualizaciones para explicar y entender mejor la dinámica de la pandemia de choques y atropellamientos de los usuarios más vulnerables de la vía.</p>
+                        <img src="img/nuestra-historia-logo-1.png" class="d-inline-block mr-3">
+                        <img src="img/nuestra-historia-logo-2.png" class="d-inline-block mr-3">
+                        <img src="img/nuestra-historia-logo-3.png" class="d-inline-block mr-3">
+                    </div>
+                    <div class="col-12 col-md-5 right-column">
+                        <div class="row no-gutters">
+                            <div class="col-12 text-center">
+                                <img src="img/nuestra-historia-hero.png" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="row no-gutters caption-box">
+                            <div class="col-10 mx-auto caption-body p-4">
+
+                                <div class="row no-gutters">
+                                    <div class="col-4 d-flex flex-column pr-md-3">
+                                        <p class="years my-auto text-center">
+                                            +4
+                                            <span>Años de datos</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-8 d-flex flex-column">
+                                        <p class="my-auto">
+                                            Luchando y esperando a que nunca más muera nadie en las calles y para que algún día ese dato sea CERO. 
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="en-memoria">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-11 mx-auto">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <h2 class="text-center mb-4">En memoria de las personas</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card p-2">
+                                <div class="row no-gutters">
+                                    <div class="col-4 px-3 text-center">
+                                        <img src="img/manu.png" alt="" class="img-fluid">
+                                        <p class="name">Manu</p>
+                                        <p class="position">Política Pública</p>
+                                    </div>
+                                    <div class="col-8 d-flex flex-column">
+                                        <p class="text my-auto">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card p-2">
+                                <div class="row no-gutters">
+                                    <div class="col-4 px-3 text-center">
+                                        <img src="img/manu.png" alt="" class="img-fluid">
+                                        <p class="name">Manu</p>
+                                        <p class="position">Política Pública</p>
+                                    </div>
+                                    <div class="col-8 d-flex flex-column">
+                                        <p class="text my-auto">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card p-2">
+                                <div class="row no-gutters">
+                                    <div class="col-4 px-3 text-center">
+                                        <img src="img/manu.png" alt="" class="img-fluid">
+                                        <p class="name">Manu</p>
+                                        <p class="position">Política Pública</p>
+                                    </div>
+                                    <div class="col-8 d-flex flex-column">
+                                        <p class="text my-auto">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+
+                      
+                    </div>
+                      <div class="swiper-button-prev">
+                          <img src="img/rounded-left-arrow-dark.svg" alt="">
+                      </div>
+                      <div class="swiper-button-next">
+                          <img src="img/rounded-right-arrow-dark.svg" alt="">
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bottom">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <img src="img/jumbotron.svg" class="w-100">
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="mt-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-3">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h3>¿Quieres colaborar o reportar un incidente?</h3>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <form id="contacto">
+                                <div class="form-group">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Contáctanos
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Reporta un siniestro
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="email" placeholder="Correo electrónico" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">
+                                        Enviar <img src="img/right-arrow.svg" alt="">
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3"></div>
+                <div class="col-12 col-md-4">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <img src="img/logo-footer.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row no-gutters my-2">
+                        <div class="col-12">
+                            <a href="javascript:void(0):" class="d-inline-block mr-2">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                            <a href="javascript:void(0):" class="d-inline-block mr-2">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="javascript:void(0):" class="d-inline-block mr-2">
+                                <i class="fab fa-youtube fa-2x"></i>
+                            </a>
+                            <a href="javascript:void(0):" class="d-inline-block mr-2">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p>
+                                <a href="javascript:void(0);">
+                                    info@niumamuertevial.com
+                                </a>
+                                <a href="javascript:void(0);">
+                                    55 5555 5555
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 text-right">
+                    <a href="javascript:void(0);" id="scroll-top">
+                        <img src="img/rounded-top-arrow-dark.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="./bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="js/googlemap.js"></script>
+
+    <!-- mapa -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries"></script>
+    <!-- mapa -->
+
+    <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

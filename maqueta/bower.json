@@ -20,8 +20,8 @@
     "tests"
   ],
   "dependencies": {
-        "bootstrap": "4.3.1",
-        "jquery-validation": "^1.19.1",
-        "components-font-awesome": "^5.9.0"
-    }
+    "bootstrap": "4.3.1",
+    "jquery-validation": "jquery-validate#^1.19.5",
+    "components-font-awesome": "^5.9.0"
+  }
 }

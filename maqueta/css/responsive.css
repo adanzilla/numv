@@ -1,0 +1,110 @@
+@media (max-width: 575px) {
+  /* line 15, ../sass/responsive.scss */
+  * body p {
+    font-size: 16px;
+  }
+  /* line 19, ../sass/responsive.scss */
+  * body .btn-primary {
+    font-size: 16px;
+  }
+  /* line 32, ../sass/responsive.scss */
+  * body header#masthead.static nav {
+    height: 80px;
+  }
+  /* line 35, ../sass/responsive.scss */
+  * body header#masthead.static nav .logo img {
+    margin-top: 0;
+  }
+  /* line 42, ../sass/responsive.scss */
+  * body header#masthead nav {
+    height: auto;
+  }
+  /* line 46, ../sass/responsive.scss */
+  * body header#masthead nav .z-index-movil {
+    z-index: 2;
+  }
+  /* line 50, ../sass/responsive.scss */
+  * body header#masthead nav button {
+    border: 0;
+  }
+  /* line 55, ../sass/responsive.scss */
+  * body header#masthead nav .logo img {
+    max-height: 50px;
+  }
+  /* line 67, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary {
+    width: 100%;
+    background-color: #F3F6F6;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  /* line 77, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul {
+    padding-top: 0;
+    text-align: center;
+    height: 100vh;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  /* line 86, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li {
+    padding-left: 0;
+    margin: 1rem auto;
+    padding: 0 0 0 0;
+    width: 100%;
+  }
+  /* line 93, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li.active a:after {
+    position: relative;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1rem;
+  }
+  /* line 103, ../sass/responsive.scss */
+  * body header#masthead nav #menu-primary ul li a {
+    font-size: 20px;
+    color: light;
+  }
+  /* line 118, ../sass/responsive.scss */
+  * body section#inicio h1 {
+    font-size: 24px;
+  }
+  /* line 129, ../sass/responsive.scss */
+  * body section#inicio .card p.title {
+    font-size: 18px;
+  }
+  /* line 133, ../sass/responsive.scss */
+  * body section#inicio .card p.subtitle {
+    font-size: 12px;
+  }
+  /* line 142, ../sass/responsive.scss */
+  * body section#cifras h2 {
+    font-size: 22px;
+  }
+  /* line 150, ../sass/responsive.scss */
+  * body section#cifras .cards .card p {
+    font-size: 14px;
+  }
+  /* line 152, ../sass/responsive.scss */
+  * body section#cifras .cards .card p.title {
+    font-size: 14px;
+  }
+  /* line 155, ../sass/responsive.scss */
+  * body section#cifras .cards .card p.cifras {
+    font-size: 34px;
+  }
+  /* line 157, ../sass/responsive.scss */
+  * body section#cifras .cards .card p.cifras span {
+    font-size: 14px;
+  }
+  /* line 170, ../sass/responsive.scss */
+  * body section#graficas h3 {
+    font-size: 14px;
+  }
+}
