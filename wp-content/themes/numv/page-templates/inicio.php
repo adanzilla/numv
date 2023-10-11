@@ -95,7 +95,7 @@ get_header(); ?>
                 <div class="row no-gutters">
                     <div class="col-12">
                         <p class="cifras">
-                            2917 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <em>2917</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                         </p>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ get_header(); ?>
                 <div class="row no-gutters">
                     <div class="col-12">
                         <p class="cifras">
-                            308 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <em>308</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                         </p>
                     </div>
                 </div>
@@ -133,7 +133,7 @@ get_header(); ?>
                 <div class="row no-gutters">
                     <div class="col-12">
                         <p class="cifras">
-                            1623 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <em>1623</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                         </p>
                     </div>
                 </div>

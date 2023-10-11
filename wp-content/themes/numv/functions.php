@@ -160,6 +160,7 @@ function numv_scripts() {
 
 	wp_enqueue_script( "bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", ["jquery"], _S_VERSION, true );
 	wp_enqueue_script( "swiper", "https://unpkg.com/swiper@8/swiper-bundle.min.js", ["jquery"], _S_VERSION, true );
+	wp_enqueue_script( 'numeral', '//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js', ["jquery"], '20200606', true );
 	
 	wp_enqueue_script( "plugins", get_template_directory_uri() . "/js/plugins.js", ["jquery"], _S_VERSION, true );
 	wp_enqueue_script( "googlemap", get_template_directory_uri() . "/js/googlemap.js", ["jquery"], _S_VERSION, true );

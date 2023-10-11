@@ -4,6 +4,14 @@ jQuery(document).ready(function($) {
 	var dinamic_bars_chart;
 
 	var pie_por_genero;
+
+	$.fn.digits = function(){ 
+	    return this.each(function(){ 
+	        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+	    })
+	}
+
+	jQuery('.cifras em').digits();
 	
 
 	if( jQuery('#pie-chart-iii').length ){
@@ -574,10 +582,10 @@ jQuery(document).ready(function($) {
 	                			}
 	                		};
 
-	                		jQuery('#muertes-totales').html( json.totales );
-	                		jQuery('#peatones').html( json.Peatones );
-	                		jQuery('#ciclistas').html( json.Ciclistas );
-	                		jQuery('#motociclistas').html( json.Motociclistas );
+	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
 
 	                		dinamic_bars_chart.destroy();
 
@@ -664,10 +672,10 @@ jQuery(document).ready(function($) {
 
 
 
-	                		jQuery('#muertes-totales').html( json.totales );
-	                		jQuery('#peatones').html( json.Peatones );
-	                		jQuery('#ciclistas').html( json.Ciclistas );
-	                		jQuery('#motociclistas').html( json.Motociclistas );
+	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
 
 	                		dinamic_bars_chart.destroy();
 
@@ -754,10 +762,10 @@ jQuery(document).ready(function($) {
 
 	                		
 
-	                		jQuery('#muertes-totales').html( json.totales );
-	                		jQuery('#peatones').html( json.Peatones );
-	                		jQuery('#ciclistas').html( json.Ciclistas );
-	                		jQuery('#motociclistas').html( json.Motociclistas );
+	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
 
 	                		dinamic_bars_chart.destroy();
 
