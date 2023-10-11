@@ -446,7 +446,7 @@ jQuery(document).ready(function($) {
         });
     }
 
-    jQuery('#menu-primary').on('click', '.nav-link', function(event) {
+    jQuery('#menu-primary').on('click', '.nav-link.easy-scroll', function(event) {
     	event.preventDefault();
     	var destination = jQuery(this).attr('href');
     	console.log(destination);

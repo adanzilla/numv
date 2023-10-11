@@ -66,22 +66,22 @@
                             <div id="menu-primary" class="ml-auto">
                                 <ul id="main-menu" class="navbar-nav mx-auto pt-0">
                                     <li class="menu-item active">
-                                        <a href="#inicio" class="nav-link easy-scroll">Inicio</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#inicio" class="nav-link">Inicio</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#cifras" class="nav-link easy-scroll">Cifras</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#cifras" class="nav-link">Cifras</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#mapa" class="nav-link easy-scroll">Mapa</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#mapa" class="nav-link">Mapa</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#reportes" class="nav-link easy-scroll">Reportes</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#reportes" class="nav-link">Reportes</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#quienes-somos" class="nav-link easy-scroll">Quiénes somos</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#quienes-somos" class="nav-link">Quiénes somos</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#footer" class="nav-link easy-scroll">Contacto</a>
+                                        <a href="<?php echo site_url( "/" ); ?>#footer" class="nav-link">Contacto</a>
                                     </li>
                                 </ul>
                             </div>

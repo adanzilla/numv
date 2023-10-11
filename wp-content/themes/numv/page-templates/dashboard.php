@@ -9,7 +9,7 @@
  * @since Intertec 1.0
  */
 
-get_header(); ?>
+get_header('dashboard'); ?>
 
 <section class="dashboard header">
     <div class="container">
