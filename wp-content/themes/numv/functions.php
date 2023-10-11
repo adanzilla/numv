@@ -145,6 +145,9 @@ add_action( 'widgets_init', 'numv_widgets_init' );
  * Enqueue scripts and styles.
  */
 function numv_scripts() {
+
+	$locations = locations();
+
 	wp_enqueue_style( "bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", [], _S_VERSION );
 	wp_enqueue_style( "font-awesome", get_template_directory_uri() . "/bower_components/components-font-awesome/css/all.css", [], _S_VERSION );
 	wp_enqueue_style( "swiper", "https://unpkg.com/swiper@8/swiper-bundle.min.css", [], _S_VERSION );
@@ -160,11 +163,51 @@ function numv_scripts() {
 	
 	wp_enqueue_script( "plugins", get_template_directory_uri() . "/js/plugins.js", ["jquery"], _S_VERSION, true );
 	wp_enqueue_script( "googlemap", get_template_directory_uri() . "/js/googlemap.js", ["jquery"], _S_VERSION, true );
+	wp_localize_script( "googlemap", 'googlemap_data', [ "locations" => $locations, 'template' =>  get_template_directory_uri() ] );
 	wp_enqueue_script( "google_maps_script", "//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries", [], _S_VERSION, true );
 	wp_enqueue_script( "main", get_template_directory_uri() . "/js/main.js", ["jquery"], _S_VERSION, true );
 	wp_localize_script('main', 'numv_ajax', [ 'ajax_url' => admin_url( 'admin-ajax.php'), 'site_url' => site_url( "/" ) ,'template' =>  get_template_directory_uri() ] );
 }
 add_action( 'wp_enqueue_scripts', 'numv_scripts' );
+
+
+function locations(){
+
+	global $wpdb;
+	$locations = $wpdb->get_results("SELECT * FROM incidentes");
+
+	if( ! empty( $locations ) ){
+		foreach ($locations as &$location) {
+
+			$location->longitud = (float) $location->longitud;
+            $location->latitud = (float) $location->latitud;
+
+			switch ( $location->submodo ) {
+				case 'Peatón':
+					$location->pin = "/img/pin-amarillo.svg";
+					$location->icon = "/img/icon-amarillo.svg";
+					break;
+
+				case 'Ciclista':
+					$location->pin = "/img/pin-morado.svg";
+					$location->icon = "/img/icon-morado.svg";
+					break;
+
+				case 'Motociclista':
+					$location->pin = "/img/pin-verde.svg";
+					$location->icon = "/img/icon-verde.svg";
+					break;
+				
+				default:
+					$location->pin = "/img/pin-amarillo.svg";
+					$location->icon = "/img/icon-amarillo.svg";
+					break;
+			}
+		}
+	}
+
+	return $locations;
+}
 
 /**
  * Implement the Custom Header feature.

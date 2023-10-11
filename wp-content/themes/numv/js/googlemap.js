@@ -3,6 +3,8 @@ var gmarkers1 = [];
 
 function initMap() {
 
+	console.log( googlemap_data );
+
 	if( jQuery('#map').length ){
 
 		var infowindow = new google.maps.InfoWindow({
@@ -16,7 +18,7 @@ function initMap() {
 
 		const map = new google.maps.Map(document.getElementById("map"), {
 			//zoom: 9,
-			zoom: 14,
+			zoom: 10,
 			center: center,
 			mapTypeControlOptions: {
 				mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "NUMV"],
@@ -64,64 +66,69 @@ function initMap() {
 
 
 
-		for (let i = 0; i < numv.locations.length; i++) {
+		for (let i = 0; i < googlemap_data.locations.length; i++) {
+
+
+			const location = googlemap_data.locations[i];
 			
-			const location = numv.locations[i];
-			var category = numv.locations[i].tipo;
-			
-			var args = {
-				"position": { lat: location['latitud'], lng: location['longitud'] },
-				"icon": location['pin'],
-				map,
-				"category": category,
-				"title": location['nombre'],
+			if( location.latitud != 0 ){
+				var category = googlemap_data.locations[i].submodo;
 				
-				"optimized": false,
+				var args = {
+					"position": { lat: location['latitud'], lng: location['longitud'] },
+					"icon": googlemap_data.template + location['pin'],
+					map,
+					"category": category,
+					"title": "",
+					
+					"optimized": false,
+				}
+				
+
+
+				const marker = new google.maps.Marker( args );
+
+				gmarkers1.push(marker);
+
+				const contentString = '<div class="row no-gutters info-window">'+
+									    '<div class="col-12">'+
+									        '<p class="title"><img src="'+ googlemap_data.template+location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
+									        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
+									        '<p><span style="font-weight: 600;">Género:</span> '+ location['genero'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Edad:</span> '+ location['edad'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Vehículo:</span> </p>'+
+									        '<hr>'+
+									        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
+									        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
+									        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
+									        '<hr>'+
+									        '<p><span style="font-weight: 600;">Dónde</span></p>'+
+									        '<p><span style="font-weight: 600;">Ciudad:</span> '+ location['municipio'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Estado:</span> '+ location['estado'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Municipio:</span> '+ location['conurbacion'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Entorno:</span> '+ location['entorno'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Tipo de calle:</span> Autopista</p>'+
+									    '</div>'+
+									'</div>';
+
+
+				marker.addListener("click", () => {
+					
+					infowindow.setOptions({
+				        content: contentString,
+				        maxWidth:300
+				    });
+				    
+
+					infowindow.open({
+						anchor: marker,
+						map,
+						shouldFocus: true,
+					});
+
+				});
 			}
 			
-
-
-			const marker = new google.maps.Marker( args );
-
-			gmarkers1.push(marker);
-
-			const contentString = '<div class="row no-gutters info-window">'+
-								    '<div class="col-12">'+
-								        '<p class="title"><img src="'+ location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
-								        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
-								        '<p><span style="font-weight: 600;">Género:</span> H</p>'+
-								        '<p><span style="font-weight: 600;">Edad:</span> 39 </p>'+
-								        '<p><span style="font-weight: 600;">Vehículo:</span> 23-jun-23</p>'+
-								        '<hr>'+
-								        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
-								        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
-								        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
-								        '<hr>'+
-								        '<p><span style="font-weight: 600;">Dónde</span></p>'+
-								        '<p><span style="font-weight: 600;">Ciudad:</span> Culiacán</p>'+
-								        '<p><span style="font-weight: 600;">Estado:</span> Sinaloa</p>'+
-								        '<p><span style="font-weight: 600;">Municipio:</span> Culiacán</p>'+
-								        '<p><span style="font-weight: 600;">Entorno:</span> No urbano</p>'+
-								        '<p><span style="font-weight: 600;">Tipo de calle:</span> Autopista</p>'+
-								    '</div>'+
-								'</div>';
-
-
-			marker.addListener("click", () => {
-				
-				infowindow.setOptions({
-			        content: contentString,
-			        maxWidth:300
-			    });
-			    
-
-				infowindow.open({
-					anchor: marker,
-					map,
-					shouldFocus: true,
-				});
-
-			});
 
 
 			

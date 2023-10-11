@@ -3,6 +3,8 @@ var gmarkers1 = [];
 
 function initMap() {
 
+	console.log( google_map_data );
+
 	if( jQuery('#map').length ){
 
 		var infowindow = new google.maps.InfoWindow({
@@ -24,50 +26,15 @@ function initMap() {
 		});
 
 		var numv = {
-			template : 'http://numv.local/maqueta/',
-			locations : [
-				{
-					'images': "2350",
-					'images_src': "",
-					'latitud': 19.4159322,
-					'leyenda': "Leyenda",
-					'longitud': -99.1581775,
-					'nombre': "Nombre",
-					'pin': "http://numv.local/maqueta/img/pin-amarillo.svg",
-					'icon': "http://numv.local/maqueta/img/icon-amarillo.svg",
-					'tipo': "Peatón",
-				},
-				{
-					"images": "2351",
-					"images_src": "",
-					"latitud": 19.4079963,
-					"leyenda": "Casa Cleo",
-					"longitud": -99.173461,
-					"nombre": "Casa Cleo",
-					"pin": "http://numv.local/maqueta/img/pin-morado.svg",
-					"icon": "http://numv.local/maqueta/img/icon-morado.svg",
-					"tipo": "Ciclista",
-				},
-				{
-					"images": "2352",
-					"images_src": "",
-					"latitud": 19.411151,
-					"leyenda": "The Amsterdam",
-					"longitud": -99.17399,
-					"nombre": "The Amsterdam",
-					"pin": "http://numv.local/maqueta/img/pin-verde.svg",
-					"icon": "http://numv.local/maqueta/img/icon-verde.svg",
-					"tipo": "Motociclista",
-				}
-			]
+			template : 'http://numv.local/maqueta/'
 		};
 
 
 
-		for (let i = 0; i < numv.locations.length; i++) {
+		for (let i = 0; i < google_map_data.locations.length; i++) {
 			
-			const location = numv.locations[i];
-			var category = numv.locations[i].tipo;
+			const location = google_map_data.locations[i];
+			var category = google_map_data.locations[i].submodo;
 			
 			var args = {
 				"position": { lat: location['latitud'], lng: location['longitud'] },

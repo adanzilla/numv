@@ -145,16 +145,16 @@ jQuery(document).ready(function($) {
 	if ( jQuery('#top10-estados-mas-incidentes').length ) {
 		const data = {
 			labels: [
-			'CDMX',
-		  	'EdoMex',
-		  	'Nayarit',
-		  	'Michoacán',
-		  	'Guanajuato',
-		  	'Jalisco',
-		  	'Durango',
-		  	'Sinaloa',
-		  	'Puebla',
-		  	'Queretaro'
+			'Edomex',
+			'Veracruz',
+			'Guanajuato',
+			'Sinaloa',
+			'Jalisco',
+			'Chihuahua',
+			'Puebla',
+			'CdMx',
+			'Tamaulipas',
+			'Nuevo León',
 		  	],
 		  	datasets: [
 		  		{
@@ -162,7 +162,7 @@ jQuery(document).ready(function($) {
 			  			"Peatones"
 			  		],
 			  		data: [
-			  			2,3,4,5,6,7,3,4,2,3
+			  			112,94,81,74,81,99,70,69,83,95
 			  		],
 			  		backgroundColor: '#FFCC14'
 			  	},
@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
 			  			"Motociclistas"
 			  		],
 			  		data: [
-			  			1,2,3,1,2,3,1,2,3,1
+			  			107,89,77,73,42,27,48,60,24,19
 			  		],
 			  		backgroundColor: '#64D3C3'
 			  	},
@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 			  			"Ciclistas"
 			  		],
 			  		data: [
-			  			1,4,2,6,2,7,2,5,2,1
+			  			22,12,37,23,17,11,19,8,22,6
 			  		],
 			  		backgroundColor: '#A073C3'
 			  	},
