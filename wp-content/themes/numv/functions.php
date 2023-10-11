@@ -165,6 +165,8 @@ function numv_scripts() {
 	wp_enqueue_script( "googlemap", get_template_directory_uri() . "/js/googlemap.js", ["jquery"], _S_VERSION, true );
 	wp_localize_script( "googlemap", 'googlemap_data', [ "locations" => $locations, 'template' =>  get_template_directory_uri() ] );
 	wp_enqueue_script( "google_maps_script", "//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries", [], _S_VERSION, true );
+	wp_enqueue_script( "filters", get_template_directory_uri() . "/js/filters.js", ["jquery"], _S_VERSION, true );
+
 	wp_enqueue_script( "main", get_template_directory_uri() . "/js/main.js", ["jquery"], _S_VERSION, true );
 	wp_localize_script('main', 'numv_ajax', [ 'ajax_url' => admin_url( 'admin-ajax.php'), 'site_url' => site_url( "/" ) ,'template' =>  get_template_directory_uri() ] );
 }
@@ -207,6 +209,27 @@ function locations(){
 	}
 
 	return $locations;
+}
+
+add_action( 'wp_ajax_nopriv_municipios', "municipios" );
+function municipios(){
+	$response = new stdClass();
+	$response->result = false;
+
+	
+	$response->estado = $_POST['estado'];
+
+	if( !empty( $_POST['estado'] ) ){
+
+		global $wpdb;
+		$response->municipios = $wpdb->get_results("SELECT DISTINCT municipio FROM `incidentes` WHERE conurbacion = '". $_POST['estado'] ."'");
+
+	}
+
+
+	
+	echo json_encode( $response );
+	wp_die();
 }
 
 /**
