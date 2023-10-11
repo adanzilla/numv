@@ -474,6 +474,8 @@ jQuery(document).ready(function($) {
         },
         submitHandler: function(form) {
 
+        	jQuery('button[type="submit"]').html("filtrando...").prop('disabled',true);
+
         	var formulario = jQuery(form);
             var data = formulario.serialize();
 
@@ -485,7 +487,8 @@ jQuery(document).ready(function($) {
                 success: function(json) {
                     if( json.result ){
 
-                    	console.log( json );
+                    	jQuery('button[type="submit"]').html("Filtrar").prop('disabled',false);
+
 
                     	if( json.grafica == 'por-municipio' ){
                     		const new_data = {
