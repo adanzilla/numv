@@ -120,7 +120,7 @@ get_header(); ?>
                             <select name="filtro-edad" id="filtro-edad" class="form-control mr-3">
                                 <option value="">Edad</option>
                                 <?php for ($i=0; $i < 100; $i++) : ?>
-                                    <option value="<?php echo $i; ?> años"><?php echo $i; ?> años</option>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?> años</option>
                                 <?php endfor; ?>
                             </select>
                         </div>

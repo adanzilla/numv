@@ -675,7 +675,7 @@ jQuery(document).ready(function($) {
 	                		);	
 	                    }
 
-	                    if( json.grafica == 'por-ano' ){
+	                    if( json.grafica == 'por-ano' || json.grafica == 'todos' ){
                     		const new_data_ano = {
 	                        	labels: json.labels,
 	                          	datasets: [

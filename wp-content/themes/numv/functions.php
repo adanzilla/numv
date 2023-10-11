@@ -415,6 +415,68 @@ function grafica_dinamica(){
 
 	}
 
+	if( $data['filtro-fecha'] == '' && $data['filtro-municipio'] == '' && $data['filtro-estado'] == '' ){
+
+		$response->grafica = 'todos';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados_por_estado = $wpdb->get_results( $query );
+
+
+		$query_labels = "SELECT DISTINCT conurbacion FROM `incidentes` WHERE latitud <> ''";
+
+		$labels = $wpdb->get_results( $query_labels, ARRAY_A );
+
+		if( $labels ){
+			$response->labels = [];
+			
+			$response->datasetPeatones = [];
+			$response->datasetMotociclistas = [];
+			$response->datasetCiclistas = [];
+
+			foreach ($labels as $label) {
+				array_push( $response->labels , $label['conurbacion'] );
+
+				$peatones_por_estado = 0;
+				$motociclistas_por_estado = 0;
+				$ciclistas_por_estado = 0;
+
+				$query_por_estado = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $label['conurbacion'] ."'";
+				$totales_por_estado = $wpdb->get_results( $query_por_estado, ARRAY_A );
+
+				foreach ($totales_por_estado as $resultado_por_estado) {
+					if( $resultado_por_estado['submodo'] == "Peatón" ){ $peatones_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Ciclista" ){ $ciclistas_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Motociclista" ){ $motociclistas_por_estado++; }
+				}
+
+				array_push($response->datasetPeatones, $peatones_por_estado);
+				array_push($response->datasetMotociclistas, $motociclistas_por_estado);
+				array_push($response->datasetCiclistas, $ciclistas_por_estado);
+				
+
+			}
+		}
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados_por_estado );
+
+		foreach ($resultados_por_estado as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			
+		}
+
+		
+		$response->query_labels = $query_labels;
+
+	}
+
 
 	
 	echo json_encode( $response );
