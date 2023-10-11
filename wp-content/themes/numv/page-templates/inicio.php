@@ -48,7 +48,7 @@ get_header(); ?>
                 <div class="row no-gutters mt-4">
                     <div class="col-12">
                         <p class="excerpt">
-                            Somos un proyecto que se dedica a reunir cifras para visibilizar a las víctimas de tránsito.
+                            Este es un proyecto dedicado a reunir cifras de manera independiente para visibilizar a las víctimas de siniestros de tránsito.
                         </p>
                     </div>
                 </div>
@@ -75,8 +75,8 @@ get_header(); ?>
         <div class="row no-gutters">
             <div class="col-12">
                 <div class="col-12">
-                    <h2 class="text-center">Cifras recolectadas de fallecidos en 2023</h2>
-                    <p class="text-center">Estas cifras  son obtenidas de distintos medios de comunicación  y  validadas por el equipo  de Céntrico.</p>
+                    <h2 class="text-center">Cifras recolectadas de personas fallecidas en 2023</h2>
+                    <p class="text-center">Estás cifras son extraídas de medios de comunicación digitales y redes sociales, y validadas por nuestro equipo</p>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@ get_header(); ?>
                         </div>
                         <div class="col-8 d-flex flex-column">
                             <p class="my-auto">
-                                ¿Estás buscando cifras específicas con distintos enfoques?  <br>
+                                ¿Estás buscando cifras específicas?  <br>
                                 <b>Consulta resultados por estado, municipio, entre otros</b><br>
                                 <a href="<?php echo site_url( "dashboard" ); ?>" class="btn btn-primary mt-3">
                                     Conoce las cifras <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
@@ -215,7 +215,7 @@ get_header(); ?>
                 <div class="col-12">
                     <div class="col-12">
                         <h2 class="text-center">Las vialidades más peligrosas</h2>
-                        <p class="text-center">Encuentra todos los incidentes geográficamente colocándote sobre el mapa</p>
+                        <p class="text-center">Explora todos los siniestros de tránsito navegando el mapa</p>
                     </div>
                 </div>
             </div>
@@ -408,7 +408,7 @@ get_header(); ?>
             <div class="row no-gutters">
                 <div class="col-12">
                     
-                    <h2 class="text-center">Quienes somos</h2>
+                    <h2 class="text-center">Quiénes somos</h2>
                     <p class="text-center">Céntrico es un equipo de especialistas apasionadas de las ciudades, la movilidad, y la seguridad vial. Non enfocamos en la implementación de proyectos de movilidad sustentable, así como en el desarrollo de políticas públicas que eleven las condiciones de la movilidad en el país.</p>
                     <p class="text-center">Si deseas saber más sobre Céntrico, visita <a href="https://www.centrico.mx">www.centrico.mx</a></p>
                 </div>
@@ -430,7 +430,8 @@ get_header(); ?>
                                         Leal
                                     </p>
                                     <p class="position">
-                                        Política Pública
+                                        Codirectora<br>
+                                        Coordinadora política pública
                                     </p>
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/alejandra-leal.png" alt="" class="img-fluid">
                                 </div>
@@ -442,6 +443,7 @@ get_header(); ?>
                                         Treviño
                                     </p>
                                     <p class="position">
+                                        Co-director<br>
                                         Datos
                                     </p>
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/xavier-trevino.png" alt="" class="img-fluid">
@@ -454,7 +456,7 @@ get_header(); ?>
                                         Ruiz
                                     </p>
                                     <p class="position">
-                                        Arquitecto
+                                        Coordinador de diseño
                                     </p>
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/patricio-ruiz.png" alt="" class="img-fluid">
                                 </div>

@@ -565,8 +565,9 @@
   border: 0;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+  min-height: 340px;
 }
-/* line 657, ../sass/numv.scss */
+/* line 658, ../sass/numv.scss */
 * body section#quienes-somos .card p.name {
   font-family: "Figtree", sans-serif;
   font-size: 21.341px;
@@ -577,7 +578,7 @@
   width: 60%;
   margin-bottom: 10px;
 }
-/* line 666, ../sass/numv.scss */
+/* line 667, ../sass/numv.scss */
 * body section#quienes-somos .card p.position {
   color: #606060;
   font-family: "Alegreya Sans", serif;
@@ -587,7 +588,7 @@
   line-height: 110%;
   /* 19.8px */
 }
-/* line 679, ../sass/numv.scss */
+/* line 680, ../sass/numv.scss */
 * body section#nuestra-historia h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -595,7 +596,7 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 688, ../sass/numv.scss */
+/* line 689, ../sass/numv.scss */
 * body section#nuestra-historia .left-column p {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -603,17 +604,17 @@
   font-weight: 400;
   line-height: 1.4;
 }
-/* line 698, ../sass/numv.scss */
+/* line 699, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box {
   margin-top: -50px;
 }
-/* line 700, ../sass/numv.scss */
+/* line 701, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body {
   border-radius: 8px;
   background: #000;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 704, ../sass/numv.scss */
+/* line 705, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p {
   color: #FFF;
   font-family: "Alegreya Sans", serif;
@@ -623,7 +624,7 @@
   line-height: normal;
   margin-bottom: 0;
 }
-/* line 712, ../sass/numv.scss */
+/* line 713, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p.years {
   font-family: "Figtree", sans-serif;
   font-size: 48px;
@@ -632,7 +633,7 @@
   line-height: normal;
   letter-spacing: -1.056px;
 }
-/* line 719, ../sass/numv.scss */
+/* line 720, ../sass/numv.scss */
 * body section#nuestra-historia .right-column .caption-box .caption-body p.years span {
   font-family: "Figtree", sans-serif;
   color: #ffffff;
@@ -642,7 +643,7 @@
   line-height: normal;
   display: block;
 }
-/* line 738, ../sass/numv.scss */
+/* line 739, ../sass/numv.scss */
 * body section#en-memoria h2 {
   font-size: 40px;
   font-size: 3.1vw;
@@ -650,13 +651,13 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 747, ../sass/numv.scss */
+/* line 748, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card {
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 753, ../sass/numv.scss */
+/* line 754, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.name {
   text-align: center;
   font-family: "Figtree", sans-serif;
@@ -666,7 +667,7 @@
   line-height: 110%;
   /* 23.475px */
 }
-/* line 762, ../sass/numv.scss */
+/* line 763, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.position {
   font-family: "Figtree", sans-serif;
   font-size: 10.671px;
@@ -675,7 +676,7 @@
   line-height: 110%;
   /* 11.738px */
 }
-/* line 770, ../sass/numv.scss */
+/* line 771, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.text {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -683,13 +684,13 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 785, ../sass/numv.scss */
+/* line 786, ../sass/numv.scss */
 * body footer {
   background-image: url("../img/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 791, ../sass/numv.scss */
+/* line 792, ../sass/numv.scss */
 * body footer.dashboard p {
   color: var(--base-dark, #1D1D1B);
   font-family: "Alegreya Sans", serif;
@@ -699,11 +700,11 @@
   line-height: 150%;
   /* 24px */
 }
-/* line 802, ../sass/numv.scss */
+/* line 803, ../sass/numv.scss */
 * body footer form .form-group {
   position: relative;
 }
-/* line 805, ../sass/numv.scss */
+/* line 806, ../sass/numv.scss */
 * body footer form .form-group label.error {
   background-color: #000000;
   color: #ffffff;
@@ -714,42 +715,42 @@
   top: 0;
   right: 0;
 }
-/* line 818, ../sass/numv.scss */
+/* line 819, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary {
   background-color: #ffffff;
   border-color: #1D1D1B;
   color: #1D1D1B;
 }
-/* line 822, ../sass/numv.scss */
+/* line 823, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled).active, * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled):active {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 830, ../sass/numv.scss */
+/* line 831, ../sass/numv.scss */
 * body footer form .form-group .btn-group .show > .btn-primary.dropdown-toggle {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 840, ../sass/numv.scss */
+/* line 841, ../sass/numv.scss */
 * body footer #scroll-top {
   height: auto;
   width: auto;
   display: block;
 }
-/* line 844, ../sass/numv.scss */
+/* line 845, ../sass/numv.scss */
 * body footer #scroll-top:hover {
   background-image: url("../img/rounded-top-arrow-dark-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
-/* line 849, ../sass/numv.scss */
+/* line 850, ../sass/numv.scss */
 * body footer #scroll-top:hover img {
   opacity: 0;
 }
-/* line 856, ../sass/numv.scss */
+/* line 857, ../sass/numv.scss */
 * body footer h3 {
   font-family: "Alegreya Sans", serif;
   font-size: 16px;
@@ -758,7 +759,7 @@
   line-height: 150%;
   /* 24px */
 }
-/* line 865, ../sass/numv.scss */
+/* line 866, ../sass/numv.scss */
 * body footer p a {
   color: #352F28;
   font-family: "Figtree", sans-serif;
@@ -767,7 +768,7 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 876, ../sass/numv.scss */
+/* line 877, ../sass/numv.scss */
 * body footer a i.fab {
   font-size: 24px;
   font-size: 1.9vw;

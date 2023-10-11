@@ -75,10 +75,7 @@
                         <div class="col-12">
                             <p>
                                 <a href="javascript:void(0);">
-                                    info@niumamuertevial.com
-                                </a>
-                                <a href="javascript:void(0);">
-                                    55 5555 5555
+                                    info@niunamuertevial.mx
                                 </a>
                             </p>
                         </div>

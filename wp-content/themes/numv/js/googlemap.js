@@ -93,7 +93,7 @@ function initMap() {
 									    '<div class="col-12">'+
 									        '<p class="title"><img src="'+ googlemap_data.template+location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
 									        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
-									        '<p><span style="font-weight: 600;">Género:</span> '+ location['genero'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Sexo:</span> '+ location['genero'] +'</p>'+
 									        '<p><span style="font-weight: 600;">Edad:</span> '+ location['edad'] +'</p>'+
 									        '<p><span style="font-weight: 600;">Vehículo:</span> </p>'+
 									        '<hr>'+

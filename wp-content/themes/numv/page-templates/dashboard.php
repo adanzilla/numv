@@ -16,7 +16,7 @@ get_header('dashboard'); ?>
         <div class="row no-gutters">
             <div class="col-12 col-md-8">
                 <p class="mb-0">
-                    <a href="javascript:void(0);">
+                    <a href="<?php echo site_url( "/" ); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow-primary.svg" alt=""> Regresar
                     </a>
                 </p>
@@ -30,7 +30,7 @@ get_header('dashboard'); ?>
                         <a href="javascript:void(0);" class="btn btn-light d-inline-block mr-md-4">
                             Compartir
                         </a>
-                        <a href="javascript:void(0);" class="btn btn-primary d-inline-block">
+                        <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-primary d-inline-block" download="">
                             Descargar datos
                         </a>
                     </div>
@@ -251,7 +251,7 @@ get_header('dashboard'); ?>
                 <div class="row no-gutters">
                     <div class="col-12">
                         <div class="card p-3">
-                            <h3>Muertes por género</h3>
+                            <h3>Muertes por sexo</h3>
                             <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/graph/chart-pie.png" alt="" class="mt-3 w-100"> -->
                             <div class="row no-gutters">
                                 <div class="col-9 mx-auto">
