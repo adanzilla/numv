@@ -485,6 +485,8 @@ jQuery(document).ready(function($) {
                 success: function(json) {
                     if( json.result ){
 
+                    	console.log( json );
+
                     	if( json.grafica == 'por-municipio' ){
                     		const new_data = {
 	                        	labels: json.labels,
@@ -523,6 +525,94 @@ jQuery(document).ready(function($) {
 	                		const new_config = {
 	                			type: 'bar',
 	                			data: new_data,
+	                			options: {
+	                				responsive: true,
+	                				    //maintainAspectRatio: false,
+	                				plugins: {
+	                					legend : {
+	                						align: 'start',
+	                						labels : {
+	                							boxHeight: 50,
+	                							color: '#000000',
+	                							padding : 10,
+	                							usePointStyle: true,
+	                							font: {
+	                								size: 12
+	                							},
+	                							boxHeight: 100
+	                						}
+	                					}
+	                				},
+	                			    
+	                				responsive: true,
+	                				legend: {
+	                					position: 'right' 
+	                				},
+	                				scales: {
+	                					x: {
+	                				        stacked: true,
+	                				        ticks: {
+	                                            font: {
+	                                                size: 10
+	                                            }
+	                                        }
+	                                    },
+	                                    y: {
+	                				      	stacked: true,
+	                  					        ticks: {
+	                  	                            font: {
+	                  	                                size: 10
+	                  	                            }
+	                  	                        }
+	                  	                    }
+	                				    }
+	                			}
+	                		};
+
+	                		jQuery('#muertes-totales').html( json.totales );
+	                		jQuery('#peatones').html( json.Peatones );
+	                		jQuery('#ciclistas').html( json.Ciclistas );
+	                		jQuery('#motociclistas').html( json.Motociclistas );
+
+	                		dinamic_bars_chart.destroy();
+
+	                		dinamic_bars_chart = new Chart( 
+	                			 document.getElementById('bars-chart'),
+	                			 new_config 
+	                		);	
+	                    }
+
+	                    if( json.grafica == 'por-estado' ){
+                    		const new_data_estado = {
+	                        	labels: json.labels,
+	                          	datasets: [
+	                          		{
+	                        	  		label: [
+	                        	  			"Peatones"
+	                        	  		],
+	                        	  		data: json.datasetPeatones,
+	                        	  		backgroundColor: '#FFCC14'
+	                        	  	},
+	                        	  	{
+	                        	  		label: [
+	                        	  			"Motociclistas"
+	                        	  		],
+	                        	  		data: json.datasetMotociclistas,
+	                        	  		backgroundColor: '#64D3C3'
+	                        	  	},
+	                        	  	{
+	                        	  		label: [
+	                        	  			"Ciclistas"
+	                        	  		],
+	                        	  		data: json.datasetCiclistas,
+	                        	  		backgroundColor: '#A073C3'
+	                        	  	},
+	                        	]
+                        	};
+
+	                		const new_config = {
+	                			type: 'bar',
+	                			data: new_data_estado,
 	                			options: {
 	                				responsive: true,
 	                				    //maintainAspectRatio: false,

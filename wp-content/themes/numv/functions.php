@@ -258,7 +258,7 @@ function grafica_dinamica(){
 		$query .= " AND municipio = '". $data['filtro-municipio'] ."'";
 	}
 	if( $data['filtro-vialidad'] != ''){
-		$query .= " AND vialidad = '". $data['filtro-vialidad'] ."'";
+		$query .= " AND tipo = '". $data['filtro-vialidad'] ."'";
 	}
 	if( $data['filtro-edad'] != ''){
 		$query .= " AND edad = '". $data['filtro-edad'] ."'";
@@ -288,6 +288,68 @@ function grafica_dinamica(){
 		}
 
 		$response->labels = [ $data['filtro-municipio'] ];
+
+	}
+
+	if( ! empty( $data['filtro-estado'] ) && $data['filtro-municipio'] == '' ){
+
+		$response->grafica = 'por-estado';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados_por_estado = $wpdb->get_results( $query );
+
+
+		$query_labels = "SELECT DISTINCT municipio FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $data['filtro-estado'] ."'";
+
+		$labels = $wpdb->get_results( $query_labels, ARRAY_A );
+
+		if( $labels ){
+			$response->labels = [];
+			
+			$response->datasetPeatones = [];
+			$response->datasetMotociclistas = [];
+			$response->datasetCiclistas = [];
+
+			foreach ($labels as $label) {
+				array_push( $response->labels , $label['municipio'] );
+
+				$peatones_por_municipio = 0;
+				$motociclistas_por_municipio = 0;
+				$ciclistas_por_municipio = 0;
+
+				$query_por_municipio = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $data['filtro-estado'] ."' AND municipio = '" . $label['municipio']. "'";
+				$totales_por_municipio = $wpdb->get_results( $query_por_municipio, ARRAY_A );
+
+				foreach ($totales_por_municipio as $resultado_por_municipio) {
+					if( $resultado_por_municipio['submodo'] == "Peatón" ){ $peatones_por_municipio++; }
+					if( $resultado_por_municipio['submodo'] == "Ciclista" ){ $ciclistas_por_municipio++; }
+					if( $resultado_por_municipio['submodo'] == "Motociclista" ){ $motociclistas_por_municipio++; }
+				}
+
+				array_push($response->datasetPeatones, $peatones_por_municipio);
+				array_push($response->datasetMotociclistas, $motociclistas_por_municipio);
+				array_push($response->datasetCiclistas, $ciclistas_por_municipio);
+				
+
+			}
+		}
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados_por_estado );
+
+		foreach ($resultados_por_estado as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			
+		}
+
+		
+		$response->query_labels = $query_labels;
 
 	}
 
