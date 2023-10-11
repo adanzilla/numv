@@ -370,13 +370,17 @@ $figtree: 'Figtree', sans-serif;
 							&.cifras {
 								margin-bottom: 0;
 								font-size: 48px;
-								font-size: 4vw;
+								font-size: 3.9vw;
 								font-style: normal;
 								font-weight: 700;
 								font-family: $figtree;
 								line-height: normal;
 								letter-spacing: -1.056px;
-								
+								em {
+									font-weight: inherit;
+									font-style: normal;
+									font-family: $figtree;
+								}
 								span {
 									color: #DD4040;
 									text-align: center;

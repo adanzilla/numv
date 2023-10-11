@@ -17,7 +17,7 @@ function initMap() {
 
 		const map = new google.maps.Map(document.getElementById("map"), {
 			//zoom: 9,
-			zoom: 14,
+			zoom: 9,
 			center: center,
 			mapTypeControlOptions: {
 				mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "NUMV"],
@@ -25,69 +25,109 @@ function initMap() {
 		});
 
 		var numv = {
-			template : 'http://numv.local/maqueta/'
+			template : 'http://numv.local/maqueta/',
+			locations : [
+				{
+					'images': "2350",
+					'images_src': "",
+					'latitud': 19.4159322,
+					'leyenda': "Leyenda",
+					'longitud': -99.1581775,
+					'nombre': "Nombre",
+					'pin': "http://numv.local/maqueta/img/pin-amarillo.svg",
+					'icon': "http://numv.local/maqueta/img/icon-amarillo.svg",
+					'tipo': "Peatón",
+				},
+				{
+					"images": "2351",
+					"images_src": "",
+					"latitud": 19.4079963,
+					"leyenda": "Casa Cleo",
+					"longitud": -99.173461,
+					"nombre": "Casa Cleo",
+					"pin": "http://numv.local/maqueta/img/pin-morado.svg",
+					"icon": "http://numv.local/maqueta/img/icon-morado.svg",
+					"tipo": "Ciclista",
+				},
+				{
+					"images": "2352",
+					"images_src": "",
+					"latitud": 19.411151,
+					"leyenda": "The Amsterdam",
+					"longitud": -99.17399,
+					"nombre": "The Amsterdam",
+					"pin": "http://numv.local/maqueta/img/pin-verde.svg",
+					"icon": "http://numv.local/maqueta/img/icon-verde.svg",
+					"tipo": "Motociclista",
+				}
+			]
 		};
 
 
 
-		for (let i = 0; i < google_map_data.locations.length; i++) {
+		for (let i = 0; i < googlemap_data.locations.length; i++) {
+
+
+			const location = googlemap_data.locations[i];
 			
-			const location = google_map_data.locations[i];
-			var category = google_map_data.locations[i].submodo;
-			
-			var args = {
-				"position": { lat: location['latitud'], lng: location['longitud'] },
-				"icon": location['pin'],
-				map,
-				"category": category,
-				"title": location['nombre'],
+			if( location.latitud != 0 ){
+				var category = googlemap_data.locations[i].submodo;
 				
-				"optimized": false,
+				var args = {
+					"position": { lat: location['latitud'], lng: location['longitud'] },
+					"icon": googlemap_data.template + location['pin'],
+					map,
+					"category": category,
+					"title": "",
+					
+					"optimized": false,
+				}
+				
+
+
+				const marker = new google.maps.Marker( args );
+
+				gmarkers1.push(marker);
+
+				const contentString = '<div class="row no-gutters info-window">'+
+									    '<div class="col-12">'+
+									        '<p class="title"><img src="'+ googlemap_data.template+location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
+									        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
+									        '<p><span style="font-weight: 600;">Género:</span> '+ location['genero'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Edad:</span> '+ location['edad'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Vehículo:</span> </p>'+
+									        '<hr>'+
+									        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
+									        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
+									        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
+									        '<hr>'+
+									        '<p><span style="font-weight: 600;">Dónde</span></p>'+
+									        '<p><span style="font-weight: 600;">Ciudad:</span> '+ location['municipio'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Estado:</span> '+ location['estado'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Municipio:</span> '+ location['conurbacion'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Entorno:</span> '+ location['entorno'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Tipo de calle:</span> Autopista</p>'+
+									    '</div>'+
+									'</div>';
+
+
+				marker.addListener("click", () => {
+					
+					infowindow.setOptions({
+				        content: contentString,
+				        maxWidth:300
+				    });
+				    
+
+					infowindow.open({
+						anchor: marker,
+						map,
+						shouldFocus: true,
+					});
+
+				});
 			}
 			
-
-
-			const marker = new google.maps.Marker( args );
-
-			gmarkers1.push(marker);
-
-			const contentString = '<div class="row no-gutters info-window">'+
-								    '<div class="col-12">'+
-								        '<p class="title"><img src="'+ location['icon'] +'"> <span style="font-weight: 600;">'+ category +'</span></p>'+
-								        '<p><span style="font-weight: 600;">Usuario:</span> Conductor</p>'+
-								        '<p><span style="font-weight: 600;">Género:</span> H</p>'+
-								        '<p><span style="font-weight: 600;">Edad:</span> 39 </p>'+
-								        '<p><span style="font-weight: 600;">Vehículo:</span> 23-jun-23</p>'+
-								        '<hr>'+
-								        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
-								        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
-								        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
-								        '<hr>'+
-								        '<p><span style="font-weight: 600;">Dónde</span></p>'+
-								        '<p><span style="font-weight: 600;">Ciudad:</span> Culiacán</p>'+
-								        '<p><span style="font-weight: 600;">Estado:</span> Sinaloa</p>'+
-								        '<p><span style="font-weight: 600;">Municipio:</span> Culiacán</p>'+
-								        '<p><span style="font-weight: 600;">Entorno:</span> No urbano</p>'+
-								        '<p><span style="font-weight: 600;">Tipo de calle:</span> Autopista</p>'+
-								    '</div>'+
-								'</div>';
-
-
-			marker.addListener("click", () => {
-				
-				infowindow.setOptions({
-			        content: contentString,
-			        maxWidth:300
-			    });
-			    
-
-				infowindow.open({
-					anchor: marker,
-					map,
-					shouldFocus: true,
-				});
-
-			});
 
 
 			
@@ -117,9 +157,9 @@ jQuery('#map-filters').on('change', 'form', function(event) {
 
 	var filter = [];
 	
-	$.each( jQuery(this).serializeArray(), function(i, field) {
-		var input = $('input[name='+field.name+']');
-		field.value = $.trim(field.value);
+	jQuery.each( jQuery(this).serializeArray(), function(i, field) {
+		var input = jQuery('input[name='+field.name+']');
+		field.value = jQuery.trim(field.value);
 
 		filter.push( field.value );
 
@@ -132,7 +172,7 @@ jQuery('#map-filters').on('change', 'form', function(event) {
 	for (i = 0; i < gmarkers1.length; i++) {
         marker = gmarkers1[i];
 
-        if ( jQuery,$.inArray( marker.category, filter) >= 0 ) {
+        if ( jQuery.inArray( marker.category, filter) >= 0 ) {
             marker.setVisible(true);
         }
         else {
