@@ -232,6 +232,71 @@ function municipios(){
 	wp_die();
 }
 
+add_action( 'wp_ajax_nopriv_grafica_dinamica', "grafica_dinamica" );
+function grafica_dinamica(){
+	$response = new stdClass();
+	$response->result = false;
+
+	parse_str( $_POST['data'], $data);
+	$response->data = $data;
+
+	//filtro-fecha
+	//filtro-estado
+	//filtro-municipio
+	//filtro-vialidad
+	//filtro-edad
+	
+	$query = "SELECT * FROM `incidentes` WHERE latitud <> ''";
+
+	if( $data['filtro-fecha'] != ''){
+		$query .= " AND ano = '". $data['filtro-fecha'] ."'";
+	}
+	if( $data['filtro-estado'] != ''){
+		$query .= " AND conurbacion = '". $data['filtro-estado'] ."'";
+	}
+	if( $data['filtro-municipio'] != ''){
+		$query .= " AND municipio = '". $data['filtro-municipio'] ."'";
+	}
+	if( $data['filtro-vialidad'] != ''){
+		$query .= " AND vialidad = '". $data['filtro-vialidad'] ."'";
+	}
+	if( $data['filtro-edad'] != ''){
+		$query .= " AND edad = '". $data['filtro-edad'] ."'";
+	}
+
+	$response->query = $query;
+
+	if( ! empty( $data['filtro-municipio'] ) ){
+
+		$response->grafica = 'por-municipio';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados = $wpdb->get_results( $query );
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados );
+
+		foreach ($resultados as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			
+		}
+
+		$response->labels = [ $data['filtro-municipio'] ];
+
+	}
+
+
+	
+	echo json_encode( $response );
+	wp_die();
+}
+
 /**
  * Implement the Custom Header feature.
  */

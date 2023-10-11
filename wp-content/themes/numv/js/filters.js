@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 	
+	
 
 	jQuery('form#filters').on('change', '#filtro-fecha', function(event) {
 		event.preventDefault();

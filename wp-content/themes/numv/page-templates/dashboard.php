@@ -169,7 +169,7 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
+                            <p class="cifras" id="muertes-totales">
                                 2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
@@ -188,7 +188,7 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
+                            <p class="cifras" id="ciclistas">
                                 2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
@@ -207,7 +207,7 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
+                            <p class="cifras" id="peatones">
                                 2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
@@ -226,7 +226,7 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
+                            <p class="cifras" id="motociclistas">
                                 2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
