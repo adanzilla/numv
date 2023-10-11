@@ -45,35 +45,83 @@ get_header(); ?>
         <div class="row no-gutters">
             <div class="col-12">
                 <div class="card px-4 py-3">
-                    <form action="" id="filters" class="form-inline">
+                    <form id="filters" class="form-inline">
                         <div class="form-group">
-                            <select name="" id="" class="form-control mr-3">
+                            <select name="filtro-fecha" id="filtro-fecha" class="form-control mr-3">
                                 <option value="">Fecha</option>
+                                <option value="2023">2023</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control mr-3">
+                            <select name="filtro-estado" id="filtro-estado" class="form-control mr-3">
                                 <option value="">Estado</option>
+                                <option value="Acapulco">Acapulco</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">Baja California</option>
+                                <option value="Baja California Sur">Baja California Sur</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="CdMx">CdMx</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Coahuila">Coahuila</option>
+                                <option value="Colima">Colima</option>
+                                <option value="Durango">Durango</option>
+                                <option value="Edomex">Edomex</option>
+                                <option value="Guanajuato">Guanajuato</option>
+                                <option value="Guerrero">Guerrero</option>
+                                <option value="Hidalgo">Hidalgo</option>
+                                <option value="Jalisco">Jalisco</option>
+                                <option value="Michoacán">Michoacán</option>
+                                <option value="Morelos">Morelos</option>
+                                <option value="Nayarit">Nayarit</option>
+                                <option value="Nuevo León">Nuevo León</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Puebla">Puebla</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Quintana Roo">Quintana Roo</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control mr-3">
+                            <select name="filtro-municipio" id="filtro-municipio" class="form-control mr-3">
                                 <option value="">Municipio</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control mr-3">
+                            <select name="filtro-vialidad" id="filtro-vialidad" class="form-control mr-3">
                                 <option value="">Vialidades</option>
+                                <option value="Autopista">Autopista</option>
+                                <option value="Avenica con BRT">Avenica con BRT</option>
+                                <option value="Avenida">Avenida</option>
+                                <option value="Avenida con BRT">Avenida con BRT</option>
+                                <option value="Avenida continua">Avenida continua</option>
+                                <option value="Calle">Calle</option>
+                                <option value="Calle Colectora">Calle Colectora</option>
+                                <option value="Calle local">Calle local</option>
+                                <option value="Callle local">Callle local</option>
+                                <option value="Camino rural">Camino rural</option>
+                                <option value="Camino vecinal">Camino vecinal</option>
+                                <option value="Carretera">Carretera</option>
+                                <option value="Carretera local">Carretera local</option>
+                                <option value="Colectora">Colectora</option>
+                                <option value="Fuera de calle">Fuera de calle</option>
+                                <option value="Fuera de la calle">Fuera de la calle</option>
+                                <option value="Gasolinera">Gasolinera</option>
+                                <option value="Lateral">Lateral</option>
+                                <option value="Patio de maniobras">Patio de maniobras</option>
+                                <option value="Playa">Playa</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <select name="" id="" class="form-control mr-3">
                                 <option value="">Siniestros</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="form-group">
-                            <select name="" id="" class="form-control mr-3">
+                            <select name="filtro-edad" id="filtro-edad" class="form-control mr-3">
                                 <option value="">Edad</option>
+                                <?php for ($i=0; $i < 100; $i++) : ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?> años</option>
+                                <?php endfor; ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -94,9 +142,9 @@ get_header(); ?>
             <div class="col-12">
                 <p>
                     <span class="d-inline-block mr-3">Filtrado por:</span>
-                    <a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>
-                    <a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>
-                    <a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>
+                    <!--<a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>-->
+                    <!--<a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>-->
+                    <!--<a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>-->
                 </p>
             </div>
         </div>
@@ -121,8 +169,8 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
-                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <p class="cifras" id="muertes-totales">
+                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
                     </div>
@@ -140,8 +188,8 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
-                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <p class="cifras" id="ciclistas">
+                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
                     </div>
@@ -159,8 +207,8 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
-                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <p class="cifras" id="peatones">
+                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
                     </div>
@@ -178,8 +226,8 @@ get_header(); ?>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p class="cifras">
-                                2160 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                            <p class="cifras" id="motociclistas">
+                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                             </p>
                         </div>
                     </div>

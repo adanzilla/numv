@@ -1,6 +1,4 @@
 jQuery(document).ready(function($) {
-
-
 	
 
 	if( jQuery('#pie-chart-iii').length ){

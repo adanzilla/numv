@@ -160,11 +160,14 @@ function numv_scripts() {
 
 	wp_enqueue_script( "bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", ["jquery"], _S_VERSION, true );
 	wp_enqueue_script( "swiper", "https://unpkg.com/swiper@8/swiper-bundle.min.js", ["jquery"], _S_VERSION, true );
+	wp_enqueue_script( 'numeral', '//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js', ["jquery"], '20200606', true );
 	
 	wp_enqueue_script( "plugins", get_template_directory_uri() . "/js/plugins.js", ["jquery"], _S_VERSION, true );
 	wp_enqueue_script( "googlemap", get_template_directory_uri() . "/js/googlemap.js", ["jquery"], _S_VERSION, true );
 	wp_localize_script( "googlemap", 'googlemap_data', [ "locations" => $locations, 'template' =>  get_template_directory_uri() ] );
 	wp_enqueue_script( "google_maps_script", "//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries", [], _S_VERSION, true );
+	wp_enqueue_script( "filters", get_template_directory_uri() . "/js/filters.js", ["jquery"], _S_VERSION, true );
+
 	wp_enqueue_script( "main", get_template_directory_uri() . "/js/main.js", ["jquery"], _S_VERSION, true );
 	wp_localize_script('main', 'numv_ajax', [ 'ajax_url' => admin_url( 'admin-ajax.php'), 'site_url' => site_url( "/" ) ,'template' =>  get_template_directory_uri() ] );
 }
@@ -207,6 +210,303 @@ function locations(){
 	}
 
 	return $locations;
+}
+
+add_action( 'wp_ajax_nopriv_municipios', "municipios" );
+function municipios(){
+	$response = new stdClass();
+	$response->result = false;
+
+	
+	$response->estado = $_POST['estado'];
+
+	if( !empty( $_POST['estado'] ) ){
+
+		global $wpdb;
+		$response->municipios = $wpdb->get_results("SELECT DISTINCT municipio FROM `incidentes` WHERE conurbacion = '". $_POST['estado'] ."'");
+
+	}
+
+
+	
+	echo json_encode( $response );
+	wp_die();
+}
+
+add_action( 'wp_ajax_nopriv_grafica_dinamica', "grafica_dinamica" );
+function grafica_dinamica(){
+	$response = new stdClass();
+	$response->result = false;
+
+	parse_str( $_POST['data'], $data);
+	$response->data = $data;
+
+	//filtro-fecha
+	//filtro-estado
+	//filtro-municipio
+	//filtro-vialidad
+	//filtro-edad
+	
+	$query = "SELECT * FROM `incidentes` WHERE latitud <> ''";
+
+	if( $data['filtro-fecha'] != ''){
+		$query .= " AND ano = '". $data['filtro-fecha'] ."'";
+	}
+	if( $data['filtro-estado'] != ''){
+		$query .= " AND conurbacion = '". $data['filtro-estado'] ."'";
+	}
+	if( $data['filtro-municipio'] != ''){
+		$query .= " AND municipio = '". $data['filtro-municipio'] ."'";
+	}
+	if( $data['filtro-vialidad'] != ''){
+		$query .= " AND tipo = '". $data['filtro-vialidad'] ."'";
+	}
+	if( $data['filtro-edad'] != ''){
+		$query .= " AND edad = '". $data['filtro-edad'] ."'";
+	}
+
+	$response->query = $query;
+
+	if( ! empty( $data['filtro-municipio'] ) ){
+
+		$response->grafica = 'por-municipio';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados = $wpdb->get_results( $query );
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados );
+
+		$response->h = 0;
+		$response->m = 0;
+
+		foreach ($resultados as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
+			
+		}
+
+		$response->labels = [ $data['filtro-municipio'] ];
+
+	}
+
+	if( ! empty( $data['filtro-estado'] ) && $data['filtro-municipio'] == '' ){
+
+		$response->grafica = 'por-estado';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados_por_estado = $wpdb->get_results( $query );
+
+
+		$query_labels = "SELECT DISTINCT municipio FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $data['filtro-estado'] ."'";
+
+		$labels = $wpdb->get_results( $query_labels, ARRAY_A );
+
+		if( $labels ){
+			$response->labels = [];
+			
+			$response->datasetPeatones = [];
+			$response->datasetMotociclistas = [];
+			$response->datasetCiclistas = [];
+
+			foreach ($labels as $label) {
+				array_push( $response->labels , $label['municipio'] );
+
+				$peatones_por_municipio = 0;
+				$motociclistas_por_municipio = 0;
+				$ciclistas_por_municipio = 0;
+
+				$query_por_municipio = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $data['filtro-estado'] ."' AND municipio = '" . $label['municipio']. "'";
+				$totales_por_municipio = $wpdb->get_results( $query_por_municipio, ARRAY_A );
+
+				
+				$response->h = 0;
+				$response->m = 0;
+
+				foreach ($totales_por_municipio as $resultado_por_municipio) {
+					if( $resultado_por_municipio['submodo'] == "Peatón" ){ $peatones_por_municipio++; }
+					if( $resultado_por_municipio['submodo'] == "Ciclista" ){ $ciclistas_por_municipio++; }
+					if( $resultado_por_municipio['submodo'] == "Motociclista" ){ $motociclistas_por_municipio++; }
+					
+				}
+
+				array_push($response->datasetPeatones, $peatones_por_municipio);
+				array_push($response->datasetMotociclistas, $motociclistas_por_municipio);
+				array_push($response->datasetCiclistas, $ciclistas_por_municipio);
+				
+
+			}
+		}
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados_por_estado );
+
+		foreach ($resultados_por_estado as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
+			
+		}
+
+		
+		$response->query_labels = $query_labels;
+
+	}
+
+	if( ! empty( $data['filtro-fecha'] ) && $data['filtro-municipio'] == '' && $data['filtro-estado'] == '' ){
+
+		$response->grafica = 'por-ano';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados_por_estado = $wpdb->get_results( $query );
+
+
+		$query_labels = "SELECT DISTINCT conurbacion FROM `incidentes` WHERE latitud <> '' AND ano = '". $data['filtro-fecha'] ."'";
+
+		$labels = $wpdb->get_results( $query_labels, ARRAY_A );
+
+		if( $labels ){
+			$response->labels = [];
+			
+			$response->datasetPeatones = [];
+			$response->datasetMotociclistas = [];
+			$response->datasetCiclistas = [];
+
+			foreach ($labels as $label) {
+				array_push( $response->labels , $label['conurbacion'] );
+
+				$peatones_por_estado = 0;
+				$motociclistas_por_estado = 0;
+				$ciclistas_por_estado = 0;
+
+				$query_por_estado = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $label['conurbacion'] ."'";
+				$totales_por_estado = $wpdb->get_results( $query_por_estado, ARRAY_A );
+
+				$response->h = 0;
+				$response->m = 0;
+				
+
+				foreach ($totales_por_estado as $resultado_por_estado) {
+					if( $resultado_por_estado['submodo'] == "Peatón" ){ $peatones_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Ciclista" ){ $ciclistas_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Motociclista" ){ $motociclistas_por_estado++; }
+
+				}
+
+				array_push($response->datasetPeatones, $peatones_por_estado);
+				array_push($response->datasetMotociclistas, $motociclistas_por_estado);
+				array_push($response->datasetCiclistas, $ciclistas_por_estado);
+				
+
+			}
+		}
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados_por_estado );
+
+		foreach ($resultados_por_estado as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
+			
+		}
+
+		
+		$response->query_labels = $query_labels;
+
+	}
+
+	if( $data['filtro-fecha'] == '' && $data['filtro-municipio'] == '' && $data['filtro-estado'] == '' ){
+
+		$response->grafica = 'todos';
+		$response->result = true;
+
+		global $wpdb;
+		$resultados_por_estado = $wpdb->get_results( $query );
+
+
+		$query_labels = "SELECT DISTINCT conurbacion FROM `incidentes` WHERE latitud <> ''";
+
+		$labels = $wpdb->get_results( $query_labels, ARRAY_A );
+
+		if( $labels ){
+			$response->labels = [];
+			
+			$response->datasetPeatones = [];
+			$response->datasetMotociclistas = [];
+			$response->datasetCiclistas = [];
+
+			foreach ($labels as $label) {
+				array_push( $response->labels , $label['conurbacion'] );
+
+				$peatones_por_estado = 0;
+				$motociclistas_por_estado = 0;
+				$ciclistas_por_estado = 0;
+
+				$query_por_estado = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $label['conurbacion'] ."'";
+				$totales_por_estado = $wpdb->get_results( $query_por_estado, ARRAY_A );
+
+				foreach ($totales_por_estado as $resultado_por_estado) {
+					if( $resultado_por_estado['submodo'] == "Peatón" ){ $peatones_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Ciclista" ){ $ciclistas_por_estado++; }
+					if( $resultado_por_estado['submodo'] == "Motociclista" ){ $motociclistas_por_estado++; }
+				}
+
+				array_push($response->datasetPeatones, $peatones_por_estado);
+				array_push($response->datasetMotociclistas, $motociclistas_por_estado);
+				array_push($response->datasetCiclistas, $ciclistas_por_estado);
+				
+
+			}
+		}
+
+		$response->Peatones = 0;
+		$response->Motociclistas = 0;
+		$response->Ciclistas = 0;
+		$response->totales = count( $resultados_por_estado );
+		$response->h = 0;
+		$response->m = 0;
+		
+
+		foreach ($resultados_por_estado as $resultado) {
+
+			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
+			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
+			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
+			
+		}
+
+		
+		$response->query_labels = $query_labels;
+
+	}
+
+
+	
+	echo json_encode( $response );
+	wp_die();
 }
 
 /**

@@ -3,7 +3,6 @@ var gmarkers1 = [];
 
 function initMap() {
 
-	console.log( googlemap_data );
 
 	if( jQuery('#map').length ){
 
@@ -18,7 +17,7 @@ function initMap() {
 
 		const map = new google.maps.Map(document.getElementById("map"), {
 			//zoom: 9,
-			zoom: 10,
+			zoom: 9,
 			center: center,
 			mapTypeControlOptions: {
 				mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "NUMV"],
@@ -168,7 +167,6 @@ jQuery('#map-filters').on('change', 'form', function(event) {
 
 	});
 
-	console.log( filter );
 	
 
 	for (i = 0; i < gmarkers1.length; i++) {

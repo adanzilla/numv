@@ -3,7 +3,6 @@ var gmarkers1 = [];
 
 function initMap() {
 
-	console.log( google_map_data );
 
 	if( jQuery('#map').length ){
 
@@ -128,7 +127,6 @@ jQuery('#map-filters').on('change', 'form', function(event) {
 
 	});
 
-	console.log( filter );
 	
 
 	for (i = 0; i < gmarkers1.length; i++) {
