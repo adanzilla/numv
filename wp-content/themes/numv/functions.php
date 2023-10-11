@@ -279,11 +279,17 @@ function grafica_dinamica(){
 		$response->Ciclistas = 0;
 		$response->totales = count( $resultados );
 
+		$response->h = 0;
+		$response->m = 0;
+
 		foreach ($resultados as $resultado) {
 
 			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
 			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
 			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
 			
 		}
 
@@ -321,10 +327,15 @@ function grafica_dinamica(){
 				$query_por_municipio = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $data['filtro-estado'] ."' AND municipio = '" . $label['municipio']. "'";
 				$totales_por_municipio = $wpdb->get_results( $query_por_municipio, ARRAY_A );
 
+				
+				$response->h = 0;
+				$response->m = 0;
+
 				foreach ($totales_por_municipio as $resultado_por_municipio) {
 					if( $resultado_por_municipio['submodo'] == "Peatón" ){ $peatones_por_municipio++; }
 					if( $resultado_por_municipio['submodo'] == "Ciclista" ){ $ciclistas_por_municipio++; }
 					if( $resultado_por_municipio['submodo'] == "Motociclista" ){ $motociclistas_por_municipio++; }
+					
 				}
 
 				array_push($response->datasetPeatones, $peatones_por_municipio);
@@ -345,6 +356,8 @@ function grafica_dinamica(){
 			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
 			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
 			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
 			
 		}
 
@@ -383,10 +396,15 @@ function grafica_dinamica(){
 				$query_por_estado = "SELECT * FROM `incidentes` WHERE latitud <> '' AND conurbacion = '". $label['conurbacion'] ."'";
 				$totales_por_estado = $wpdb->get_results( $query_por_estado, ARRAY_A );
 
+				$response->h = 0;
+				$response->m = 0;
+				
+
 				foreach ($totales_por_estado as $resultado_por_estado) {
 					if( $resultado_por_estado['submodo'] == "Peatón" ){ $peatones_por_estado++; }
 					if( $resultado_por_estado['submodo'] == "Ciclista" ){ $ciclistas_por_estado++; }
 					if( $resultado_por_estado['submodo'] == "Motociclista" ){ $motociclistas_por_estado++; }
+
 				}
 
 				array_push($response->datasetPeatones, $peatones_por_estado);
@@ -407,6 +425,8 @@ function grafica_dinamica(){
 			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
 			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
 			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
 			
 		}
 
@@ -463,12 +483,17 @@ function grafica_dinamica(){
 		$response->Motociclistas = 0;
 		$response->Ciclistas = 0;
 		$response->totales = count( $resultados_por_estado );
+		$response->h = 0;
+		$response->m = 0;
+		
 
 		foreach ($resultados_por_estado as $resultado) {
 
 			if( $resultado->submodo == "Peatón" ){ $response->Peatones++; } 
 			if( $resultado->submodo == "Motociclista" ){ $response->Motociclistas++; } 
 			if( $resultado->submodo == "Ciclista" ){ $response->Ciclistas++; } 
+			if( $resultado->genero == "H" ){ $response->h++; } 
+			if( $resultado->genero == "M" ){ $response->m++; } 
 			
 		}
 

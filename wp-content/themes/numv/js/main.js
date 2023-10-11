@@ -2,6 +2,8 @@ jQuery(document).ready(function($) {
 
 
 	var dinamic_bars_chart;
+
+	var pie_por_genero;
 	
 
 	if( jQuery('#pie-chart-iii').length ){
@@ -45,7 +47,7 @@ jQuery(document).ready(function($) {
 		    }
 		};
 
-		 const myChart = new Chart( 
+		const myChart = new Chart( 
 			 document.getElementById('pie-chart-iii'),
 			 config 
 		);	
@@ -90,7 +92,7 @@ jQuery(document).ready(function($) {
 		    }
 		};
 
-		 const myChart = new Chart( 
+		 pie_por_genero = new Chart( 
 			 document.getElementById('pie-chart-ii'),
 			 config 
 		);	
@@ -764,6 +766,51 @@ jQuery(document).ready(function($) {
 	                			 new_config 
 	                		);	
 	                    }
+
+	                    const data_por_genero = {
+	                      labels: [
+	                        "Hombre",
+	                        "Mujer"
+	                      ],
+	                      datasets: [{
+	                        label: '',
+	                        data: [json.h,json.m],
+	                        backgroundColor: [
+	                          '#8596E7',
+	                          '#EEA43B'
+	                        ],
+	                        hoverOffset: 4
+	                      }]
+	                    };
+
+	                    const config_por_genero = {
+	                    	type: 'pie',
+	                    	data: data_por_genero,
+	                    	options: {
+	                    		responsive: true,
+	                            plugins: {
+	                                legend : {
+	                                	align: 'start',
+	                                	labels : {
+	                                		color: '#000000',
+	                                		padding : 10,
+	                                		usePointStyle: true,
+	                                		font: {
+	                                			size: 12
+	                                		},
+	                                		boxHeight: 100
+	                                	}
+	                                }
+	                            }
+	                        }
+	                    };
+
+	                    pie_por_genero.destroy();
+
+	                    pie_por_genero = new Chart( 
+	                    	 document.getElementById('pie-chart-ii'),
+	                    	 config_por_genero 
+	                    );
                         
                         
                     }
