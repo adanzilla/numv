@@ -196,7 +196,7 @@ get_header(); ?>
 <section class="my-5 pb-5" id="banner">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-11 col-md-11 col-lg-10 mx-auto">
+            <div class="col-12 col-md-11 col-lg-10 mx-auto">
                 <div class="card px-4 px-md-5 py-4 py-md-2 w-100">
                     <div class="row no-gutters">
                         <div class="col-md-4 text-center d-flex flex-column">
