@@ -1,6 +1,9 @@
-$primary : #73bebf;
+$primary : #28A1B7;
+$dark: #1D1D1B;
+$grey: #606060;
 $light: #ffffff;
-$font-medium: 'Helvetica';
+$alegreya: 'Alegreya Sans', serif;
+$figtree: 'Figtree', sans-serif;
 @media (max-width: 1024px) {
 
 }
@@ -17,6 +20,14 @@ $font-medium: 'Helvetica';
 			}
 
 			.btn-primary {
+				
+				font-size: 16px;
+
+				img {
+				}
+			}
+
+			.btn-light {
 				
 				font-size: 16px;
 
@@ -374,9 +385,87 @@ $font-medium: 'Helvetica';
 
 				}
 
+				&.dashboard {
+					&.header {
+						h1 {
+							
+							font-size: 26px;
+							
+						}
+					}
+
+					form {
+						&.form-inline {
+							display: block!important;
+						}
+					}
+
+					&.badges {
+						p {
+						}
+						a {
+							
+							padding: 2px 12px;
+							align-items: center;
+							border-radius: 11px;
+							background: #E8E8E8;
+							color: $dark;
+							font-family: $figtree;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 18px; /* 138.462% */
+							
+							&.badge-pill {
+								img {
+									margin-left: 8px;
+								}
+							}
+
+							&:hover {
+								background-color: $light;
+								color: #ededed;
+
+							}
+						}
+					}
+
+					&.graficas {
+						height: auto;
+						h3 {
+							font-size: 20px;
+							
+							
+							
+							
+						}
+						canvas {
+							&#bars-chart {
+
+							}
+						}
+					}
+				}
+
 			}
 
+			footer {
 
+				a {
+					i {
+						&.fab{
+							font-size: 18px;
+						}
+					}
+				}
+
+				&.dashboard {
+					p {
+						font-size: 14px;
+						
+					}
+				}
+			}
 		}
 	}
 }

@@ -14,7 +14,7 @@ get_header('dashboard'); ?>
 <section class="dashboard header">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 mt-5 mt-md-0">
                 <p class="mb-0">
                     <a href="<?php echo site_url( "/" ); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow-primary.svg" alt=""> Regresar
@@ -24,10 +24,10 @@ get_header('dashboard'); ?>
                     Tablero de información
                 </h1>
             </div>
-            <div class="col-12 col-md-4 text-right d-flex">
+            <div class="col-12 col-md-4 text-right d-flex mt-5 mt-md-0">
                 <div class="row no-gutters mt-auto ml-auto">
                     <div class="col-12">
-                        <a href="javascript:void(0);" class="btn btn-light d-inline-block mr-md-4">
+                        <a href="javascript:void(0);" class="btn btn-light d-inline-block mr-3 mr-md-4">
                             Compartir
                         </a>
                         <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-primary d-inline-block" download="">
@@ -237,7 +237,7 @@ get_header('dashboard'); ?>
     </div>
 </section>
 
- <section class="my-5 dashboard graficas" style="max-height: 80vh;">
+ <section class="my-5 dashboard graficas" style="">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12 col-md-9 pr-md-2">

@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3"></div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mt-5 mt-md-0">
                     <div class="row no-gutters">
                         <div class="col-12">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">
