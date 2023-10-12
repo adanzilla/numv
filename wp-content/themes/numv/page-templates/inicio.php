@@ -187,12 +187,12 @@ get_header(); ?>
     <div class="container">
         <div class="row no-gutters">
             <div class="col-11 col-md-11 col-lg-10 mx-auto">
-                <div class="card px-5 py-2 w-100">
+                <div class="card px-4 px-md-5 py-4 py-md-2 w-100">
                     <div class="row no-gutters">
-                        <div class="col-4 text-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/banner-hero.svg" alt="" class="img-fluid my-auto">
+                        <div class="col-md-4 text-center d-flex flex-column">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/banner-hero.svg" alt="" class="my-auto img-fluid my-auto">
                         </div>
-                        <div class="col-8 d-flex flex-column">
+                        <div class="col-md-8 d-flex flex-column">
                             <p class="my-auto">
                                 ¿Estás buscando cifras específicas?  <br>
                                 <b>Realiza una consulta personalizada</b><br>
@@ -286,7 +286,7 @@ get_header(); ?>
             </div>
 
             <div class="row no-gutters my-5">
-                <div class="col-12 col-md-6">
+                <div class="col-11 col-md-6 mx-auto">
                     
                     <div class="row no-gutters">
                         <div class="col-12">
@@ -327,7 +327,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 pl-md-5">
+                <div class="col-11 col-md-6 pl-md-5 mx-auto mt-5 mt-md-0">
                     
                     <div class="row no-gutters">
                         <div class="col-12">
@@ -401,7 +401,7 @@ get_header(); ?>
     </div>
 </section>
 
- <section class="my-5 p" id="quienes-somos">
+ <section class="my-0 my-md-5 p" id="quienes-somos">
     <div class="row no-gutters">
         <div class="col-12 col-sm-10 col-lg-9 mx-auto">
     
@@ -516,9 +516,9 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5 pb-5" id="nuestra-historia">
+<section class="my-5 pb-md-5" id="nuestra-historia">
     <div class="row no-gutters">
-        <div class="col-12 col-sm-10 col-lg-11 mx-auto">
+        <div class="col-11 col-sm-10 col-lg-11 mx-auto">
     
             <div class="row no-gutters">
                 <div class="col-12 col-md-7 left-column pr-md-5">
@@ -548,7 +548,7 @@ get_header(); ?>
                                         <span>Años de datos</span>
                                     </p>
                                 </div>
-                                <div class="col-8 d-flex flex-column">
+                                <div class="col-8 d-flex flex-column pl-2 pl-md-0">
                                     <p class="my-auto">
                                         Luchando y esperando a que nunca más muera nadie en las calles y para que algún día ese dato sea CERO. 
                                     </p>

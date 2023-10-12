@@ -172,6 +172,208 @@ $font-medium: 'Helvetica';
 					}
 				}
 
+				&#banner {
+					.card {
+
+						p {
+							font-size: 20px;
+							
+							line-height: 1.2;
+							b {
+								font-size: 22px;
+								
+								
+								line-height: 1.2;
+							}
+						}
+
+					}
+				}
+
+				&#mapa {
+
+					h2 {
+						font-size: 22px;
+						
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+
+				&#reportes {
+					h2 {
+						font-size: 22px;
+					}
+					h4 {
+						font-size: 20px;
+					}
+
+					.row {
+						&.ver-todos {
+
+							p {
+								a {
+								}
+							}
+						}
+						.ver-todo {
+							&:hover {
+								img {
+
+								}
+							}
+						}
+						&.bordered {
+
+							a {
+								&.my-auto {
+									&:hover {
+										img {
+
+										}
+									}
+								}
+							}
+
+							p {
+								&.title {
+									a {
+										font-size: 16px;
+										span {
+											font-size: 14px;
+										}
+
+									}
+								}
+
+								
+
+							}
+
+						}
+					}
+
+					.card {
+						img {
+
+						}
+
+						p {
+
+							&.tag {
+								font-size: 14px;
+							}
+
+							
+							&.title {
+								font-size: 16px;
+							}
+
+							
+							&.extract {
+								font-size: 16px;
+							}
+
+						}
+
+					}
+
+				}
+
+				&#quienes-somos {
+					h2 {
+						font-size: 22px;
+					}
+				
+
+					p {
+						&.text-center {
+							font-size: 16px;
+							&:last-child {
+								font-weight: 500;
+							}
+						}
+					}
+
+
+					.swiper-button-disabled {
+					}
+
+					.card {
+						p {
+
+
+
+							&.name {
+								font-size: 21.341px;
+							}
+							&.position {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+
+				&#nuestra-historia {
+					h2 {
+						font-size: 22px;
+					}
+
+					.left-column {
+						p {
+							font-size: 16px;
+							
+						}
+					}
+					
+					.right-column {
+						.caption-box {
+							.caption-body {
+								p {
+									font-size: 16px;
+									&.years {
+										font-size: 24px;
+										span {
+											font-size: 14px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				&#en-memoria {
+
+					h2 {
+						font-size: 22px;
+					}
+
+					.swiper-slide {
+						.card {
+							p {
+								
+								&.name {
+									font-size: 12px;
+								}
+								
+								&.position {
+									font-size: 12px;
+								}
+								
+								&.text {
+									font-size: 12px;
+									line-height: 1.5;
+								}
+							}
+						}
+					}
+
+				}
+
 			}
 
 

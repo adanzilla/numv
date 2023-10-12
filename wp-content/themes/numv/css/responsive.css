@@ -107,4 +107,107 @@
   * body section#graficas h3 {
     font-size: 14px;
   }
+  /* line 178, ../sass/responsive.scss */
+  * body section#banner .card p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  /* line 182, ../sass/responsive.scss */
+  * body section#banner .card p b {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  /* line 195, ../sass/responsive.scss */
+  * body section#mapa h2 {
+    font-size: 22px;
+  }
+  /* line 200, ../sass/responsive.scss */
+  * body section#mapa p {
+    font-size: 18px;
+  }
+  /* line 206, ../sass/responsive.scss */
+  * body section#reportes h2 {
+    font-size: 22px;
+  }
+  /* line 209, ../sass/responsive.scss */
+  * body section#reportes h4 {
+    font-size: 20px;
+  }
+  /* line 242, ../sass/responsive.scss */
+  * body section#reportes .row.bordered p.title a {
+    font-size: 16px;
+  }
+  /* line 244, ../sass/responsive.scss */
+  * body section#reportes .row.bordered p.title a span {
+    font-size: 14px;
+  }
+  /* line 265, ../sass/responsive.scss */
+  * body section#reportes .card p.tag {
+    font-size: 14px;
+  }
+  /* line 270, ../sass/responsive.scss */
+  * body section#reportes .card p.title {
+    font-size: 16px;
+  }
+  /* line 275, ../sass/responsive.scss */
+  * body section#reportes .card p.extract {
+    font-size: 16px;
+  }
+  /* line 286, ../sass/responsive.scss */
+  * body section#quienes-somos h2 {
+    font-size: 22px;
+  }
+  /* line 292, ../sass/responsive.scss */
+  * body section#quienes-somos p.text-center {
+    font-size: 16px;
+  }
+  /* line 294, ../sass/responsive.scss */
+  * body section#quienes-somos p.text-center:last-child {
+    font-weight: 500;
+  }
+  /* line 309, ../sass/responsive.scss */
+  * body section#quienes-somos .card p.name {
+    font-size: 21.341px;
+  }
+  /* line 312, ../sass/responsive.scss */
+  * body section#quienes-somos .card p.position {
+    font-size: 18px;
+  }
+  /* line 320, ../sass/responsive.scss */
+  * body section#nuestra-historia h2 {
+    font-size: 22px;
+  }
+  /* line 325, ../sass/responsive.scss */
+  * body section#nuestra-historia .left-column p {
+    font-size: 16px;
+  }
+  /* line 334, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p {
+    font-size: 16px;
+  }
+  /* line 336, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p.years {
+    font-size: 24px;
+  }
+  /* line 338, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p.years span {
+    font-size: 14px;
+  }
+  /* line 351, ../sass/responsive.scss */
+  * body section#en-memoria h2 {
+    font-size: 22px;
+  }
+  /* line 359, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.name {
+    font-size: 12px;
+  }
+  /* line 363, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.position {
+    font-size: 12px;
+  }
+  /* line 367, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
