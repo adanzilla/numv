@@ -168,6 +168,8 @@ $figtree: 'Figtree', sans-serif;
 
 					.cards {
 						.card {
+
+
 							img {
 							}
 							p {
@@ -462,6 +464,16 @@ $figtree: 'Figtree', sans-serif;
 			}
 
 			footer {
+
+				.container {
+					padding-right: 20px;
+					padding-left: 20px;
+					
+					border: 1px dotted orange;
+					> .row {
+						border: 1px dotted green;
+					}
+				}
 
 				a {
 					i {
