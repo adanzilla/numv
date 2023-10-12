@@ -75,154 +75,168 @@
     font-size: 20px;
     color: light;
   }
+  /* line 125, ../sass/responsive.scss */
+  * body section {
+    border: 1px dotted red;
+  }
   /* line 129, ../sass/responsive.scss */
+  * body section .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px dotted orange;
+  }
+  /* line 134, ../sass/responsive.scss */
+  * body section .container > .row {
+    border: 1px dotted green;
+  }
+  /* line 141, ../sass/responsive.scss */
   * body section#inicio h1 {
     font-size: 24px;
   }
-  /* line 140, ../sass/responsive.scss */
+  /* line 152, ../sass/responsive.scss */
   * body section#inicio .card p.title {
     font-size: 18px;
   }
-  /* line 144, ../sass/responsive.scss */
+  /* line 156, ../sass/responsive.scss */
   * body section#inicio .card p.subtitle {
     font-size: 12px;
   }
-  /* line 153, ../sass/responsive.scss */
+  /* line 165, ../sass/responsive.scss */
   * body section#cifras h2 {
     font-size: 22px;
   }
-  /* line 161, ../sass/responsive.scss */
+  /* line 173, ../sass/responsive.scss */
   * body section#cifras .cards .card p {
     font-size: 14px;
   }
-  /* line 163, ../sass/responsive.scss */
+  /* line 175, ../sass/responsive.scss */
   * body section#cifras .cards .card p.title {
     font-size: 14px;
   }
-  /* line 166, ../sass/responsive.scss */
+  /* line 178, ../sass/responsive.scss */
   * body section#cifras .cards .card p.cifras {
     font-size: 34px;
   }
-  /* line 168, ../sass/responsive.scss */
+  /* line 180, ../sass/responsive.scss */
   * body section#cifras .cards .card p.cifras span {
     font-size: 14px;
   }
-  /* line 181, ../sass/responsive.scss */
+  /* line 193, ../sass/responsive.scss */
   * body section#graficas h3 {
     font-size: 14px;
   }
-  /* line 189, ../sass/responsive.scss */
+  /* line 201, ../sass/responsive.scss */
   * body section#banner .card p {
     font-size: 20px;
     line-height: 1.2;
   }
-  /* line 193, ../sass/responsive.scss */
+  /* line 205, ../sass/responsive.scss */
   * body section#banner .card p b {
     font-size: 22px;
     line-height: 1.2;
   }
-  /* line 206, ../sass/responsive.scss */
+  /* line 218, ../sass/responsive.scss */
   * body section#mapa h2 {
     font-size: 22px;
   }
-  /* line 211, ../sass/responsive.scss */
+  /* line 223, ../sass/responsive.scss */
   * body section#mapa p {
     font-size: 18px;
   }
-  /* line 217, ../sass/responsive.scss */
+  /* line 229, ../sass/responsive.scss */
   * body section#reportes h2 {
     font-size: 22px;
   }
-  /* line 220, ../sass/responsive.scss */
+  /* line 232, ../sass/responsive.scss */
   * body section#reportes h4 {
     font-size: 20px;
   }
-  /* line 253, ../sass/responsive.scss */
+  /* line 265, ../sass/responsive.scss */
   * body section#reportes .row.bordered p.title a {
     font-size: 16px;
   }
-  /* line 255, ../sass/responsive.scss */
+  /* line 267, ../sass/responsive.scss */
   * body section#reportes .row.bordered p.title a span {
     font-size: 14px;
   }
-  /* line 276, ../sass/responsive.scss */
+  /* line 288, ../sass/responsive.scss */
   * body section#reportes .card p.tag {
     font-size: 14px;
   }
-  /* line 281, ../sass/responsive.scss */
+  /* line 293, ../sass/responsive.scss */
   * body section#reportes .card p.title {
     font-size: 16px;
   }
-  /* line 286, ../sass/responsive.scss */
+  /* line 298, ../sass/responsive.scss */
   * body section#reportes .card p.extract {
     font-size: 16px;
   }
-  /* line 297, ../sass/responsive.scss */
+  /* line 309, ../sass/responsive.scss */
   * body section#quienes-somos h2 {
     font-size: 22px;
   }
-  /* line 303, ../sass/responsive.scss */
+  /* line 315, ../sass/responsive.scss */
   * body section#quienes-somos p.text-center {
     font-size: 16px;
   }
-  /* line 305, ../sass/responsive.scss */
+  /* line 317, ../sass/responsive.scss */
   * body section#quienes-somos p.text-center:last-child {
     font-weight: 500;
   }
-  /* line 320, ../sass/responsive.scss */
+  /* line 332, ../sass/responsive.scss */
   * body section#quienes-somos .card p.name {
     font-size: 21.341px;
   }
-  /* line 323, ../sass/responsive.scss */
+  /* line 335, ../sass/responsive.scss */
   * body section#quienes-somos .card p.position {
     font-size: 18px;
   }
-  /* line 331, ../sass/responsive.scss */
+  /* line 343, ../sass/responsive.scss */
   * body section#nuestra-historia h2 {
     font-size: 22px;
   }
-  /* line 336, ../sass/responsive.scss */
+  /* line 348, ../sass/responsive.scss */
   * body section#nuestra-historia .left-column p {
     font-size: 16px;
   }
-  /* line 345, ../sass/responsive.scss */
+  /* line 357, ../sass/responsive.scss */
   * body section#nuestra-historia .right-column .caption-box .caption-body p {
     font-size: 16px;
   }
-  /* line 347, ../sass/responsive.scss */
+  /* line 359, ../sass/responsive.scss */
   * body section#nuestra-historia .right-column .caption-box .caption-body p.years {
     font-size: 24px;
   }
-  /* line 349, ../sass/responsive.scss */
+  /* line 361, ../sass/responsive.scss */
   * body section#nuestra-historia .right-column .caption-box .caption-body p.years span {
     font-size: 14px;
   }
-  /* line 362, ../sass/responsive.scss */
+  /* line 374, ../sass/responsive.scss */
   * body section#en-memoria h2 {
     font-size: 22px;
   }
-  /* line 370, ../sass/responsive.scss */
+  /* line 382, ../sass/responsive.scss */
   * body section#en-memoria .swiper-slide .card p.name {
     font-size: 12px;
   }
-  /* line 374, ../sass/responsive.scss */
+  /* line 386, ../sass/responsive.scss */
   * body section#en-memoria .swiper-slide .card p.position {
     font-size: 12px;
   }
-  /* line 378, ../sass/responsive.scss */
+  /* line 390, ../sass/responsive.scss */
   * body section#en-memoria .swiper-slide .card p.text {
     font-size: 12px;
     line-height: 1.5;
   }
-  /* line 390, ../sass/responsive.scss */
+  /* line 402, ../sass/responsive.scss */
   * body section.dashboard.header h1 {
     font-size: 26px;
   }
-  /* line 398, ../sass/responsive.scss */
+  /* line 410, ../sass/responsive.scss */
   * body section.dashboard form.form-inline {
     display: block !important;
   }
-  /* line 406, ../sass/responsive.scss */
+  /* line 418, ../sass/responsive.scss */
   * body section.dashboard.badges a {
     padding: 2px 12px;
     align-items: center;
@@ -236,28 +250,28 @@
     line-height: 18px;
     /* 138.462% */
   }
-  /* line 420, ../sass/responsive.scss */
+  /* line 432, ../sass/responsive.scss */
   * body section.dashboard.badges a.badge-pill img {
     margin-left: 8px;
   }
-  /* line 425, ../sass/responsive.scss */
+  /* line 437, ../sass/responsive.scss */
   * body section.dashboard.badges a:hover {
     background-color: #ffffff;
     color: #ededed;
   }
-  /* line 433, ../sass/responsive.scss */
+  /* line 445, ../sass/responsive.scss */
   * body section.dashboard.graficas {
     height: auto;
   }
-  /* line 435, ../sass/responsive.scss */
+  /* line 447, ../sass/responsive.scss */
   * body section.dashboard.graficas h3 {
     font-size: 20px;
   }
-  /* line 456, ../sass/responsive.scss */
+  /* line 468, ../sass/responsive.scss */
   * body footer a i.fab {
     font-size: 18px;
   }
-  /* line 463, ../sass/responsive.scss */
+  /* line 475, ../sass/responsive.scss */
   * body footer.dashboard p {
     font-size: 14px;
   }

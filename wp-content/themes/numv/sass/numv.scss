@@ -234,6 +234,14 @@ $figtree: 'Figtree', sans-serif;
 
 		section {
 
+			.container {
+				border: 1px solid red;
+				&.for-mobile {
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+
 			&.dashboard {
 				&.header {
 					h1 {
