@@ -19,10 +19,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+    <meta property="og:url"                content="https://niunamuertevial.mx" />
+    <meta property="og:type"               content="page" />
+    <meta property="og:title"              content="Ni una muerte vial" />
+    <meta property="og:description"        content="Conoce los índices de muertes viales en peatones, ciclistas y motociclistas en México" />
+    <meta property="og:image"              content="<?php echo get_template_directory_uri() ?>/img/hero.png" />
     
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
