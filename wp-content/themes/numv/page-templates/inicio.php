@@ -195,7 +195,7 @@ get_header(); ?>
                         <div class="col-8 d-flex flex-column">
                             <p class="my-auto">
                                 ¿Estás buscando cifras específicas?  <br>
-                                <b>Consulta resultados por estado, municipio, entre otros</b><br>
+                                <b>Realiza una consulta personalizada</b><br>
                                 <a href="<?php echo site_url( "dashboard" ); ?>" class="btn btn-primary mt-3">
                                     Conoce las cifras <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
                                 </a>
@@ -444,7 +444,7 @@ get_header(); ?>
                                     </p>
                                     <p class="position">
                                         Co-director<br>
-                                        Datos
+                                        Coordinador análisis de datos
                                     </p>
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/xavier-trevino.png" alt="" class="img-fluid">
                                 </div>
@@ -526,12 +526,10 @@ get_header(); ?>
                     <h2 class="text-left mb-4">Nuestra historia</h2>
                     
                     <p>Ni Una Muerte Vial surge en noviembre de 2018, a partir del atropellamiento de Manuel Vara, especialista en movilidad, en Puebla. Decidimos que para honrar la memoria de las víctimas de siniestros de tránsito, nos abocaríamos a reconocer y visibilizar a los peatones y ciclistas atropellados en el país. Eventualmente decidimos integrar datos de motociclistas.</p>
-                    <p>En 2020, con apoyo Reacciona por la vida, publicamos el primer informe “Ni una muerte vial 2019”, donde proponemos que la narrativa de </p>
-                    <p>A principios de 2023 publicamos Las 150 vialidades más peligrosas, un ranking de las calles donde más mueren peatones y ciclistas por atropellamiento  a nivel nacional, resultante del análisis de 5 años de datos generados por nuestra iniciativa.</p>
-                    <p><b>Ahora, con apoyo de fondation Botnar, a través de la Alianza global por la seguridad vial (GRSP) y la Cruz Roja Internacional (IFRC) dentro del marco de la última etapa del Reto por la seguridad vial infantil (Botnar Child Road Safety Challenge)</b>, hemos sido capaces de mejorar la interfaz de esta página así como integrar un panel dinámico de datos que nos permite ofrecer mejores visualizaciones para explicar y entender mejor la dinámica de la pandemia de choques y atropellamientos de los usuarios más vulnerables de la vía.</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-1.png" class="d-inline-block mr-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-2.png" class="d-inline-block mr-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-3.png" class="d-inline-block mr-3">
+                    
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-1.svg" class="d-inline-block mr-3">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-2.svg" class="d-inline-block mr-3">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/nuestra-historia-logo-3.svg" class="d-inline-block mr-3">
                 </div>
                 <div class="col-12 col-md-5 right-column">
                     <div class="row no-gutters">
