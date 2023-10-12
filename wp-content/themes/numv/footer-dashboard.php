@@ -14,7 +14,7 @@
     <footer id="footer" class="mt-5 dashboard">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mt-4 mt-md-0">
                     <div class="row no-gutters">
                         <div class="col-12">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">

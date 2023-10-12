@@ -1,6 +1,9 @@
-$primary : #73bebf;
+$primary : #28A1B7;
+$dark: #1D1D1B;
+$grey: #606060;
 $light: #ffffff;
-$font-medium: 'Helvetica';
+$alegreya: 'Alegreya Sans', serif;
+$figtree: 'Figtree', sans-serif;
 @media (max-width: 1024px) {
 
 }
@@ -17,6 +20,14 @@ $font-medium: 'Helvetica';
 			}
 
 			.btn-primary {
+				
+				font-size: 16px;
+
+				img {
+				}
+			}
+
+			.btn-light {
 				
 				font-size: 16px;
 
@@ -172,9 +183,289 @@ $font-medium: 'Helvetica';
 					}
 				}
 
+				&#banner {
+					.card {
+
+						p {
+							font-size: 20px;
+							
+							line-height: 1.2;
+							b {
+								font-size: 22px;
+								
+								
+								line-height: 1.2;
+							}
+						}
+
+					}
+				}
+
+				&#mapa {
+
+					h2 {
+						font-size: 22px;
+						
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+
+				&#reportes {
+					h2 {
+						font-size: 22px;
+					}
+					h4 {
+						font-size: 20px;
+					}
+
+					.row {
+						&.ver-todos {
+
+							p {
+								a {
+								}
+							}
+						}
+						.ver-todo {
+							&:hover {
+								img {
+
+								}
+							}
+						}
+						&.bordered {
+
+							a {
+								&.my-auto {
+									&:hover {
+										img {
+
+										}
+									}
+								}
+							}
+
+							p {
+								&.title {
+									a {
+										font-size: 16px;
+										span {
+											font-size: 14px;
+										}
+
+									}
+								}
+
+								
+
+							}
+
+						}
+					}
+
+					.card {
+						img {
+
+						}
+
+						p {
+
+							&.tag {
+								font-size: 14px;
+							}
+
+							
+							&.title {
+								font-size: 16px;
+							}
+
+							
+							&.extract {
+								font-size: 16px;
+							}
+
+						}
+
+					}
+
+				}
+
+				&#quienes-somos {
+					h2 {
+						font-size: 22px;
+					}
+				
+
+					p {
+						&.text-center {
+							font-size: 16px;
+							&:last-child {
+								font-weight: 500;
+							}
+						}
+					}
+
+
+					.swiper-button-disabled {
+					}
+
+					.card {
+						p {
+
+
+
+							&.name {
+								font-size: 21.341px;
+							}
+							&.position {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+
+				&#nuestra-historia {
+					h2 {
+						font-size: 22px;
+					}
+
+					.left-column {
+						p {
+							font-size: 16px;
+							
+						}
+					}
+					
+					.right-column {
+						.caption-box {
+							.caption-body {
+								p {
+									font-size: 16px;
+									&.years {
+										font-size: 24px;
+										span {
+											font-size: 14px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				&#en-memoria {
+
+					h2 {
+						font-size: 22px;
+					}
+
+					.swiper-slide {
+						.card {
+							p {
+								
+								&.name {
+									font-size: 12px;
+								}
+								
+								&.position {
+									font-size: 12px;
+								}
+								
+								&.text {
+									font-size: 12px;
+									line-height: 1.5;
+								}
+							}
+						}
+					}
+
+				}
+
+				&.dashboard {
+					&.header {
+						h1 {
+							
+							font-size: 26px;
+							
+						}
+					}
+
+					form {
+						&.form-inline {
+							display: block!important;
+						}
+					}
+
+					&.badges {
+						p {
+						}
+						a {
+							
+							padding: 2px 12px;
+							align-items: center;
+							border-radius: 11px;
+							background: #E8E8E8;
+							color: $dark;
+							font-family: $figtree;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 18px; /* 138.462% */
+							
+							&.badge-pill {
+								img {
+									margin-left: 8px;
+								}
+							}
+
+							&:hover {
+								background-color: $light;
+								color: #ededed;
+
+							}
+						}
+					}
+
+					&.graficas {
+						height: auto;
+						h3 {
+							font-size: 20px;
+							
+							
+							
+							
+						}
+						canvas {
+							&#bars-chart {
+
+							}
+						}
+					}
+				}
+
 			}
 
+			footer {
 
+				a {
+					i {
+						&.fab{
+							font-size: 18px;
+						}
+					}
+				}
+
+				&.dashboard {
+					p {
+						font-size: 14px;
+						
+					}
+				}
+			}
 		}
 	}
 }

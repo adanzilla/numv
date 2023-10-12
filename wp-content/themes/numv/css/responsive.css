@@ -1,37 +1,41 @@
 @media (max-width: 575px) {
-  /* line 15, ../sass/responsive.scss */
+  /* line 18, ../sass/responsive.scss */
   * body p {
     font-size: 16px;
   }
-  /* line 19, ../sass/responsive.scss */
+  /* line 22, ../sass/responsive.scss */
   * body .btn-primary {
     font-size: 16px;
   }
-  /* line 32, ../sass/responsive.scss */
+  /* line 30, ../sass/responsive.scss */
+  * body .btn-light {
+    font-size: 16px;
+  }
+  /* line 43, ../sass/responsive.scss */
   * body header#masthead.static nav {
     height: 80px;
   }
-  /* line 35, ../sass/responsive.scss */
+  /* line 46, ../sass/responsive.scss */
   * body header#masthead.static nav .logo img {
     margin-top: 0;
   }
-  /* line 42, ../sass/responsive.scss */
+  /* line 53, ../sass/responsive.scss */
   * body header#masthead nav {
     height: auto;
   }
-  /* line 46, ../sass/responsive.scss */
+  /* line 57, ../sass/responsive.scss */
   * body header#masthead nav .z-index-movil {
     z-index: 2;
   }
-  /* line 50, ../sass/responsive.scss */
+  /* line 61, ../sass/responsive.scss */
   * body header#masthead nav button {
     border: 0;
   }
-  /* line 55, ../sass/responsive.scss */
+  /* line 66, ../sass/responsive.scss */
   * body header#masthead nav .logo img {
     max-height: 50px;
   }
-  /* line 67, ../sass/responsive.scss */
+  /* line 78, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary {
     width: 100%;
     background-color: #F3F6F6;
@@ -42,7 +46,7 @@
     left: 0;
     z-index: 1;
   }
-  /* line 77, ../sass/responsive.scss */
+  /* line 88, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary ul {
     padding-top: 0;
     text-align: center;
@@ -51,14 +55,14 @@
     -ms-flex-pack: center !important;
     justify-content: center !important;
   }
-  /* line 86, ../sass/responsive.scss */
+  /* line 97, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary ul li {
     padding-left: 0;
     margin: 1rem auto;
     padding: 0 0 0 0;
     width: 100%;
   }
-  /* line 93, ../sass/responsive.scss */
+  /* line 104, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary ul li.active a:after {
     position: relative;
     width: 100%;
@@ -66,45 +70,195 @@
     border-bottom: 1px solid #ffffff;
     padding-bottom: 1rem;
   }
-  /* line 103, ../sass/responsive.scss */
+  /* line 114, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary ul li a {
     font-size: 20px;
     color: light;
   }
-  /* line 118, ../sass/responsive.scss */
+  /* line 129, ../sass/responsive.scss */
   * body section#inicio h1 {
     font-size: 24px;
   }
-  /* line 129, ../sass/responsive.scss */
+  /* line 140, ../sass/responsive.scss */
   * body section#inicio .card p.title {
     font-size: 18px;
   }
-  /* line 133, ../sass/responsive.scss */
+  /* line 144, ../sass/responsive.scss */
   * body section#inicio .card p.subtitle {
     font-size: 12px;
   }
-  /* line 142, ../sass/responsive.scss */
+  /* line 153, ../sass/responsive.scss */
   * body section#cifras h2 {
     font-size: 22px;
   }
-  /* line 150, ../sass/responsive.scss */
+  /* line 161, ../sass/responsive.scss */
   * body section#cifras .cards .card p {
     font-size: 14px;
   }
-  /* line 152, ../sass/responsive.scss */
+  /* line 163, ../sass/responsive.scss */
   * body section#cifras .cards .card p.title {
     font-size: 14px;
   }
-  /* line 155, ../sass/responsive.scss */
+  /* line 166, ../sass/responsive.scss */
   * body section#cifras .cards .card p.cifras {
     font-size: 34px;
   }
-  /* line 157, ../sass/responsive.scss */
+  /* line 168, ../sass/responsive.scss */
   * body section#cifras .cards .card p.cifras span {
     font-size: 14px;
   }
-  /* line 170, ../sass/responsive.scss */
+  /* line 181, ../sass/responsive.scss */
   * body section#graficas h3 {
+    font-size: 14px;
+  }
+  /* line 189, ../sass/responsive.scss */
+  * body section#banner .card p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  /* line 193, ../sass/responsive.scss */
+  * body section#banner .card p b {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  /* line 206, ../sass/responsive.scss */
+  * body section#mapa h2 {
+    font-size: 22px;
+  }
+  /* line 211, ../sass/responsive.scss */
+  * body section#mapa p {
+    font-size: 18px;
+  }
+  /* line 217, ../sass/responsive.scss */
+  * body section#reportes h2 {
+    font-size: 22px;
+  }
+  /* line 220, ../sass/responsive.scss */
+  * body section#reportes h4 {
+    font-size: 20px;
+  }
+  /* line 253, ../sass/responsive.scss */
+  * body section#reportes .row.bordered p.title a {
+    font-size: 16px;
+  }
+  /* line 255, ../sass/responsive.scss */
+  * body section#reportes .row.bordered p.title a span {
+    font-size: 14px;
+  }
+  /* line 276, ../sass/responsive.scss */
+  * body section#reportes .card p.tag {
+    font-size: 14px;
+  }
+  /* line 281, ../sass/responsive.scss */
+  * body section#reportes .card p.title {
+    font-size: 16px;
+  }
+  /* line 286, ../sass/responsive.scss */
+  * body section#reportes .card p.extract {
+    font-size: 16px;
+  }
+  /* line 297, ../sass/responsive.scss */
+  * body section#quienes-somos h2 {
+    font-size: 22px;
+  }
+  /* line 303, ../sass/responsive.scss */
+  * body section#quienes-somos p.text-center {
+    font-size: 16px;
+  }
+  /* line 305, ../sass/responsive.scss */
+  * body section#quienes-somos p.text-center:last-child {
+    font-weight: 500;
+  }
+  /* line 320, ../sass/responsive.scss */
+  * body section#quienes-somos .card p.name {
+    font-size: 21.341px;
+  }
+  /* line 323, ../sass/responsive.scss */
+  * body section#quienes-somos .card p.position {
+    font-size: 18px;
+  }
+  /* line 331, ../sass/responsive.scss */
+  * body section#nuestra-historia h2 {
+    font-size: 22px;
+  }
+  /* line 336, ../sass/responsive.scss */
+  * body section#nuestra-historia .left-column p {
+    font-size: 16px;
+  }
+  /* line 345, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p {
+    font-size: 16px;
+  }
+  /* line 347, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p.years {
+    font-size: 24px;
+  }
+  /* line 349, ../sass/responsive.scss */
+  * body section#nuestra-historia .right-column .caption-box .caption-body p.years span {
+    font-size: 14px;
+  }
+  /* line 362, ../sass/responsive.scss */
+  * body section#en-memoria h2 {
+    font-size: 22px;
+  }
+  /* line 370, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.name {
+    font-size: 12px;
+  }
+  /* line 374, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.position {
+    font-size: 12px;
+  }
+  /* line 378, ../sass/responsive.scss */
+  * body section#en-memoria .swiper-slide .card p.text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  /* line 390, ../sass/responsive.scss */
+  * body section.dashboard.header h1 {
+    font-size: 26px;
+  }
+  /* line 398, ../sass/responsive.scss */
+  * body section.dashboard form.form-inline {
+    display: block !important;
+  }
+  /* line 406, ../sass/responsive.scss */
+  * body section.dashboard.badges a {
+    padding: 2px 12px;
+    align-items: center;
+    border-radius: 11px;
+    background: #E8E8E8;
+    color: #1D1D1B;
+    font-family: "Figtree", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 138.462% */
+  }
+  /* line 420, ../sass/responsive.scss */
+  * body section.dashboard.badges a.badge-pill img {
+    margin-left: 8px;
+  }
+  /* line 425, ../sass/responsive.scss */
+  * body section.dashboard.badges a:hover {
+    background-color: #ffffff;
+    color: #ededed;
+  }
+  /* line 433, ../sass/responsive.scss */
+  * body section.dashboard.graficas {
+    height: auto;
+  }
+  /* line 435, ../sass/responsive.scss */
+  * body section.dashboard.graficas h3 {
+    font-size: 20px;
+  }
+  /* line 456, ../sass/responsive.scss */
+  * body footer a i.fab {
+    font-size: 18px;
+  }
+  /* line 463, ../sass/responsive.scss */
+  * body footer.dashboard p {
     font-size: 14px;
   }
 }
