@@ -1,5 +1,10 @@
 jQuery(document).ready(function($) {
 
+	jQuery('.collapse').on('click', '.easy-scroll', function(event) {
+        event.preventDefault();
+        console.log('hiding');
+        jQuery('.collapse').collapse('toggle');
+    });
 
 	var dinamic_bars_chart;
 

@@ -299,12 +299,12 @@ get_header(); ?>
                             <div class="card p-3">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/thumbnail.png" alt="" class="mb-3">
                                 <p class="tag mb-1">Datos 2020-2021</p>
-                                <p class="title">Las 15 vías más peligrosas</p>
+                                <p class="title">Las 150 vías más peligrosas</p>
                                 <p class="extract">
                                     El desafío de convertir zonas de riesgo en entornos seguros
                                 </p>
                                 <p>
-                                    <a href="" class="btn btn-block btn-primary mt-3">
+                                    <a href="https://niunamuertevial.mx/docs/las150mas.pdf" class="btn btn-block btn-primary mt-3" download="">
                                         Consultar reporte <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
                                     </a>
                                 </p>
@@ -319,7 +319,7 @@ get_header(); ?>
                                     El desafío de convertir zonas de riesgo en entornos seguros
                                 </p>
                                 <p>
-                                    <a href="" class="btn btn-block btn-primary mt-3">
+                                    <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-block btn-primary mt-3" download="">
                                         Consultar reporte <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
                                     </a>
                                 </p>
