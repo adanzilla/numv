@@ -219,19 +219,20 @@ get_header(); ?>
 </section>
 
 <section class="my-5 p" id="mapa">
-    <div class="row no-gutters">
-        <div class="col-12 col-sm-10 col-lg-11 mx-auto">
-            <div class="row no-gutters">
-                <div class="col-12">
+    <div class="container for-mobile">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-11 mx-auto">
+                <div class="row no-gutters">
                     <div class="col-12">
-                        <h2 class="text-center">Las vialidades más peligrosas</h2>
-                        <p class="text-center">Explora todos los siniestros de tránsito navegando el mapa</p>
+                        <div class="col-12">
+                            <h2 class="text-center">Las vialidades más peligrosas</h2>
+                            <p class="text-center">Explora todos los siniestros de tránsito navegando el mapa</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row no-gutters my-3">
-                <div class="col-12">
+                <div class="row no-gutters my-3">
+                    
                     <div class="col-12 text-center">
                         <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/mapa.png" alt="" class="img-fluid"> -->
                         <div id="map" style="height: 65vh; width: 100%;"></div>
@@ -275,9 +276,10 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 </section>
