@@ -183,7 +183,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-12 col-md-4 pl-md-2 mt-4 mt-md-0 d-flex">
-                <div class="card p-3">
+                <div class="card p-3 w-100">
                     <h3>Factores de riesgo</h3>
                     <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/graph/chart-pie.png" alt="" class="mt-3 w-100"> -->
                     <canvas id="pie-chart"></canvas>
