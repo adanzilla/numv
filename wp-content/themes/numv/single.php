@@ -7,7 +7,7 @@
  * @package NUMV
  */
 
-get_header();
+get_header('blog');
 ?>
 
 	<section class="blog header mb-5 my-md-5">

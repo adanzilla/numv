@@ -33,9 +33,10 @@ $cats = get_the_category( get_the_ID() );
 		<h1>
 			<?php the_title(); ?>
 		</h1>
-		<p>
+		<p class="text-muted">
 			<?php echo get_the_excerpt( get_the_ID() ); ?>
 		</p>
+		<hr class="mb-3 mb-md-5">
 	</div>
 </div>
 

@@ -309,14 +309,14 @@ get_header(); ?>
                 <div class="row no-gutters">
                     <div class="col-12 col-md-6 pr-1">
                         <div class="card p-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/thumbnail.png" alt="" class="mb-3">
+                            <img src="http://niunamuertevial.mx/wp-content/uploads/2023/10/las150-300x200.jpeg" alt="" class="mb-3">
                             <p class="tag mb-1">Datos 2020-2021</p>
                             <p class="title">Las 150 vías más peligrosas</p>
                             <p class="extract">
                                 El desafío de convertir zonas de riesgo en entornos seguros
                             </p>
                             <p>
-                                <a href="https://niunamuertevial.mx/docs/las150mas.pdf" class="btn btn-block btn-primary mt-3" download="">
+                                <a href="https://niunamuertevial.mx/las-150-vias-mas-peligrosas/" class="btn btn-block btn-primary mt-3">
                                     Consultar reporte <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
                                 </a>
                             </p>
@@ -324,14 +324,14 @@ get_header(); ?>
                     </div>
                     <div class="col-12 col-md-6 pl-1 mt-3 mt-md-0">
                         <div class="card p-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/thumbnail.png" alt="" class="mb-3">
+                            <img src="https://niunamuertevial.mx/wp-content/uploads/2023/10/placeholder-blog-single-300x200.png" alt="" class="mb-3">
                             <p class="tag mb-1">Datos 2020-2021</p>
                             <p class="title">Reporte anual 2019-2020</p>
                             <p class="extract">
                                 El desafío de convertir zonas de riesgo en entornos seguros
                             </p>
                             <p>
-                                <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-block btn-primary mt-3" download="">
+                                <a href="https://niunamuertevial.mx/reporte-anual-2019-2020/" class="btn btn-block btn-primary mt-3">
                                     Consultar reporte <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.svg" alt="">
                                 </a>
                             </p>
@@ -399,7 +399,7 @@ get_header(); ?>
 
                     <div class="row no-gutters ver-todos">
                         <div class="col-4 d-flex flex-column text-right pr-0 ml-auto">
-                            <a href="" class="btn btn-block btn-primary mt-3 transparent">
+                            <a href="<?php echo site_url( "blog" ); ?>" class="btn btn-block btn-primary mt-3 transparent">
                                 Ver todo <img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-primary.svg" alt="">
                             </a>
                         </div>

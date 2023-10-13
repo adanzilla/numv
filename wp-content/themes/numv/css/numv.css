@@ -214,10 +214,6 @@
 * body header#masthead nav #menu-primary ul li a::after {
   display: none;
 }
-/* line 238, ../sass/numv.scss */
-* body section .container {
-  border: 1px solid red;
-}
 /* line 240, ../sass/numv.scss */
 * body section .container.for-mobile {
   width: 100%;
@@ -584,6 +580,10 @@
   line-height: 150%;
   /* 27px */
   letter-spacing: -0.342px;
+}
+/* line 667, ../sass/numv.scss */
+* body section#reportes .card img {
+  border-radius: 8px !important;
 }
 /* line 673, ../sass/numv.scss */
 * body section#reportes .card p.tag {

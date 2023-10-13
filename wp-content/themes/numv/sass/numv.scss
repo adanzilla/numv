@@ -236,7 +236,7 @@ $figtree: 'Figtree', sans-serif;
 		section {
 
 			.container {
-				border: 1px solid red;
+				// border: 1px solid red;
 				&.for-mobile {
 					width: 100%;
 					max-width: 100%;
@@ -665,7 +665,7 @@ $figtree: 'Figtree', sans-serif;
 
 				.card {
 					img {
-
+						border-radius: 8px!important;
 					}
 
 					p {
