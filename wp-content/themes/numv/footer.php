@@ -22,14 +22,15 @@
                     </div>
                     <div class="row no-gutters">
                         <div class="col-12">
+                            <p class="mensaje d-none">Gracias por enviar tus datos, nos pondremos en contacto a la brevedad</p>
                             <form id="contacto">
                                 <div class="form-group">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-primary active">
-                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Contáctanos
+                                            <input type="radio" name="options" value="Contáctenme" id="option1" autocomplete="off" checked> Contáctanos
                                         </label>
                                         <label class="btn btn-primary">
-                                            <input type="radio" name="options" id="option2" autocomplete="off"> Reporta un siniestro
+                                            <input type="radio" name="options" value="Quiero reportar un incidente" id="option2" autocomplete="off"> Reporta un siniestro
                                         </label>
                                     </div>
                                 </div>

@@ -509,6 +509,76 @@ function grafica_dinamica(){
 	wp_die();
 }
 
+add_action( 'wp_ajax_nopriv_form_submit', "form_submit" );
+function form_submit(){
+	$response = new stdClass();
+	$response->result = false;
+
+	parse_str( $_POST['data'], $data);
+	$response->data = $data;
+
+	$body = '';
+		
+	foreach ($data as $key => $value) {
+		$body .= '<p><b>'. strtoupper( $key ) .'</b>: '.$value.'</p>';
+	}
+
+	$template = '<p>Nos han contactado</p>'. $body ;
+
+	$post_id = wp_insert_post(
+		array(
+			'post_title'=> $data['name'].' - '.$data['email'],
+			'post_type'=> 'form-submit',
+			'post_content'=> $body,
+			'post_status'=> 'publish'
+		)
+	);
+
+	if( $post_id ){
+		$response->result = true;
+	}
+	
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	$response->mail = wp_mail( "adan.serrano@gmail.com", "Nuevo registro", $template, $headers);
+
+	echo json_encode( $response );
+	wp_die();
+}
+
+$labels = array(
+	'name' => _x( 'Submit', 'post type general name', 'xpats' ),
+	'singular_name' => _x( 'Submit', 'post type singular name', 'xpats' ),
+	'menu_name' => _x( 'Submit', 'admin menu', 'xpats' ),
+	'name_admin_bar' => _x( 'Submit', 'add new on admin bar', 'xpats' ),
+	'add_new' => _x( 'Add New', 'Submit', 'xpats' ),
+	'add_new_item' => __( 'Add New submit', 'xpats' ),
+	'new_item' => __( 'New submit', 'xpats' ),
+	'edit_item' => __( 'Edit submit', 'xpats' ),
+	'view_item' => __( 'View submit', 'xpats' ),
+	'all_items' => __( 'All submit', 'xpats' ),
+	'search_items' => __( 'Search submit', 'xpats' ),
+	'parent_item_colon' => __( 'Parent submit:', 'xpats' ),
+	'not_found' => __( 'No submit found.', 'xpats' ),
+	'not_found_in_trash' => __( 'No submit found in Trash.', 'xpats' )
+);
+
+$args = array(
+	'labels' => $labels,
+	'description' => "",
+	'public' => false,
+	'publicly_queryable' => false,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'query_var' => true,
+	'capability_type' => 'post',
+	'has_archive' => false,
+	'hierarchical' => true,
+	'menu_position' => null,
+	'supports' => array( 'title', 'editor', 'author' )
+);
+
+register_post_type( 'form-submit', $args );
+
 /**
  * Implement the Custom Header feature.
  */

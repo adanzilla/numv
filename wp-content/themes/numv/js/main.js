@@ -446,7 +446,20 @@ jQuery(document).ready(function($) {
                     disabled: true
                 }).html("Enviando...");
 
-                console.log( form );
+                var formulario = jQuery(form);
+                var data = formulario.serialize();
+                jQuery.ajax({
+                    type : "POST",
+                    dataType : "json",
+                    url: numv_ajax.ajax_url,
+                    data : { action: "form_submit", data },
+                    success: function(json) {
+                        if( json.result ){
+                            jQuery('p.mensaje').removeClass('d-none');
+                            jQuery('form#contacto').addClass('d-none');
+                        }
+                    }
+                });
             }
         });
     }
