@@ -13,6 +13,7 @@ $figtree: 'Figtree', sans-serif;
 	
 	body {
 
+		.debug { border: 2px dotted green; }
 
 		a {
 			color: $primary;
@@ -298,6 +299,74 @@ $figtree: 'Figtree', sans-serif;
 					canvas {
 						&#bars-chart {
 
+						}
+					}
+				}
+			}
+
+			&.blog {
+				&.grid {
+					.card {
+						p {
+							&.date{
+								font-family: $figtree;
+								font-size: 12px;
+								font-style: normal;
+								font-weight: 500;
+								line-height: normal;
+								letter-spacing: -0.264px;
+							}
+
+							&.title{
+								font-family: $figtree;
+								font-size: 24px;
+								font-style: normal;
+								font-weight: 700;
+								line-height: normal;
+								letter-spacing: -0.528px;
+							}
+
+							&.excerpt{
+								color: #606060;
+								font-family: $alegreya;
+								font-size: 18px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+								letter-spacing: -0.342px;
+							}
+
+							&.categories{
+								.badge {
+									border-radius: 11px;
+									padding: 0px 10px;
+									
+									&.reporte {
+										background: #DFF2F6;
+										color: #61C0D1;
+										font-size: 13px;
+										font-style: normal;
+										font-weight: 700;
+										line-height: 18px; /* 138.462% */
+									}
+
+									&.articulo {
+										background: #ECE3F3;
+										color: #A073C3;
+										font-size: 13px;
+										font-style: normal;
+										font-weight: 700;
+										line-height: 18px; /* 138.462% */
+									}
+								}
+							}
+
+						}
+
+						a {
+							&.permalink {
+								color: $dark;
+							}
 						}
 					}
 				}

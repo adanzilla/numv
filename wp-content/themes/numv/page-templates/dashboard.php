@@ -5,8 +5,8 @@
  * Description: Muestra el contenido de Dashboard
  *
  * @package WordPress
- * @subpackage intertec
- * @since Intertec 1.0
+ * @subpackage numv
+ * @since numv 1.0
  */
 
 get_header('dashboard'); ?>
