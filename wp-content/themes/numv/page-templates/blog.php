@@ -50,7 +50,9 @@ get_header('dashboard'); ?>
                     <div class="card p-3">
                         <div class="row no-gutters">
                             <div class="col-12 col-md-4">
-                                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="w-100">
+                                <a href="<?php echo get_the_permalink( get_the_ID() ) ?>">
+                                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'blog-grid' ); ?>" class="w-100">
+                                </a>
                             </div>
                             <div class="col-12 col-md-8 pl-md-5 mt-3 mt-md-0 d-flex flex-column">
                                 <div class="row no-gutters my-auto">

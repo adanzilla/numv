@@ -10,31 +10,36 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<section class="blog header mb-5 my-md-5">
+	    <div class="container">
+	        <div class="row no-gutters">
+	            <div class="col-12 col-md-8 mt-5 mt-md-0">
+	                <p class="mb-0">
+	                    <a href="<?php echo site_url( "/" ); ?>">
+	                        <img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow-primary.svg" alt=""> Regresar
+	                    </a>
+	                </p>
+	            </div>
+	        </div>
+	    </div>
+	</section> 
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<section class="blog single">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-12">
+					<?php
+					while ( have_posts() ) :
+						the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+						get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'numv' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'numv' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+					endwhile; // End of the loop.
+					?>
+				</div>
+			</div>
+		</div>
+	</section>
 
 <?php
-get_sidebar();
 get_footer();

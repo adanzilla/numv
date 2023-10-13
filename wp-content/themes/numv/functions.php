@@ -100,6 +100,8 @@ function numv_setup() {
 		)
 	);
 
+	add_image_size( 'blog-grid', 300, 200, true );
+
 	// disable for posts
 	add_filter('use_block_editor_for_post', '__return_false', 10);
 
