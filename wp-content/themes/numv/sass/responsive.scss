@@ -228,6 +228,11 @@ $figtree: 'Figtree', sans-serif;
 				}
 
 				&#reportes {
+
+					.btn {
+						padding: 0 0 0 0!important;
+					}
+
 					h2 {
 						font-size: 22px;
 					}
@@ -350,6 +355,12 @@ $figtree: 'Figtree', sans-serif;
 						p {
 							font-size: 16px;
 							
+						}
+
+						img {
+							&.logo {
+								height: 40px;
+							}
 						}
 					}
 					

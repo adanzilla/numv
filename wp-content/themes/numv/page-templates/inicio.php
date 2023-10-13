@@ -68,7 +68,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5" id="cifras">
+<section class="mt-0 mb-5 my-md-5" id="cifras">
     <div class="container for-mobile">
         <div class="row no-gutters">
             <div class="col-12 col-sm-10 col-lg-9 mx-auto">
@@ -81,8 +81,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters justify-content-center cards my-3">
-                    <div class="col-6 pr-2 pr-md-0 col-md  mx-md-2 mb-3 mb-md-0">
+                <div class="row no-gutters justify-content-center cards my-0 my-md-3">
+                    <div class="col-6 pr-2 pr-md-0 col-md  mx-md-2 mb-0 mb-md-0">
                         <div class="card py-3 px-3 px-md-4">
                             <div class="row no-gutters">
                                 <div class="col">
@@ -96,7 +96,7 @@ get_header(); ?>
                             </div>
                             <div class="row no-gutters">
                                 <div class="col-12">
-                                    <p class="cifras">
+                                    <p class="cifras" id="muertes-totales">
                                         <em>2917</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
@@ -117,14 +117,14 @@ get_header(); ?>
                             </div>
                             <div class="row no-gutters">
                                 <div class="col-12">
-                                    <p class="cifras">
+                                    <p class="cifras" id="ciclistas">
                                         <em>308</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md pr-2 pr-md-0 mx-md-2 mb-3 mb-md-0">
+                    <div class="col-6 col-md pr-2 pr-md-0 mx-md-2 mb-md-3 mb-md-0">
                         <div class="card py-3 px-3 px-md-4">
                             <div class="row no-gutters">
                                 <div class="col">
@@ -138,14 +138,14 @@ get_header(); ?>
                             </div>
                             <div class="row no-gutters">
                                 <div class="col-12">
-                                    <p class="cifras">
+                                    <p class="cifras" id="peatones">
                                         <em>1623</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md pl-2 pl-md-0 mx-md-2 mb-3 mb-md-0">
+                    <div class="col-6 col-md pl-2 pl-md-0 mx-md-2 mb-md-3 mb-md-0">
                         <div class="card py-3 px-3 px-md-4">
                             <div class="row no-gutters">
                                 <div class="col">
@@ -159,7 +159,7 @@ get_header(); ?>
                             </div>
                             <div class="row no-gutters">
                                 <div class="col-12">
-                                    <p class="cifras">
+                                    <p class="cifras" id="motociclistas">
                                         986 <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
@@ -172,7 +172,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5" id="graficas">
+<section class="mt-0 mb-5 my-md-5" id="graficas">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12 col-md-8 pr-md-2">
@@ -193,7 +193,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5 pb-5" id="banner">
+<section class="mt-0 mb-5 my-md-5 pb-md-5" id="banner">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12 col-md-11 col-lg-10 mx-auto">
@@ -218,7 +218,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5 p" id="mapa">
+<section class="mt-0 mb-5 my-md-5 p" id="mapa">
     <div class="container for-mobile">
         <div class="row no-gutters">
             <div class="col-12 col-sm-10 col-lg-11 mx-auto">
@@ -284,7 +284,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5 p" id="reportes">
+<section class="mt-0 mb-5 my-md-5" id="reportes">
     <div class="container">
         
         
@@ -297,7 +297,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="row no-gutters my-5">
+        <div class="row no-gutters my-md-5">
             <div class="col-12 col-md-6 mx-auto">
                 
                 <div class="row no-gutters">
@@ -339,11 +339,11 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <div class="col-11 col-md-6 pl-md-5 mx-auto mt-5 mt-md-0">
+            <div class="col-12 col-md-6 pl-md-5 mx-auto mt-5 mt-md-0">
                 
                 <div class="row no-gutters">
                     <div class="col-12">
-                        <h4>Recolección de datos y análisis anual</h4>
+                        <h4>Blog</h4>
                     </div>
                 </div>
 
@@ -413,7 +413,7 @@ get_header(); ?>
     </div>
 </section>
 
- <section class="my-0 my-md-5 p" id="quienes-somos">
+ <section class="mt-0 mb-5 my-md-5" id="quienes-somos">
     <div class="container for-mobile">
         <div class="row no-gutters">
             <div class="col-12 col-sm-10 col-lg-9 mx-auto">
@@ -422,7 +422,7 @@ get_header(); ?>
                     <div class="col-12">
                         
                         <h2 class="text-center">Quiénes somos</h2>
-                        <p class="text-center">Céntrico es un equipo de especialistas apasionadas de las ciudades, la movilidad, y la seguridad vial. Non enfocamos en la implementación de proyectos de movilidad sustentable, así como en el desarrollo de políticas públicas que eleven las condiciones de la movilidad en el país.</p>
+                        <p class="text-center">Céntrico es un equipo de especialistas apasionadas de las ciudades, la movilidad, y la seguridad vial. Nos enfocamos en la implementación de proyectos de movilidad sustentable, así como en el desarrollo de políticas públicas que eleven las condiciones de la movilidad en el país.</p>
                         <p class="text-center">Si deseas saber más sobre Céntrico, visita <a href="https://www.centrico.mx">www.centrico.mx</a></p>
                     </div>
                 </div>
@@ -501,13 +501,13 @@ get_header(); ?>
                                 <div class="swiper-slide">
                                     <div class="card py-4 px-3">
                                         <p class="name">
-                                            Norber
-                                            Sánchez
+                                            Sara
+                                            Miranda
                                         </p>
                                         <p class="position">
-                                            Datos
+                                            Diseño
                                         </p>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/norber-sanchez.png" alt="" class="img-fluid">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/sara-miranda.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -530,7 +530,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5 pb-md-5" id="nuestra-historia">
+<section class="mt-0 mb-5 my-md-5 pb-md-5" id="nuestra-historia">
     <div class="container">
 
         <div class="row no-gutters">
@@ -576,7 +576,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="my-5" id="en-memoria">
+<section class="mt-0 mb-5 my-md-5" id="en-memoria">
     <div class="row no-gutters">
         <div class="col-12 col-sm-10 col-lg-11 mx-auto">
             <div class="row no-gutters">
@@ -657,7 +657,8 @@ get_header(); ?>
 <section id="bottom">
     <div class="row no-gutters">
         <div class="col-12">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/jumbotron.svg" class="w-100">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/jumbotron.svg" class="d-none d-md-block w-100">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/jumbotron-mobile.svg" class="d-block d-md-none w-100">
         </div>
     </div>
 </section>

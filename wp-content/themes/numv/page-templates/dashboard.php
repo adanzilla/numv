@@ -40,7 +40,7 @@ get_header('dashboard'); ?>
     </div>
 </section> 
 
-<section class="dashboard controls my-5">
+<section class="dashboard controls mb-5 mt-2 my-md-5">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12">
@@ -152,83 +152,93 @@ get_header('dashboard'); ?>
 </section> 
 
 <section class="my-5" id="cifras">
-    <div class="row no-gutters">
-        <div class="col-12 col-sm-10 col-lg-10 mx-auto">
-    
-            <div class="row no-gutters justify-content-center cards my-3">
-                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/muertes-totales.png">
-                        </div>
-                        <div class="col-9 d-flex flex-column">
-                            <p class="my-auto">
-                                Muertes totales
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-12">
-                            <p class="cifras" id="muertes-totales">
-                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ciclistas.png">
-                        </div>
-                        <div class="col-9 d-flex flex-column">
-                            <p class="my-auto">
-                                Ciclistas
-                            </p>
+    <div class="container for-mobile">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-10 col-lg-10 mx-auto">
+        
+                <div class="row no-gutters justify-content-center cards my-3">
+                    <div class="col-6 pr-2 pr-md-0 col-md  mx-md-2 mb-3 mb-md-0">
+                        <div class="card py-3 px-3 px-md-4">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/muertes-totales.png">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <p class="my-auto">
+                                        Muertes totales
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <p class="cifras" id="muertes-totales">
+                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row no-gutters">
-                        <div class="col-12">
-                            <p class="cifras" id="ciclistas">
-                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
-                            </p>
+                    <div class="col-6 pl-2 pl-md-0 col-md  mx-md-2 mb-3 mb-md-0">
+                        <div class="card py-3 px-3 px-md-4">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ciclistas.png">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <p class="my-auto">
+                                        Ciclistas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <p class="cifras" id="ciclistas">
+                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/peatones.png">
-                        </div>
-                        <div class="col-9 d-flex flex-column">
-                            <p class="my-auto">
-                                Peatones
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-12">
-                            <p class="cifras" id="peatones">
-                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5 col-md card py-3 px-3 px-md-4 mx-auto mx-md-2 mb-3 mb-md-0">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/motociclistas.png">
-                        </div>
-                        <div class="col-9 d-flex flex-column">
-                            <p class="my-auto">
-                                Motociclistas
-                            </p>
+                    <div class="col-6 col-md pr-2 pr-md-0 mx-md-2 mb-3 mb-md-0">
+                        <div class="card py-3 px-3 px-md-4">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/peatones.png">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <p class="my-auto">
+                                        Peatones
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <p class="cifras" id="peatones">
+                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row no-gutters">
-                        <div class="col-12">
-                            <p class="cifras" id="motociclistas">
-                                <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
-                            </p>
+                    <div class="col-6 col-md pl-2 pl-md-0 mx-md-2 mb-3 mb-md-0">
+                        <div class="card py-3 px-3 px-md-4">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/motociclistas.png">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <p class="my-auto">
+                                        Motociclistas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <p class="cifras" id="motociclistas">
+                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
