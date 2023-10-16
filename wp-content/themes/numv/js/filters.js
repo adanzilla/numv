@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
 	
-	console.log('Ready!');
 
 	jQuery('form#filters').on('change', '#filtro-fecha', function(event) {
 		event.preventDefault();
@@ -245,6 +244,25 @@ jQuery(document).ready(function($) {
 		}
 
 	}
+
+	jQuery('body').on('click', '#compartir', function(event) {
+		event.preventDefault();
+
+		var dummy = document.createElement('input'),
+		text = numv_ajax.site_url + 'dashboard/?share=true&' + jQuery('form').serialize();
+
+		document.body.appendChild(dummy);
+		dummy.value = text;
+		dummy.select();
+		document.execCommand('copy');
+		document.body.removeChild(dummy);
+
+		jQuery('.alert').removeClass('d-none');
+
+	});
+
+	
+
 
 
 });

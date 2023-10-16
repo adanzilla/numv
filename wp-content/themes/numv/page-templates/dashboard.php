@@ -27,13 +27,23 @@ get_header('dashboard'); ?>
             <div class="col-12 col-md-4 text-right d-flex mt-5 mt-md-0">
                 <div class="row no-gutters mt-auto ml-auto">
                     <div class="col-12">
-                        <a href="javascript:void(0);" class="btn btn-light d-inline-block mr-3 mr-md-4">
+                        <a id="compartir" href="javascript:void(0);" class="btn btn-light d-inline-block mr-3 mr-md-4">
                             Compartir
                         </a>
                         <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-primary d-inline-block" download="">
                             Descargar datos
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters mt-3">
+            <div class="col-12">
+                <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                  <strong>Has copiado la URL con los datos</strong> Ahora puedes pegarla para compartir.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
             </div>
         </div>
@@ -125,7 +135,7 @@ get_header('dashboard'); ?>
                             </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
+                            <button id="btn-filter" type="submit" class="btn btn-primary">
                                 Filtrar
                             </button>
                         </div>
@@ -140,6 +150,7 @@ get_header('dashboard'); ?>
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12">
+
                 <p>
                     <span class="d-inline-block mr-3">Filtrado por:</span>
                     <!--<a href="javascript:void(0);" class="badge badge-pill badge-primary px-3 py-1 mr-1 mb-1">Hidalgo <img src="<?php echo get_template_directory_uri(); ?>/img/btn-tache.svg" alt=""></a>-->

@@ -507,347 +507,391 @@ jQuery(document).ready(function($) {
         	var formulario = jQuery(form);
             var data = formulario.serialize();
 
-            jQuery.ajax({
-                type : "POST",
-                dataType : "json",
-                url: numv_ajax.ajax_url,
-                data : { action: "grafica_dinamica", data },
-                success: function(json) {
-                    if( json.result ){
-
-                    	jQuery('button[type="submit"]').html("Filtrar").prop('disabled',false);
-
-
-                    	if( json.grafica == 'por-municipio' ){
-                    		const new_data = {
-	                        	labels: json.labels,
-	                          	datasets: [
-	                          		{
-	                        	  		label: [
-	                        	  			"Peatones"
-	                        	  		],
-	                        	  		data: [
-	                        	  			json.Peatones
-
-	                        	  		],
-	                        	  		backgroundColor: '#FFCC14'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Motociclistas"
-	                        	  		],
-	                        	  		data: [
-	                        	  			json.Motociclistas
-	                        	  		],
-	                        	  		backgroundColor: '#64D3C3'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Ciclistas"
-	                        	  		],
-	                        	  		data: [
-	                        	  			json.Ciclistas
-	                        	  		],
-	                        	  		backgroundColor: '#A073C3'
-	                        	  	},
-	                        	]
-                        	};
-
-	                		const new_config = {
-	                			type: 'bar',
-	                			data: new_data,
-	                			options: {
-	                				responsive: true,
-	                				    //maintainAspectRatio: false,
-	                				plugins: {
-	                					legend : {
-	                						align: 'start',
-	                						labels : {
-	                							boxHeight: 50,
-	                							color: '#000000',
-	                							padding : 10,
-	                							usePointStyle: true,
-	                							font: {
-	                								size: 12
-	                							},
-	                							boxHeight: 100
-	                						}
-	                					}
-	                				},
-	                			    
-	                				responsive: true,
-	                				legend: {
-	                					position: 'right' 
-	                				},
-	                				scales: {
-	                					x: {
-	                				        stacked: true,
-	                				        ticks: {
-	                                            font: {
-	                                                size: 10
-	                                            }
-	                                        }
-	                                    },
-	                                    y: {
-	                				      	stacked: true,
-	                  					        ticks: {
-	                  	                            font: {
-	                  	                                size: 10
-	                  	                            }
-	                  	                        }
-	                  	                    }
-	                				    }
-	                			}
-	                		};
-
-	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
-	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
-	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
-	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
-
-	                		dinamic_bars_chart.destroy();
-
-	                		dinamic_bars_chart = new Chart( 
-	                			 document.getElementById('bars-chart'),
-	                			 new_config 
-	                		);	
-	                    }
-
-	                    if( json.grafica == 'por-estado' ){
-                    		const new_data_estado = {
-	                        	labels: json.labels,
-	                          	datasets: [
-	                          		{
-	                        	  		label: [
-	                        	  			"Peatones"
-	                        	  		],
-	                        	  		data: json.datasetPeatones,
-	                        	  		backgroundColor: '#FFCC14'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Motociclistas"
-	                        	  		],
-	                        	  		data: json.datasetMotociclistas,
-	                        	  		backgroundColor: '#64D3C3'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Ciclistas"
-	                        	  		],
-	                        	  		data: json.datasetCiclistas,
-	                        	  		backgroundColor: '#A073C3'
-	                        	  	},
-	                        	]
-                        	};
-
-	                		const new_config = {
-	                			type: 'bar',
-	                			data: new_data_estado,
-	                			options: {
-	                				responsive: true,
-	                				    //maintainAspectRatio: false,
-	                				plugins: {
-	                					legend : {
-	                						align: 'start',
-	                						labels : {
-	                							boxHeight: 50,
-	                							color: '#000000',
-	                							padding : 10,
-	                							usePointStyle: true,
-	                							font: {
-	                								size: 12
-	                							},
-	                							boxHeight: 100
-	                						}
-	                					}
-	                				},
-	                			    
-	                				responsive: true,
-	                				legend: {
-	                					position: 'right' 
-	                				},
-	                				scales: {
-	                					x: {
-	                				        stacked: true,
-	                				        ticks: {
-	                                            font: {
-	                                                size: 10
-	                                            }
-	                                        }
-	                                    },
-	                                    y: {
-	                				      	stacked: true,
-	                  					        ticks: {
-	                  	                            font: {
-	                  	                                size: 10
-	                  	                            }
-	                  	                        }
-	                  	                    }
-	                				    }
-	                			}
-	                		};
-
-
-
-	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
-	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
-	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
-	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
-
-	                		dinamic_bars_chart.destroy();
-
-	                		dinamic_bars_chart = new Chart( 
-	                			 document.getElementById('bars-chart'),
-	                			 new_config 
-	                		);	
-	                    }
-
-	                    if( json.grafica == 'por-ano' || json.grafica == 'todos' ){
-                    		const new_data_ano = {
-	                        	labels: json.labels,
-	                          	datasets: [
-	                          		{
-	                        	  		label: [
-	                        	  			"Peatones"
-	                        	  		],
-	                        	  		data: json.datasetPeatones,
-	                        	  		backgroundColor: '#FFCC14'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Motociclistas"
-	                        	  		],
-	                        	  		data: json.datasetMotociclistas,
-	                        	  		backgroundColor: '#64D3C3'
-	                        	  	},
-	                        	  	{
-	                        	  		label: [
-	                        	  			"Ciclistas"
-	                        	  		],
-	                        	  		data: json.datasetCiclistas,
-	                        	  		backgroundColor: '#A073C3'
-	                        	  	},
-	                        	]
-                        	};
-
-	                		const new_config = {
-	                			type: 'bar',
-	                			data: new_data_ano,
-	                			options: {
-	                				responsive: true,
-	                				    //maintainAspectRatio: false,
-	                				plugins: {
-	                					legend : {
-	                						align: 'start',
-	                						labels : {
-	                							boxHeight: 50,
-	                							color: '#000000',
-	                							padding : 10,
-	                							usePointStyle: true,
-	                							font: {
-	                								size: 12
-	                							},
-	                							boxHeight: 100
-	                						}
-	                					}
-	                				},
-	                			    
-	                				responsive: true,
-	                				legend: {
-	                					position: 'right' 
-	                				},
-	                				scales: {
-	                					x: {
-	                				        stacked: true,
-	                				        ticks: {
-	                                            font: {
-	                                                size: 10
-	                                            }
-	                                        }
-	                                    },
-	                                    y: {
-	                				      	stacked: true,
-	                  					        ticks: {
-	                  	                            font: {
-	                  	                                size: 10
-	                  	                            }
-	                  	                        }
-	                  	                    }
-	                				    }
-	                			}
-	                		};
-
-	                		
-
-	                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
-	                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
-	                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
-	                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
-
-	                		dinamic_bars_chart.destroy();
-
-	                		dinamic_bars_chart = new Chart( 
-	                			 document.getElementById('bars-chart'),
-	                			 new_config 
-	                		);	
-	                    }
-
-	                    const data_por_genero = {
-	                      labels: [
-	                        "Hombre",
-	                        "Mujer"
-	                      ],
-	                      datasets: [{
-	                        label: '',
-	                        data: [json.h,json.m],
-	                        backgroundColor: [
-	                          '#8596E7',
-	                          '#EEA43B'
-	                        ],
-	                        hoverOffset: 4
-	                      }]
-	                    };
-
-	                    const config_por_genero = {
-	                    	type: 'pie',
-	                    	data: data_por_genero,
-	                    	options: {
-	                    		responsive: true,
-	                            plugins: {
-	                                legend : {
-	                                	align: 'start',
-	                                	labels : {
-	                                		color: '#000000',
-	                                		padding : 10,
-	                                		usePointStyle: true,
-	                                		font: {
-	                                			size: 12
-	                                		},
-	                                		boxHeight: 100
-	                                	}
-	                                }
-	                            }
-	                        }
-	                    };
-
-	                    pie_por_genero.destroy();
-
-	                    pie_por_genero = new Chart( 
-	                    	 document.getElementById('pie-chart-ii'),
-	                    	 config_por_genero 
-	                    );
-                        
-                        
-                    }
-                }
-            });
+            redibujar_grafica_dinamica(data);
 
             
            
             
         }
     });	
+
+
+    function redibujar_grafica_dinamica( data ){
+    	            jQuery.ajax({
+    	                type : "POST",
+    	                dataType : "json",
+    	                url: numv_ajax.ajax_url,
+    	                data : { action: "grafica_dinamica", data },
+    	                success: function(json) {
+    	                    if( json.result ){
+
+    	                    	jQuery('button[type="submit"]').html("Filtrar").prop('disabled',false);
+
+
+    	                    	if( json.grafica == 'por-municipio' ){
+    	                    		const new_data = {
+    		                        	labels: json.labels,
+    		                          	datasets: [
+    		                          		{
+    		                        	  		label: [
+    		                        	  			"Peatones"
+    		                        	  		],
+    		                        	  		data: [
+    		                        	  			json.Peatones
+
+    		                        	  		],
+    		                        	  		backgroundColor: '#FFCC14'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Motociclistas"
+    		                        	  		],
+    		                        	  		data: [
+    		                        	  			json.Motociclistas
+    		                        	  		],
+    		                        	  		backgroundColor: '#64D3C3'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Ciclistas"
+    		                        	  		],
+    		                        	  		data: [
+    		                        	  			json.Ciclistas
+    		                        	  		],
+    		                        	  		backgroundColor: '#A073C3'
+    		                        	  	},
+    		                        	]
+    	                        	};
+
+    		                		const new_config = {
+    		                			type: 'bar',
+    		                			data: new_data,
+    		                			options: {
+    		                				responsive: true,
+    		                				    //maintainAspectRatio: false,
+    		                				plugins: {
+    		                					legend : {
+    		                						align: 'start',
+    		                						labels : {
+    		                							boxHeight: 50,
+    		                							color: '#000000',
+    		                							padding : 10,
+    		                							usePointStyle: true,
+    		                							font: {
+    		                								size: 12
+    		                							},
+    		                							boxHeight: 100
+    		                						}
+    		                					}
+    		                				},
+    		                			    
+    		                				responsive: true,
+    		                				legend: {
+    		                					position: 'right' 
+    		                				},
+    		                				scales: {
+    		                					x: {
+    		                				        stacked: true,
+    		                				        ticks: {
+    		                                            font: {
+    		                                                size: 10
+    		                                            }
+    		                                        }
+    		                                    },
+    		                                    y: {
+    		                				      	stacked: true,
+    		                  					        ticks: {
+    		                  	                            font: {
+    		                  	                                size: 10
+    		                  	                            }
+    		                  	                        }
+    		                  	                    }
+    		                				    }
+    		                			}
+    		                		};
+
+    		                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+    		                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+    		                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+    		                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
+
+    		                		dinamic_bars_chart.destroy();
+
+    		                		dinamic_bars_chart = new Chart( 
+    		                			 document.getElementById('bars-chart'),
+    		                			 new_config 
+    		                		);	
+    		                    }
+
+    		                    if( json.grafica == 'por-estado' ){
+    	                    		const new_data_estado = {
+    		                        	labels: json.labels,
+    		                          	datasets: [
+    		                          		{
+    		                        	  		label: [
+    		                        	  			"Peatones"
+    		                        	  		],
+    		                        	  		data: json.datasetPeatones,
+    		                        	  		backgroundColor: '#FFCC14'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Motociclistas"
+    		                        	  		],
+    		                        	  		data: json.datasetMotociclistas,
+    		                        	  		backgroundColor: '#64D3C3'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Ciclistas"
+    		                        	  		],
+    		                        	  		data: json.datasetCiclistas,
+    		                        	  		backgroundColor: '#A073C3'
+    		                        	  	},
+    		                        	]
+    	                        	};
+
+    		                		const new_config = {
+    		                			type: 'bar',
+    		                			data: new_data_estado,
+    		                			options: {
+    		                				responsive: true,
+    		                				    //maintainAspectRatio: false,
+    		                				plugins: {
+    		                					legend : {
+    		                						align: 'start',
+    		                						labels : {
+    		                							boxHeight: 50,
+    		                							color: '#000000',
+    		                							padding : 10,
+    		                							usePointStyle: true,
+    		                							font: {
+    		                								size: 12
+    		                							},
+    		                							boxHeight: 100
+    		                						}
+    		                					}
+    		                				},
+    		                			    
+    		                				responsive: true,
+    		                				legend: {
+    		                					position: 'right' 
+    		                				},
+    		                				scales: {
+    		                					x: {
+    		                				        stacked: true,
+    		                				        ticks: {
+    		                                            font: {
+    		                                                size: 10
+    		                                            }
+    		                                        }
+    		                                    },
+    		                                    y: {
+    		                				      	stacked: true,
+    		                  					        ticks: {
+    		                  	                            font: {
+    		                  	                                size: 10
+    		                  	                            }
+    		                  	                        }
+    		                  	                    }
+    		                				    }
+    		                			}
+    		                		};
+
+
+
+    		                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+    		                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+    		                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+    		                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
+
+    		                		dinamic_bars_chart.destroy();
+
+    		                		dinamic_bars_chart = new Chart( 
+    		                			 document.getElementById('bars-chart'),
+    		                			 new_config 
+    		                		);	
+    		                    }
+
+    		                    if( json.grafica == 'por-ano' || json.grafica == 'todos' ){
+    	                    		const new_data_ano = {
+    		                        	labels: json.labels,
+    		                          	datasets: [
+    		                          		{
+    		                        	  		label: [
+    		                        	  			"Peatones"
+    		                        	  		],
+    		                        	  		data: json.datasetPeatones,
+    		                        	  		backgroundColor: '#FFCC14'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Motociclistas"
+    		                        	  		],
+    		                        	  		data: json.datasetMotociclistas,
+    		                        	  		backgroundColor: '#64D3C3'
+    		                        	  	},
+    		                        	  	{
+    		                        	  		label: [
+    		                        	  			"Ciclistas"
+    		                        	  		],
+    		                        	  		data: json.datasetCiclistas,
+    		                        	  		backgroundColor: '#A073C3'
+    		                        	  	},
+    		                        	]
+    	                        	};
+
+    		                		const new_config = {
+    		                			type: 'bar',
+    		                			data: new_data_ano,
+    		                			options: {
+    		                				responsive: true,
+    		                				    //maintainAspectRatio: false,
+    		                				plugins: {
+    		                					legend : {
+    		                						align: 'start',
+    		                						labels : {
+    		                							boxHeight: 50,
+    		                							color: '#000000',
+    		                							padding : 10,
+    		                							usePointStyle: true,
+    		                							font: {
+    		                								size: 12
+    		                							},
+    		                							boxHeight: 100
+    		                						}
+    		                					}
+    		                				},
+    		                			    
+    		                				responsive: true,
+    		                				legend: {
+    		                					position: 'right' 
+    		                				},
+    		                				scales: {
+    		                					x: {
+    		                				        stacked: true,
+    		                				        ticks: {
+    		                                            font: {
+    		                                                size: 10
+    		                                            }
+    		                                        }
+    		                                    },
+    		                                    y: {
+    		                				      	stacked: true,
+    		                  					        ticks: {
+    		                  	                            font: {
+    		                  	                                size: 10
+    		                  	                            }
+    		                  	                        }
+    		                  	                    }
+    		                				    }
+    		                			}
+    		                		};
+
+    		                		
+
+    		                		jQuery('#muertes-totales').html( numeral(json.totales).format('0,0') );
+    		                		jQuery('#peatones').html( numeral(json.Peatones).format('0,0') );
+    		                		jQuery('#ciclistas').html( numeral(json.Ciclistas).format('0,0') );
+    		                		jQuery('#motociclistas').html( numeral(json.Motociclistas).format('0,0') );
+
+    		                		dinamic_bars_chart.destroy();
+
+    		                		dinamic_bars_chart = new Chart( 
+    		                			 document.getElementById('bars-chart'),
+    		                			 new_config 
+    		                		);	
+    		                    }
+
+    		                    const data_por_genero = {
+    		                      labels: [
+    		                        "Hombre",
+    		                        "Mujer"
+    		                      ],
+    		                      datasets: [{
+    		                        label: '',
+    		                        data: [json.h,json.m],
+    		                        backgroundColor: [
+    		                          '#8596E7',
+    		                          '#EEA43B'
+    		                        ],
+    		                        hoverOffset: 4
+    		                      }]
+    		                    };
+
+    		                    const config_por_genero = {
+    		                    	type: 'pie',
+    		                    	data: data_por_genero,
+    		                    	options: {
+    		                    		responsive: true,
+    		                            plugins: {
+    		                                legend : {
+    		                                	align: 'start',
+    		                                	labels : {
+    		                                		color: '#000000',
+    		                                		padding : 10,
+    		                                		usePointStyle: true,
+    		                                		font: {
+    		                                			size: 12
+    		                                		},
+    		                                		boxHeight: 100
+    		                                	}
+    		                                }
+    		                            }
+    		                        }
+    		                    };
+
+    		                    pie_por_genero.destroy();
+
+    		                    pie_por_genero = new Chart( 
+    		                    	 document.getElementById('pie-chart-ii'),
+    		                    	 config_por_genero 
+    		                    );
+    	                        
+    	                        
+    	                    }
+    	                }
+    	            });
+    }
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = window.location.search.substring(1),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
+
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+
+	        if( sParameterName[1] != undefined && sParameterName[1] != "" ){
+	        	
+	        	if( jQuery('#'+ sParameterName[0] ).length ){
+
+		        	var option = jQuery('<option>')
+		        		.attr({ "value" : decodeURIComponent(sParameterName[1]), "selected" : true }).text( decodeURIComponent(sParameterName[1]) );
+		        	jQuery('#'+ sParameterName[0] ).append(option);
+
+	        	}
+
+	        }
+	       
+
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+	        }
+	    }
+	    return false;
+	};
+
+	getUrlParameter();
+
+	if( getUrlParameter('share') ){
+		console.log('submiting');
+
+		var data = jQuery('form#filters').serialize();
+		console.log(data);
+		redibujar_grafica_dinamica(data);
+	}
 
 
 });
