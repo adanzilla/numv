@@ -52,7 +52,7 @@
                         <div class="row my-auto">
                             <div class="col-9">
                                 <a href="<?php echo site_url( "/" ); ?>" class="logo primary">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="img-fluid">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg?1.0.0" class="img-fluid">
                                 </a>
                             </div>
                             <div class="col-3 d-flex flex-column p-0">

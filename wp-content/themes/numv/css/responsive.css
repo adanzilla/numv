@@ -37,10 +37,6 @@
   * body header#masthead nav button {
     border: 0;
   }
-  /* line 77, ../sass/responsive.scss */
-  * body header#masthead nav .logo img {
-    max-height: 50px;
-  }
   /* line 89, ../sass/responsive.scss */
   * body header#masthead nav #menu-primary {
     width: 100%;
