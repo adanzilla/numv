@@ -231,7 +231,7 @@ get_header(); ?>
                     </div>
                 </div>
 
-                <div class="row no-gutters my-3">
+                <div class="row no-gutters my-0 my-md-3">
                     
                     <div class="col-12 text-center">
                         <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/mapa.png" alt="" class="img-fluid"> -->
@@ -431,7 +431,7 @@ get_header(); ?>
 
             <div class="col-12 col-sm-10 col-lg-12 mx-auto">
 
-                <div class="row no-gutters my-5">
+                <div class="row no-gutters my-0 my-md-5">
                     <div class="col-12">
                         <div class="swiper mySwiperTeam">
                            

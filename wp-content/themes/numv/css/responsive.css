@@ -75,10 +75,19 @@
     font-size: 20px;
     color: light;
   }
+  /* line 125, ../sass/responsive.scss */
+  * body section {
+    border: 1px dotted red;
+  }
   /* line 129, ../sass/responsive.scss */
   * body section .container {
     padding-right: 20px;
     padding-left: 20px;
+    border: 1px dotted orange;
+  }
+  /* line 134, ../sass/responsive.scss */
+  * body section .container > .row {
+    border: 1px dotted green;
   }
   /* line 141, ../sass/responsive.scss */
   * body section#inicio h1 {
@@ -270,6 +279,11 @@
   * body footer .container {
     padding-right: 20px;
     padding-left: 20px;
+    border: 1px dotted orange;
+  }
+  /* line 484, ../sass/responsive.scss */
+  * body footer .container > .row {
+    border: 1px dotted green;
   }
   /* line 491, ../sass/responsive.scss */
   * body footer a i.fab {
