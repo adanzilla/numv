@@ -6,6 +6,17 @@ $alegreya: 'Alegreya Sans', serif;
 $figtree: 'Figtree', sans-serif;
 @media (max-width: 1024px) {
 
+	* {
+		body {
+			section {
+				.container.for-mobile {
+					
+					width: 100%;
+				}
+			}
+		}
+	}
+
 }
 @media (max-width: 768px) {
 

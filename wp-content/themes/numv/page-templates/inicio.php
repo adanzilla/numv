@@ -71,7 +71,7 @@ get_header(); ?>
 <section class="mt-0 mb-5 my-md-5" id="cifras">
     <div class="container for-mobile">
         <div class="row no-gutters">
-            <div class="col-12 col-sm-10 col-lg-9 mx-auto">
+            <div class="col-12 col-sm-11 col-lg-10 mx-auto">
 
                 <div class="row no-gutters">
                     <div class="col-12">

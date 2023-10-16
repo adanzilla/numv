@@ -165,7 +165,7 @@ get_header('dashboard'); ?>
 <section class="my-5" id="cifras">
     <div class="container for-mobile">
         <div class="row no-gutters">
-            <div class="col-12 col-sm-10 col-lg-10 mx-auto">
+            <div class="col-12 col-sm-11 col-lg-10 mx-auto">
         
                 <div class="row no-gutters justify-content-center cards my-3">
                     <div class="col-6 pr-2 pr-md-0 col-md  mx-md-2 mb-3 mb-md-0">
