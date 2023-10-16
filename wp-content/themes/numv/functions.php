@@ -151,7 +151,7 @@ function numv_scripts() {
 	$locations = locations();
 
 	wp_enqueue_style( "bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", [], _S_VERSION );
-	wp_enqueue_style( "font-awesome", get_template_directory_uri() . "/bower_components/components-font-awesome/css/all.css", [], _S_VERSION );
+	wp_enqueue_style( "components-font-awesome", get_template_directory_uri() . "/bower_components/components-font-awesome/css/all.css", [], _S_VERSION );
 	wp_enqueue_style( "swiper", "https://unpkg.com/swiper@8/swiper-bundle.min.css", [], _S_VERSION );
 	wp_enqueue_script( 'jquery-validate', get_template_directory_uri() . '/bower_components/jquery-validation/dist/jquery.validate.min.js', [], _S_VERSION, true );
 	wp_enqueue_script( 'chartjs', get_template_directory_uri() . '/node_modules/chart.js/dist/chart.umd.js', [], _S_VERSION, true );
@@ -580,6 +580,11 @@ $args = array(
 );
 
 register_post_type( 'form-submit', $args );
+
+/**
+ * Implement the Custom Visual Composer Elements.
+ */
+require get_template_directory() . '/inc/vc-elements.php';
 
 /**
  * Implement the Custom Header feature.
