@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	
-	
+	console.log('Ready!');
 
 	jQuery('form#filters').on('change', '#filtro-fecha', function(event) {
 		event.preventDefault();
@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
 		if( value == "" ){
 
 			jQuery('.badge-fecha').remove();
+			clear_badges();
 
 		}else{
 
@@ -25,10 +26,12 @@ jQuery(document).ready(function($) {
 				badge.append( image ).on('click', function(event) {
 					event.preventDefault();
 					jQuery(this).remove();
+					clear_badges();
 					select.val("");
 				});
 
 			jQuery('.dashboard.badges p').append( badge );	
+			jQuery('.dashboard.badges').removeClass('d-none');	
 
 		}
 
@@ -45,6 +48,7 @@ jQuery(document).ready(function($) {
 		if( value == '' ){
 
 			jQuery('.badge-estado').remove();
+			clear_badges();
 
 		}else{
 
@@ -60,6 +64,7 @@ jQuery(document).ready(function($) {
 				badge.append( image ).on('click', function(event) {
 					event.preventDefault();
 					jQuery(this).remove();
+					clear_badges();
 					select.val("");
 
 		        	jQuery('#filtro-municipio').html("");
@@ -112,6 +117,7 @@ jQuery(document).ready(function($) {
 			});
 
 			jQuery('.dashboard.badges p').append( badge );
+			jQuery('.dashboard.badges').removeClass('d-none');
 
 		}
 
@@ -127,6 +133,7 @@ jQuery(document).ready(function($) {
 		if( value == "" ){
 
 			jQuery('.badge-municipio').remove();
+			clear_badges();
 
 		}else{
 			jQuery('.badge-municipio').remove();
@@ -141,12 +148,14 @@ jQuery(document).ready(function($) {
 				badge.append( image ).on('click', function(event) {
 					event.preventDefault();
 					jQuery(this).remove();
+					clear_badges();
 					select.val("");
 				});
 
 
 
 			jQuery('.dashboard.badges p').append( badge );
+			jQuery('.dashboard.badges').removeClass('d-none');
 		}
 
 		
@@ -161,6 +170,7 @@ jQuery(document).ready(function($) {
 		if( value == "" ){
 
 			jQuery('.badge-vialidad').remove();
+			clear_badges();
 
 		}else{
 			jQuery('.badge-vialidad').remove();
@@ -175,12 +185,14 @@ jQuery(document).ready(function($) {
 				badge.append( image ).on('click', function(event) {
 					event.preventDefault();
 					jQuery(this).remove();
+					clear_badges();
 					select.val("");
 				});
 
 
 
 			jQuery('.dashboard.badges p').append( badge );
+			jQuery('.dashboard.badges').removeClass('d-none');
 		}
 
 		
@@ -195,6 +207,7 @@ jQuery(document).ready(function($) {
 		if( value == "" ){
 
 			jQuery('.badge-edad').remove();
+			clear_badges();
 
 		}else{
 			jQuery('.badge-edad').remove();
@@ -209,17 +222,29 @@ jQuery(document).ready(function($) {
 				badge.append( image ).on('click', function(event) {
 					event.preventDefault();
 					jQuery(this).remove();
+					clear_badges();
 					select.val("");
 				});
 
 
 
 			jQuery('.dashboard.badges p').append( badge );
+			jQuery('.dashboard.badges').removeClass('d-none');
 		}
 
 		
 
 	});
+
+	function clear_badges(){
+
+		if( jQuery('.dashboard.badges p').children().length == 1 ){
+
+			jQuery('.dashboard.badges').addClass('d-none');
+
+		}
+
+	}
 
 
 });

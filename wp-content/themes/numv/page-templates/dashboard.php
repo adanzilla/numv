@@ -136,7 +136,7 @@ get_header('dashboard'); ?>
     </div>
 </section>
 
-<section class="dashboard badges my-3">
+<section class="dashboard badges my-3 d-none">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-12">
