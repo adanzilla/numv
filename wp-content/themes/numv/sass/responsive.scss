@@ -492,9 +492,16 @@ $figtree: 'Figtree', sans-serif;
 							font-size: 18px;
 						}
 					}
+					&.scroll-top {
+						position: absolute;
+						bottom: 20px;
+						right: 0;
+					}
 				}
 
 				&.dashboard {
+
+
 					p {
 						font-size: 14px;
 						

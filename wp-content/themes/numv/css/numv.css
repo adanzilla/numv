@@ -817,20 +817,20 @@
   border-color: #1D1D1B;
 }
 /* line 938, ../sass/numv.scss */
-* body footer #scroll-top {
+* body footer .scroll-top {
   height: auto;
   width: auto;
   display: block;
 }
 /* line 942, ../sass/numv.scss */
-* body footer #scroll-top:hover {
+* body footer .scroll-top:hover {
   background-image: url("../img/rounded-top-arrow-dark-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
 /* line 947, ../sass/numv.scss */
-* body footer #scroll-top:hover img {
+* body footer .scroll-top:hover img {
   opacity: 0;
 }
 /* line 954, ../sass/numv.scss */

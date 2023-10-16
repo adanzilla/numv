@@ -78,12 +78,15 @@
                                 <a href="javascript:void(0);">
                                     info@niunamuertevial.mx
                                 </a>
+                                <a href="javascript:void(0);" class="scroll-top d-block d-md-none">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/rounded-top-arrow-dark.svg" alt="">
+                                </a>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-2 text-right">
-                    <a href="javascript:void(0);" id="scroll-top">
+                    <a href="javascript:void(0);" class="scroll-top d-none d-md-block">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/rounded-top-arrow-dark.svg" alt="">
                     </a>
                 </div>

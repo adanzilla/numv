@@ -275,7 +275,13 @@
   * body footer a i.fab {
     font-size: 18px;
   }
-  /* line 498, ../sass/responsive.scss */
+  /* line 495, ../sass/responsive.scss */
+  * body footer a.scroll-top {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+  }
+  /* line 505, ../sass/responsive.scss */
   * body footer.dashboard p {
     font-size: 14px;
   }
