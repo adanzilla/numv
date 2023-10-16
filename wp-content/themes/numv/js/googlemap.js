@@ -98,8 +98,8 @@ function initMap() {
 									        '<p><span style="font-weight: 600;">Vehículo:</span> </p>'+
 									        '<hr>'+
 									        '<p><span style="font-weight: 600;">Cuándo</span></p>'+
-									        '<p><span style="font-weight: 600;">Fecha:</span> 23-jun-23</p>'+
-									        '<p><span style="font-weight: 600;">Hora:</span> 14:50</p>'+
+									        '<p><span style="font-weight: 600;">Fecha:</span> '+ location['fecha'] +'</p>'+
+									        '<p><span style="font-weight: 600;">Hora:</span> '+ location['hora'] +'</p>'+
 									        '<hr>'+
 									        '<p><span style="font-weight: 600;">Dónde</span></p>'+
 									        '<p><span style="font-weight: 600;">Ciudad:</span> '+ location['municipio'] +'</p>'+
