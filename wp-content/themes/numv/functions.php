@@ -473,6 +473,29 @@ function grafica_dinamica(){
 	wp_die();
 }
 
+function cifras(){
+
+	$cifras = [];
+
+
+	global $wpdb;
+	$query_cifras = "SELECT submodo,count(*) as total FROM `incidentes` GROUP BY submodo";
+	$cifras = $wpdb->get_results( $query_cifras, OBJECT_K );
+
+	$total = 0;
+	
+	foreach ($cifras as $cifra) {
+		$total += $cifra->total;
+	}
+
+	$cifras['totales'] = $total;
+
+
+	//var_dump($cifras); exit;
+
+	return $cifras;
+}
+
 add_action( 'wp_ajax_nopriv_form_submit', "form_submit" );
 function form_submit(){
 	$response = new stdClass();

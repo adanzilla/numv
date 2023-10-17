@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 
 			jQuery('.badge-fecha').remove();
 			var image = jQuery('<img>');
-				image.prop('src', googlemap_data.template+'/img/btn-tache.svg');
+				image.prop('src', numv_ajax.template+'/img/btn-tache.svg');
 
 			var badge = jQuery('<a>');
 				badge.addClass('badge badge-pill badge-fecha badge-primary px-3 py-1 mr-1 mb-1')
@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 			jQuery('.badge-municipio').remove();
 			jQuery('.badge-estado').remove();
 			var image = jQuery('<img>');
-				image.prop('src', googlemap_data.template+'/img/btn-tache.svg');
+				image.prop('src', numv_ajax.template+'/img/btn-tache.svg');
 
 			var badge = jQuery('<a>');
 				badge.addClass('badge badge-pill badge-estado badge-primary px-3 py-1 mr-1 mb-1')
@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 			jQuery('.badge-municipio').remove();
 
 			var image = jQuery('<img>');
-				image.prop('src', googlemap_data.template+'/img/btn-tache.svg');
+				image.prop('src', numv_ajax.template+'/img/btn-tache.svg');
 
 			var badge = jQuery('<a>');
 				badge.addClass('badge badge-pill badge-municipio badge-primary px-3 py-1 mr-1 mb-1')
@@ -175,7 +175,7 @@ jQuery(document).ready(function($) {
 			jQuery('.badge-vialidad').remove();
 
 			var image = jQuery('<img>');
-				image.prop('src', googlemap_data.template+'/img/btn-tache.svg');
+				image.prop('src', numv_ajax.template+'/img/btn-tache.svg');
 
 			var badge = jQuery('<a>');
 				badge.addClass('badge badge-pill badge-vialidad badge-primary px-3 py-1 mr-1 mb-1')
@@ -212,7 +212,7 @@ jQuery(document).ready(function($) {
 			jQuery('.badge-edad').remove();
 
 			var image = jQuery('<img>');
-				image.prop('src', googlemap_data.template+'/img/btn-tache.svg');
+				image.prop('src', numv_ajax.template+'/img/btn-tache.svg');
 
 			var badge = jQuery('<a>');
 				badge.addClass('badge badge-pill badge-edad badge-primary px-3 py-1 mr-1 mb-1')

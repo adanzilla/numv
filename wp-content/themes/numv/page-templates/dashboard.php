@@ -9,7 +9,12 @@
  * @since numv 1.0
  */
 
-get_header('dashboard'); ?>
+get_header('dashboard'); 
+
+$cifras = cifras();
+
+
+?>
 
 <section class="dashboard header">
     <div class="container">
@@ -89,6 +94,15 @@ get_header('dashboard'); ?>
                                 <option value="Puebla">Puebla</option>
                                 <option value="Querétaro">Querétaro</option>
                                 <option value="Quintana Roo">Quintana Roo</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Sinaloa">Sinaloa</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Tabasco">Tabasco</option>
+                                <option value="Tamaulipas">Tamaulipas</option>
+                                <option value="Tlaxcala">Tlaxcala</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatán">Yucatán</option>
+                                <option value="Zacatecas">Zacatecas</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -183,7 +197,7 @@ get_header('dashboard'); ?>
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="muertes-totales">
-                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['totales']; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
@@ -204,7 +218,7 @@ get_header('dashboard'); ?>
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="ciclistas">
-                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Ciclista']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
@@ -225,7 +239,7 @@ get_header('dashboard'); ?>
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="peatones">
-                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Peatón']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
@@ -246,7 +260,7 @@ get_header('dashboard'); ?>
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="motociclistas">
-                                        <em>2160</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Motociclista']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>
