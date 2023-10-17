@@ -43,12 +43,74 @@ class vcMapa extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Latitud',
+                        'param_name'  => 'latitud',
+                        'admin_label' => false
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Longitud',
+                        'param_name'  => 'longitud',
+                        'admin_label' => false
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'ZOOM',
+                        'param_name'  => 'zoom',
+                        'admin_label' => false
                     ]
 
                 ]
             ]
         );
 
+    }
+
+    public function locations(){
+
+        global $wpdb;
+        $locations = $wpdb->get_results("SELECT * FROM incidentes");
+
+        if( ! empty( $locations ) ){
+            foreach ($locations as &$location) {
+
+                $location->longitud = (float) $location->longitud;
+                $location->latitud = (float) $location->latitud;
+
+                switch ( $location->submodo ) {
+                    case 'Peatón':
+                        $location->pin = "/img/pin-amarillo.svg";
+                        $location->icon = "/img/icon-amarillo.svg";
+                        break;
+
+                    case 'Ciclista':
+                        $location->pin = "/img/pin-morado.svg";
+                        $location->icon = "/img/icon-morado.svg";
+                        break;
+
+                    case 'Motociclista':
+                        $location->pin = "/img/pin-verde.svg";
+                        $location->icon = "/img/icon-verde.svg";
+                        break;
+                    
+                    default:
+                        $location->pin = "/img/pin-amarillo.svg";
+                        $location->icon = "/img/icon-amarillo.svg";
+                        break;
+                }
+            }
+        }
+
+        return $locations;
     }
 
     
@@ -59,13 +121,25 @@ class vcMapa extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'latitud'   => '24.04383302971051',
+                    'longitud'  => '-102.43125243880371',
+                    'zoom'      => '5',
                 ],
                 $atts
             )
         ); 
 
-        
+        $center_map = new stdClass;
+        $center_map->lat = (float) $latitud;
+        $center_map->lng = (float) $longitud;
+        $zoom = intval( $zoom );
+
+        $locations = self::locations();
+
+        wp_enqueue_script( "googlemap", get_template_directory_uri() . "/js/googlemap.js", ["jquery"], _S_VERSION, true );
+        wp_localize_script( "googlemap", 'googlemap_data', [ "center_map" => $center_map, "zoom" => $zoom,  "locations" => $locations, 'template' =>  get_template_directory_uri() ] );
+        wp_enqueue_script( "google_maps_script", "//maps.googleapis.com/maps/api/js?key=AIzaSyCv85b3Q9XtooyVVEsp_0GRrJNz7CoeyhU&callback=initMap&libraries", [], _S_VERSION, true );
 
         $html = '
             <section class="mt-0 mb-5 my-md-5 p" id="mapa">
@@ -91,14 +165,6 @@ class vcMapa extends WPBakeryShortCode {
                                             <div class="col-12">
                                                 <div class="card p-3">
                                                     <form id="filters">
-                                                        
-                                                        <!-- <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" value="Todos" name="todos" checked>
-                                                          <label class="form-check-label" for="flexCheckDefault">
-                                                            <img src="'. $this->template .'/img/icon-todos.svg" alt=""> Todos
-                                                          </label>
-                                                        </div> -->
-
                                                         <div class="form-check">
                                                           <input class="form-check-input" type="checkbox" value="Peatón" name="peatones" checked>
                                                           <label class="form-check-label" for="flexCheckDefault">
@@ -126,9 +192,7 @@ class vcMapa extends WPBakeryShortCode {
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
-
                         </div>
                     </div>
                 </div>
