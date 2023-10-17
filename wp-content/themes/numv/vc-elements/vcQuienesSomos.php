@@ -43,7 +43,65 @@ class vcQuienesSomos extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
-                    ]
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Título',
+                        'param_name'  => 'title',
+                        'admin_label' => true
+                    ],
+
+                    [
+                        "type"        => 'textarea_html',
+                        "class"       => '',
+                        "heading"     => 'Contenido',
+                        "param_name"  => 'content',
+                        "value"       => '', 
+                        "description" => "Descripción"
+                    ],
+
+                    [
+                        'type' => 'param_group',
+                        'value' => '',
+                        'param_name' => 'cards',
+                        'params' => [
+
+                            [
+                                'type'        => 'textfield',
+                                'value'       => '',
+                                'heading'     => 'Nombre',
+                                'param_name'  => 'name',
+                                'admin_label' => true
+                            ],
+                            
+                            [
+                                'type'       => 'textfield',
+                                'value'      => '',
+                                'heading'    => 'Posición',
+                                'param_name' => 'position',
+                            ],
+
+                            [
+                                'type'       => 'textfield',
+                                'value'      => '',
+                                'heading'    => 'Etiqueta',
+                                'param_name' => 'label',
+                            ],
+
+                            [
+                                "type"        => "attach_image",
+                                "heading"     => "Imagen",
+                                "description" => "Imagen para la tarjeta",
+                                "param_name"  => "image",
+                                "value"       => "",
+                            ]
+
+
+
+                        ]
+                    ],
 
                 ]
             ]
@@ -59,13 +117,37 @@ class vcQuienesSomos extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'title'     => '',
+                    'cards'     => '',
                 ],
                 $atts
             )
         ); 
 
-        
+        $cards = vc_param_group_parse_atts( $cards );
+
+        $html_cards = '';
+
+        foreach ($cards as $card) {
+
+            $image = wp_get_attachment_image_src( $card['image'], 'full' );
+
+            $html_cards .= '
+                <div class="swiper-slide">
+                    <div class="card py-4 px-3">
+                        <p class="name">
+                            '. $card['name'] .'
+                        </p>
+                        <p class="position">
+                            '. $card['position'] .'<br>
+                            '. $card['label'] .'
+                        </p>
+                        <img src="'. $image[0] .'" alt="" class="img-fluid">
+                    </div>
+                </div>
+            ';
+        }
 
         $html = '
             <section class="mt-0 mb-5 my-md-5" id="quienes-somos">
@@ -76,9 +158,8 @@ class vcQuienesSomos extends WPBakeryShortCode {
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     
-                                    <h2 class="text-center">Quiénes somos</h2>
-                                    <p class="text-center">Céntrico es un equipo de especialistas apasionadas de las ciudades, la movilidad, y la seguridad vial. Nos enfocamos en la implementación de proyectos de movilidad sustentable, así como en el desarrollo de políticas públicas que eleven las condiciones de la movilidad en el país.</p>
-                                    <p class="text-center">Si deseas saber más sobre Céntrico, visita <a href="https://www.centrico.mx">www.centrico.mx</a></p>
+                                    <h2 class="text-center">'. $title .'</h2>
+                                    '. apply_filters( "the_content", $content ) .'
                                 </div>
                             </div>
 
@@ -91,80 +172,7 @@ class vcQuienesSomos extends WPBakeryShortCode {
                                     <div class="swiper mySwiperTeam">
                                        
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Alejandra
-                                                        Leal
-                                                    </p>
-                                                    <p class="position">
-                                                        Codirectora<br>
-                                                        Coordinadora política pública
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/alejandra-leal.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Xavier
-                                                        Treviño
-                                                    </p>
-                                                    <p class="position">
-                                                        Co-director<br>
-                                                        Coordinador análisis de datos
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/xavier-trevino.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Patricio
-                                                        Ruiz
-                                                    </p>
-                                                    <p class="position">
-                                                        Coordinador de diseño
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/patricio-ruiz.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Héctor
-                                                        Garrido
-                                                    </p>
-                                                    <p class="position">
-                                                        Consultor de datos
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/hector-garrido.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Norber
-                                                        Sánchez
-                                                    </p>
-                                                    <p class="position">
-                                                        Datos
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/norber-sanchez.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card py-4 px-3">
-                                                    <p class="name">
-                                                        Sara
-                                                        Miranda
-                                                    </p>
-                                                    <p class="position">
-                                                        Diseño
-                                                    </p>
-                                                    <img src="'. $this->template .'/img/sara-miranda.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
+                                            '. $html_cards .'
                                         </div>
 
                                        

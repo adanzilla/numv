@@ -43,7 +43,45 @@ class vcEnMemoria extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
-                    ]
+                    ],
+                    [
+                        'type' => 'param_group',
+                        'value' => '',
+                        'param_name' => 'slides',
+                        'params' => [
+
+                            [
+                                'type'        => 'textfield',
+                                'value'       => '',
+                                'heading'     => 'Nombre',
+                                'param_name'  => 'name',
+                                'admin_label' => true
+                            ],
+                            
+                            [
+                                'type'       => 'textfield',
+                                'value'      => '',
+                                'heading'    => 'Label',
+                                'param_name' => 'label',
+                            ],
+                            
+                            [
+                                'type'       => 'textfield',
+                                'value'      => '',
+                                'heading'    => 'Texto',
+                                'param_name' => 'text',
+                            ],
+
+                            [
+                                "type"        => "attach_image",
+                                "heading"     => "Imagen",
+                                "description" => "Imagen",
+                                "param_name"  => "image",
+                                "value"       => "",
+                            ]
+
+                        ]
+                    ],
 
                 ]
             ]
@@ -59,13 +97,41 @@ class vcEnMemoria extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'slides'    => ''
                 ],
                 $atts
             )
         ); 
 
-        
+        $slides = vc_param_group_parse_atts( $slides );
+
+        $html_slides = '';
+
+        foreach ($slides as $slide) {
+
+            $image = wp_get_attachment_image_src( $slide['image'], 'full' );
+
+            $html_slides .= '
+                <div class="swiper-slide">
+                    <div class="card p-2">
+                        <div class="row no-gutters">
+                            <div class="col-4 px-3 text-center">
+                                <img src="'. $image[0] .'" alt="" class="img-fluid">
+                                <p class="name">'. $slide['name'] .'</p>
+                                <p class="position">'. $slide['name'] .'</p>
+                            </div>
+                            <div class="col-8 d-flex flex-column">
+                                <p class="text my-auto">
+                                    '. $slide['text'] .'
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            ';
+        }
 
         $html = '
             <section class="mt-0 mb-5 my-md-5" id="en-memoria">
@@ -82,56 +148,8 @@ class vcEnMemoria extends WPBakeryShortCode {
                     <div class="col-12">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="card p-2">
-                                        <div class="row no-gutters">
-                                            <div class="col-4 px-3 text-center">
-                                                <img src="'. $this->template .'/img/manu.png" alt="" class="img-fluid">
-                                                <p class="name">Manu</p>
-                                                <p class="position">Política Pública</p>
-                                            </div>
-                                            <div class="col-8 d-flex flex-column">
-                                                <p class="text my-auto">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card p-2">
-                                        <div class="row no-gutters">
-                                            <div class="col-4 px-3 text-center">
-                                                <img src="'. $this->template .'/img/manu.png" alt="" class="img-fluid">
-                                                <p class="name">Manu</p>
-                                                <p class="position">Política Pública</p>
-                                            </div>
-                                            <div class="col-8 d-flex flex-column">
-                                                <p class="text my-auto">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card p-2">
-                                        <div class="row no-gutters">
-                                            <div class="col-4 px-3 text-center">
-                                                <img src="'. $this->template .'/img/manu.png" alt="" class="img-fluid">
-                                                <p class="name">Manu</p>
-                                                <p class="position">Política Pública</p>
-                                            </div>
-                                            <div class="col-8 d-flex flex-column">
-                                                <p class="text my-auto">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique lorem eget dictum blandit. Donec nec aliquet diam. Praesent hendrerit, ipsum eget condimentum ullamcorper, ante est volutpat turpis, ac ultricies libero lacus ac metus. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-
+                                '. $html_slides .'
+                                
 
                               
                             </div>

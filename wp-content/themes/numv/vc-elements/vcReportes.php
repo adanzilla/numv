@@ -51,6 +51,35 @@ class vcReportes extends WPBakeryShortCode {
 
     }
 
+    public function get_data( $mode = 'normal' ) {
+        
+        if( $mode == 'next-three-posts' ){
+
+            $args = [
+                'post_type'      => 'post',
+                'offset'         => 2,
+                'orderby'        => 'id',
+                'order'          => 'DESC',
+                'posts_per_page' => 3
+            ];
+
+        }else{
+
+            $args = [
+                'post_type'      => 'post',
+                'orderby'        => 'id',
+                'order'          => 'DESC',
+                'posts_per_page' => 2
+            ];
+
+        }
+
+
+        $query = new WP_Query( $args );
+
+        return $query;
+    }
+
     
     public function vc_reportes( $atts, $content ) {
 
@@ -65,6 +94,71 @@ class vcReportes extends WPBakeryShortCode {
             )
         ); 
 
+        $last_two_posts = self::get_data();
+        $next_three_posts = self::get_data('next-three-posts');
+
+        
+        if( $last_two_posts->have_posts() ){
+
+            $i = 1;
+            while ( $last_two_posts->have_posts() ) {
+                $last_two_posts->the_post();
+
+                $class = ( $i == 1 ) ? 'pr-1' :' pl-1 mt-3 mt-md-0';
+
+                $html_last_two_posts .= '
+                    <div class="col-12 col-md-6 '. $class .'">
+                        <div class="card p-3">
+                            <a href="'. get_the_permalink( get_the_ID() ) .'">
+                                <img src="'. get_the_post_thumbnail_url( get_the_ID(), 'blog-grid' ) .'" alt="" class="w-100 mb-3">
+                            </a>
+                            <p class="tag mb-1">'. get_the_date() .'</p>
+                            <p class="title">'. get_the_title() .'</p>
+                            <p class="extract">
+                                '. get_the_excerpt( get_the_ID() ) .'
+                            </p>
+                            <p>
+                                <a href="'. get_the_permalink( get_the_ID() ) .'" class="btn btn-block btn-primary mt-3">
+                                    Ver más <img src="'. $this->template .'/img/right-arrow.svg" alt="">
+                                </a>
+                            </p>
+                        </div>      
+                    </div>
+                ';
+
+                $i++;
+            }
+        }
+
+        if( $next_three_posts->have_posts() ){
+
+            $i = 1;
+            while ( $next_three_posts->have_posts() ) {
+                $next_three_posts->the_post();
+
+                $class = ( $i == 1 ) ? 'pr-1' :' pl-1 mt-3 mt-md-0';
+
+                $html_next_three_posts .= '
+                    <div class="row no-gutters bordered">
+                        <div class="col-10 d-flex flex-column">
+                            <p class="title my-auto">
+                                <a href="'. get_the_permalink( get_the_ID() ) .'">
+                                    '. get_the_title() .'
+                                    <span class="d-block mt-2">'. get_the_excerpt( get_the_ID() ) .'</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-2 d-flex flex-column text-right">
+                            <a href="'. get_the_permalink( get_the_ID() ) .'" class="my-auto">
+                                <img src="'. $this->template .'/img/right-arrow-dark.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                ';
+
+                $i++;
+            }
+        }
         
 
         $html = '
@@ -91,104 +185,26 @@ class vcReportes extends WPBakeryShortCode {
                             </div>
 
                             <div class="row no-gutters">
-                                <div class="col-12 col-md-6 pr-1">
-                                    <div class="card p-3">
-                                        <img src="http://niunamuertevial.mx/wp-content/uploads/2023/10/las150-300x200.jpeg" alt="" class="mb-3">
-                                        <p class="tag mb-1">Datos 2020-2021</p>
-                                        <p class="title">Las 150 vías más peligrosas</p>
-                                        <p class="extract">
-                                            El desafío de convertir zonas de riesgo en entornos seguros
-                                        </p>
-                                        <p>
-                                            <a href="https://niunamuertevial.mx/las-150-vias-mas-peligrosas/" class="btn btn-block btn-primary mt-3">
-                                                Consultar reporte <img src="'. $this->template .'/img/right-arrow.svg" alt="">
-                                            </a>
-                                        </p>
-                                    </div>      
-                                </div>
-                                <div class="col-12 col-md-6 pl-1 mt-3 mt-md-0">
-                                    <div class="card p-3">
-                                        <img src="https://niunamuertevial.mx/wp-content/uploads/2023/10/placeholder-blog-single-300x200.png" alt="" class="mb-3">
-                                        <p class="tag mb-1">Datos 2020-2021</p>
-                                        <p class="title">Reporte anual 2019-2020</p>
-                                        <p class="extract">
-                                            El desafío de convertir zonas de riesgo en entornos seguros
-                                        </p>
-                                        <p>
-                                            <a href="https://niunamuertevial.mx/reporte-anual-2019-2020/" class="btn btn-block btn-primary mt-3">
-                                                Consultar reporte <img src="'. $this->template .'/img/right-arrow.svg" alt="">
-                                            </a>
-                                        </p>
-                                    </div>      
-                                </div>
+                                '. $html_last_two_posts .'
                             </div>
                         </div>
                         <div class="col-12 col-md-6 pl-md-5 mx-auto mt-5 mt-md-0">
                             
+                           
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <h4>Blog</h4>
                                 </div>
                             </div>
 
-                            
-                                <div class="row no-gutters bordered">
-                                    <div class="col-10 d-flex flex-column">
-                                        <p class="title my-auto">
-                                            <a href="javascript:void(0);">
-                                                Reporte anual 2019-2020
-                                                <span class="d-block mt-2">Texto sobre</span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div class="col-2 d-flex flex-column text-right">
-                                        <a href="javascript:(0);" class="my-auto">
-                                            <img src="'. $this->template .'/img/right-arrow-dark.svg" alt="">
-                                        </a>
-                                    </div>
+                            '. $html_next_three_posts .'
+
+                            <div class="row no-gutters ver-todos">
+                                <div class="col-4 d-flex flex-column text-right pr-0 ml-auto">
+                                    <a href="'. site_url( "blog" ) .'" class="btn btn-block btn-primary mt-3 transparent">
+                                        Ver todo <img src="'. $this->template .'/img/right-arrow-primary.svg" alt="">
+                                    </a>
                                 </div>
-
-                                <div class="row no-gutters bordered">
-                                    <div class="col-10 d-flex flex-column">
-                                        <p class="title my-auto">
-                                            <a href="javascript:void(0);">
-                                                Reporte anual 2019-2020
-                                                <span class="d-block mt-2">Texto sobre</span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div class="col-2 d-flex flex-column text-right">
-                                        <a href="javascript:(0);" class="my-auto">
-                                            <img src="'. $this->template .'/img/right-arrow-dark.svg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="row no-gutters bordered">
-                                    <div class="col-10 d-flex flex-column">
-                                        <p class="title my-auto">
-                                            <a href="javascript:void(0);">
-                                                Reporte anual 2019-2020
-                                                <span class="d-block mt-2">Texto sobre</span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div class="col-2 d-flex flex-column text-right">
-                                        <a href="javascript:(0);" class="my-auto">
-                                            <img src="'. $this->template .'/img/right-arrow-dark.svg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-
-                                <div class="row no-gutters ver-todos">
-                                    <div class="col-4 d-flex flex-column text-right pr-0 ml-auto">
-                                        <a href="<?php echo site_url( "blog" ); ?>" class="btn btn-block btn-primary mt-3 transparent">
-                                            Ver todo <img src="'. $this->template .'/img/right-arrow-primary.svg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
                             </div>
 
                         </div>

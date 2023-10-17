@@ -43,7 +43,30 @@ class vcBanner extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
-                    ]
+                    ],
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Título',
+                        'param_name'  => 'title',
+                        'admin_label' => true
+                    ],
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Título',
+                        'param_name'  => 'subtitle',
+                        'admin_label' => true
+                    ],
+                    [
+                        "type"        => "vc_link",                 
+                        "class"       => "",                       
+                        "heading"     => "Link",                 
+                        'admin_label' => false,
+                        "param_name"  => "link",              
+                        "value"       => '',                       
+                        "description" => "Link para la ficha"
+                    ],
 
                 ]
             ]
@@ -59,12 +82,16 @@ class vcBanner extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'title'     => '¿Estás buscando cifras específicas?  ',
+                    'subtitle'  => '',
+                    'link'      => '',
                 ],
                 $atts
             )
         ); 
 
+        $link = vc_build_link( $link );
         
 
         $html = '
@@ -79,10 +106,10 @@ class vcBanner extends WPBakeryShortCode {
                                     </div>
                                     <div class="col-md-8 d-flex flex-column">
                                         <p class="my-auto">
-                                            ¿Estás buscando cifras específicas?  <br>
-                                            <b>Realiza una consulta personalizada</b><br>
-                                            <a href="<?php echo site_url( "dashboard" ); ?>" class="btn btn-primary mt-3">
-                                                Conoce las cifras <img src="'. $this->template .'/img/right-arrow.svg" alt="">
+                                            '. $title .'<br>
+                                            <b>'. $subtitle .'</b><br>
+                                            <a href="'. $link['url'] .'" class="btn btn-primary mt-3">
+                                                '. $link['title'] .' <img src="'. $this->template .'/img/right-arrow.svg" alt="">
                                             </a>
                                         </p>
                                     </div>

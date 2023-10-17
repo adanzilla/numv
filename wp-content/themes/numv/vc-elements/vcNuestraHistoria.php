@@ -43,7 +43,38 @@ class vcNuestraHistoria extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
-                    ]
+                    ],
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Título',
+                        'param_name'  => 'title',
+                        'admin_label' => true
+                    ],
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Caption',
+                        'param_name'  => 'caption',
+                        'admin_label' => false
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Años',
+                        'param_name'  => 'years',
+                        'admin_label' => false
+                    ],
+
+                    [
+                        "type"        => 'textarea_html',
+                        "class"       => '',
+                        "heading"     => 'Contenido',
+                        "param_name"  => 'content',
+                        "value"       => '', 
+                        "description" => "Descripción"
+                    ],
 
                 ]
             ]
@@ -59,7 +90,10 @@ class vcNuestraHistoria extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'title'     => '',
+                    'caption'   => '',
+                    'years'     => '',
                 ],
                 $atts
             )
@@ -74,9 +108,9 @@ class vcNuestraHistoria extends WPBakeryShortCode {
                     <div class="row no-gutters">
                         <div class="col-12 col-md-7 left-column pr-md-5">
                             
-                            <h2 class="text-left mb-4">Nuestra historia</h2>
+                            <h2 class="text-left mb-4">'. $title .'</h2>
                             
-                            <p>Ni Una Muerte Vial surge en noviembre de 2018, a partir del atropellamiento de Manuel Vara, especialista en movilidad, en Puebla. Decidimos que para honrar la memoria de las víctimas de siniestros de tránsito, nos abocaríamos a reconocer y visibilizar a los peatones y ciclistas atropellados en el país. Eventualmente decidimos integrar datos de motociclistas.</p>
+                            '. apply_filters( "the_content", $content ) .'
                             
                             <img src="'. $this->template .'/img/nuestra-historia-logo-1.svg" class="logo d-inline-block mr-3">
                             <img src="'. $this->template .'/img/nuestra-historia-logo-2.svg" class="logo d-inline-block mr-3">
@@ -95,13 +129,13 @@ class vcNuestraHistoria extends WPBakeryShortCode {
                                     <div class="row no-gutters">
                                         <div class="col-4 d-flex flex-column pr-md-3">
                                             <p class="years my-auto text-center">
-                                                +4
+                                                '. $years .'
                                                 <span>Años de datos</span>
                                             </p>
                                         </div>
                                         <div class="col-8 d-flex flex-column pl-2 pl-md-0">
                                             <p class="my-auto">
-                                                Luchando y esperando a que nunca más muera nadie en las calles y para que algún día ese dato sea CERO. 
+                                                '. $caption .'
                                             </p>
                                         </div>
                                     </div>

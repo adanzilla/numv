@@ -160,7 +160,7 @@ get_header(); ?>
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="motociclistas">
-                                        986 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em>986</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
                                     </p>
                                 </div>
                             </div>

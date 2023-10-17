@@ -43,6 +43,53 @@ class vcCifras extends WPBakeryShortCode {
                         'description' => 'Escoge una animación',
                         'admin_label' => false,
                         'weight'      => 0
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Título',
+                        'param_name'  => 'title',
+                        'admin_label' => true
+                    ],
+
+                    [
+                        'type' => 'param_group',
+                        'value' => '',
+                        'param_name' => 'cards',
+                        'params' => [
+
+                            [
+                                'type'        => 'textfield',
+                                'value'       => '',
+                                'heading'     => 'Total',
+                                'param_name'  => 'total',
+                                'admin_label' => true
+                            ],
+                            
+                            [
+                                'type'       => 'textfield',
+                                'value'      => 'DD4040',
+                                'heading'    => 'Color',
+                                'param_name' => 'color',
+                            ],
+                            
+                            [
+                                'type'       => 'textfield',
+                                'value'      => '',
+                                'heading'    => 'Tasa',
+                                'param_name' => 'rate',
+                            ]
+
+                        ]
+                    ],
+
+                    [
+                        'type'        => 'textfield',
+                        'value'       => '',
+                        'heading'     => 'Descripción',
+                        'param_name'  => 'excerpt',
+                        'admin_label' => false
                     ]
 
                 ]
@@ -59,13 +106,17 @@ class vcCifras extends WPBakeryShortCode {
         extract(
             shortcode_atts(
                 [
-                    'animation' => ''
+                    'animation' => '',
+                    'title' => 'Cifras recolectadas de personas fallecidas en 2023',
+                    'cards' => '',
+                    'excerpt' => "Estás cifras son extraídas de medios de comunicación digitales y redes sociales, y validadas por nuestro equipo"
+
                 ],
                 $atts
             )
         ); 
 
-        
+        $cards = vc_param_group_parse_atts( $cards );
 
         $html = '
             <section class="mt-0 mb-5 my-md-5" id="cifras">
@@ -76,8 +127,8 @@ class vcCifras extends WPBakeryShortCode {
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <div class="col-12">
-                                        <h2 class="text-center">Cifras recolectadas de personas fallecidas en 2023</h2>
-                                        <p class="text-center">Estás cifras son extraídas de medios de comunicación digitales y redes sociales, y validadas por nuestro equipo</p>
+                                        <h2 class="text-center">'. $title .'</h2>
+                                        <p class="text-center">'. $excerpt .'</p>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +148,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="muertes-totales">
-                                                    <em>2917</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                                    <em>'. $cards[0]['total'] .'</em> <span style="color:#'. $cards[0]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[0]['rate'] .'%</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -118,7 +169,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="ciclistas">
-                                                    <em>308</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                                    <em>'. $cards[1]['total'] .'</em> <span style="color:#'. $cards[1]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[1]['rate'] .'%</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -139,7 +190,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="peatones">
-                                                    <em>1623</em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                                    <em>'. $cards[2]['total'] .'</em> <span style="color:#'. $cards[2]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[2]['rate'] .'%</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -160,7 +211,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="motociclistas">
-                                                    986 <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                                    <em>'. $cards[3]['total'] .'</em> <span style="color:#'. $cards[3]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[3]['rate'] .'%</span>
                                                 </p>
                                             </div>
                                         </div>
