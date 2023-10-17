@@ -423,8 +423,24 @@ jQuery(document).ready(function($) {
 	        		slidesPerView: 3
 	        	},
 
-	        	1024: {
+	        	1000: {
+	        		slidesPerView: 3
+	        	},
+
+	        	1100: {
+	        		slidesPerView: 3
+	        	},
+
+	        	1200: {
+	        		slidesPerView: 4
+	        	},
+
+	        	1300: {
 	        		slidesPerView: 5
+	        	},
+
+	        	1700: {
+	        		slidesPerView: 6
 	        	},
 	        }        
 	    });
