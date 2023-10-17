@@ -151,7 +151,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="muertes-totales">
-                                                    <em>'. $this->cifras['totales'] .'</em> <span style="color:#'. $cards[0]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[0]['rate'] .'%</span>
+                                                    <em>'. $this->cifras['totales'] .'</em> <!--<span style="color:#'. $cards[0]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[0]['rate'] .'%</span>-->
                                                 </p>
                                             </div>
                                         </div>
@@ -172,7 +172,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="ciclistas">
-                                                    <em>'. $this->cifras['Ciclista']->total .'</em> <span style="color:#'. $cards[1]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[1]['rate'] .'%</span>
+                                                    <em>'. $this->cifras['Ciclista']->total .'</em> <!--<span style="color:#'. $cards[1]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[1]['rate'] .'%</span>-->
                                                 </p>
                                             </div>
                                         </div>
@@ -193,7 +193,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="peatones">
-                                                    <em>'. $this->cifras['Peatón']->total .'</em> <span style="color:#'. $cards[2]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[2]['rate'] .'%</span>
+                                                    <em>'. $this->cifras['Peatón']->total .'</em> <!--<span style="color:#'. $cards[2]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[2]['rate'] .'%</span>-->
                                                 </p>
                                             </div>
                                         </div>
@@ -214,7 +214,7 @@ class vcCifras extends WPBakeryShortCode {
                                         <div class="row no-gutters">
                                             <div class="col-12">
                                                 <p class="cifras" id="motociclistas">
-                                                    <em>'. $this->cifras['Motociclista']->total .'</em> <span style="color:#'. $cards[3]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[3]['rate'] .'%</span>
+                                                    <em>'. $this->cifras['Motociclista']->total .'</em> <!--<span style="color:#'. $cards[3]['color'] .'"><i class="fa fa-arrow-up"></i> '. $cards[3]['rate'] .'%</span>-->
                                                 </p>
                                             </div>
                                         </div>

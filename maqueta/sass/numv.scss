@@ -740,6 +740,43 @@ $figtree: 'Figtree', sans-serif;
 					letter-spacing: -0.88px;
 				}
 
+				.swiper-button-prev {
+					left: -5%!important;
+					height: auto;
+					width: auto;
+					&:after {
+						display: none;
+					}
+					&:hover {
+						background-image: url('../img/left-arrow-dark-hover.svg');
+						background-repeat: no-repeat;
+						background-position: right;
+						background-size: contain;
+						img {
+							opacity: 0;
+
+						}
+					}
+				}
+				.swiper-button-next {
+					right: -5%!important;
+					height: auto;
+					width: auto;
+					&:after {
+						display: none;
+					}
+					&:hover {
+						background-image: url('../img/right-arrow-dark-hover.svg');
+						background-repeat: no-repeat;
+						background-position: right;
+						background-size: contain;
+						img {
+							opacity: 0;
+
+						}
+					}
+				}
+
 				.swiper-slide {
 					.card {
 						border-radius: 8px;

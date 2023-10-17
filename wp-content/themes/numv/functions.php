@@ -496,6 +496,18 @@ function cifras(){
 	return $cifras;
 }
 
+function last_four_incidents(){
+
+	global $wpdb;
+	$query_incidentes = "SELECT * FROM `incidentes` ORDER BY id DESC LIMIT 0,4";
+	$resultados = $wpdb->get_results( $query_incidentes, ARRAY_A );
+
+	// echo '<pre>';
+	// var_dump($resultados); exit;
+
+	return $resultados;
+}
+
 add_action( 'wp_ajax_nopriv_form_submit', "form_submit" );
 function form_submit(){
 	$response = new stdClass();

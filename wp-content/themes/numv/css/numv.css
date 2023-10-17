@@ -734,13 +734,13 @@
   font-family: "Figtree", sans-serif;
   letter-spacing: -0.88px;
 }
-/* line 845, ../sass/numv.scss */
+/* line 846, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card {
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 }
-/* line 851, ../sass/numv.scss */
+/* line 852, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.name {
   text-align: center;
   font-family: "Figtree", sans-serif;
@@ -750,7 +750,7 @@
   line-height: 110%;
   /* 23.475px */
 }
-/* line 860, ../sass/numv.scss */
+/* line 861, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.position {
   font-family: "Figtree", sans-serif;
   font-size: 10.671px;
@@ -759,7 +759,7 @@
   line-height: 110%;
   /* 11.738px */
 }
-/* line 868, ../sass/numv.scss */
+/* line 869, ../sass/numv.scss */
 * body section#en-memoria .swiper-slide .card p.text {
   font-family: "Alegreya Sans", serif;
   font-size: 18px;
@@ -767,13 +767,13 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 883, ../sass/numv.scss */
+/* line 884, ../sass/numv.scss */
 * body footer {
   background-image: url("../img/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 889, ../sass/numv.scss */
+/* line 890, ../sass/numv.scss */
 * body footer.dashboard p {
   color: var(--base-dark, #1D1D1B);
   font-family: "Alegreya Sans", serif;
@@ -783,11 +783,11 @@
   line-height: 150%;
   /* 24px */
 }
-/* line 900, ../sass/numv.scss */
+/* line 901, ../sass/numv.scss */
 * body footer form .form-group {
   position: relative;
 }
-/* line 903, ../sass/numv.scss */
+/* line 904, ../sass/numv.scss */
 * body footer form .form-group label.error {
   background-color: #000000;
   color: #ffffff;
@@ -798,42 +798,42 @@
   top: 0;
   right: 0;
 }
-/* line 916, ../sass/numv.scss */
+/* line 917, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary {
   background-color: #ffffff;
   border-color: #1D1D1B;
   color: #1D1D1B;
 }
-/* line 920, ../sass/numv.scss */
+/* line 921, ../sass/numv.scss */
 * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled).active, * body footer form .form-group .btn-group .btn-primary:not(:disabled):not(.disabled):active {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 928, ../sass/numv.scss */
+/* line 929, ../sass/numv.scss */
 * body footer form .form-group .btn-group .show > .btn-primary.dropdown-toggle {
   background-color: #1D1D1B;
   color: #ffffff;
   border-color: #1D1D1B;
 }
-/* line 938, ../sass/numv.scss */
+/* line 939, ../sass/numv.scss */
 * body footer .scroll-top {
   height: auto;
   width: auto;
   display: block;
 }
-/* line 942, ../sass/numv.scss */
+/* line 943, ../sass/numv.scss */
 * body footer .scroll-top:hover {
   background-image: url("../img/rounded-top-arrow-dark-hover.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
-/* line 947, ../sass/numv.scss */
+/* line 948, ../sass/numv.scss */
 * body footer .scroll-top:hover img {
   opacity: 0;
 }
-/* line 954, ../sass/numv.scss */
+/* line 955, ../sass/numv.scss */
 * body footer h3 {
   font-family: "Alegreya Sans", serif;
   font-size: 16px;
@@ -842,7 +842,7 @@
   line-height: 150%;
   /* 24px */
 }
-/* line 963, ../sass/numv.scss */
+/* line 964, ../sass/numv.scss */
 * body footer p a {
   color: #352F28;
   font-family: "Figtree", sans-serif;
@@ -851,7 +851,7 @@
   font-weight: 400;
   line-height: normal;
 }
-/* line 974, ../sass/numv.scss */
+/* line 975, ../sass/numv.scss */
 * body footer a i.fab {
   font-size: 24px;
   font-size: 1.9vw;
