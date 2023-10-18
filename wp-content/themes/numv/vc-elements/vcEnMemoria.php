@@ -130,6 +130,10 @@ class vcEnMemoria extends WPBakeryShortCode {
 
             $string_edad = ( $slide['edad'] ) ? ' de '. $slide['edad'] .' años' : '';
 
+
+            $municipio = $slide['municipio'];
+            $conurbacion = $slide['conurbacion'];
+
             $html_slides .= '
                 <div class="swiper-slide">
                     <div class="card p-2">
@@ -141,7 +145,7 @@ class vcEnMemoria extends WPBakeryShortCode {
                             </div>
                             <div class="col-8 d-flex flex-column">
                                 <p class="text my-auto">
-                                    En memoria de un '. $slide['submodo'] . $string_edad .'  de '. $slide['municipio'] .', '. $slide['conurbacion'] .'
+                                    En memoria de '. $slide['nombre'] .', '. $slide['submodo'] . $string_edad .'  de '. $municipio .', '. $conurbacion .'
                                 </p>
                             </div>
                         </div>

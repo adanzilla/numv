@@ -499,7 +499,7 @@ function cifras(){
 function last_four_incidents(){
 
 	global $wpdb;
-	$query_incidentes = "SELECT * FROM `incidentes` ORDER BY id DESC LIMIT 0,4";
+	$query_incidentes = "SELECT * FROM `incidentes` WHERE nombre <> '' AND edad <> '' AND conurbacion <> '' ORDER BY id DESC LIMIT 0,4";
 	$resultados = $wpdb->get_results( $query_incidentes, ARRAY_A );
 
 	// echo '<pre>';

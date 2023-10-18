@@ -197,7 +197,7 @@ $cifras = cifras();
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="muertes-totales">
-                                        <em><?php echo $cifras['totales']; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['totales']; ?></em> <!-- <span><i class="fa fa-arrow-up"></i> 12%</span> -->
                                     </p>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@ $cifras = cifras();
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="ciclistas">
-                                        <em><?php echo $cifras['Ciclista']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Ciclista']->total; ?></em> <!-- <span><i class="fa fa-arrow-up"></i> 12%</span> -->
                                     </p>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@ $cifras = cifras();
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="peatones">
-                                        <em><?php echo $cifras['Peatón']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Peatón']->total; ?></em> <!-- <span><i class="fa fa-arrow-up"></i> 12%</span> -->
                                     </p>
                                 </div>
                             </div>
@@ -260,7 +260,7 @@ $cifras = cifras();
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <p class="cifras" id="motociclistas">
-                                        <em><?php echo $cifras['Motociclista']->total; ?></em> <span><i class="fa fa-arrow-up"></i> 12%</span>
+                                        <em><?php echo $cifras['Motociclista']->total; ?></em> <!-- <span><i class="fa fa-arrow-up"></i> 12%</span> -->
                                     </p>
                                 </div>
                             </div>
