@@ -173,7 +173,7 @@ class vcInicio extends WPBakeryShortCode {
                             </div>
 
                         </div>
-                        <div class="col-12 col-md-7 pl-4 mt-5 mt-md-0 d-flex flex-column">
+                        <div class="col-12 col-md-7 pl-0 pl-md-4 mt-5 mt-md-0 d-flex flex-column">
                             <img src="'. $this->template .'/img/hero.svg" alt="" class="w-100 my-auto">
                         </div>
                     </div>

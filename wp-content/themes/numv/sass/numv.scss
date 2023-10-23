@@ -24,6 +24,26 @@ $figtree: 'Figtree', sans-serif;
 				color: $primary;
 				text-decoration: underline solid CurrentColor;
 			}
+
+			&:focus {
+				box-shadow: none!important;
+				background-color: $primary!important;
+				border-color: $primary!important;
+			}
+
+		}
+
+		button {
+			&:focus {
+				box-shadow: none!important;
+				background-color: $primary!important;
+				border-color: $primary!important;
+			}
+		}
+
+		.form-control:focus {
+		    border-color: $primary;
+		    box-shadow: none!important;
 		}
 
 		background-color: #F3F6F6;
@@ -309,6 +329,29 @@ $figtree: 'Figtree', sans-serif;
 				&.single {
 					img {
 						border-radius: 8px;
+					}
+
+					.badge {
+						border-radius: 11px;
+						padding: 0px 10px;
+						
+						&.reporte {
+							background: #DFF2F6;
+							color: #61C0D1;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 18px; /* 138.462% */
+						}
+
+						&.articulo {
+							background: #ECE3F3;
+							color: #A073C3;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 18px; /* 138.462% */
+						}
 					}
 				}
 

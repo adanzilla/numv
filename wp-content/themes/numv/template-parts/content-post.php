@@ -21,7 +21,7 @@ $cats = get_the_category( get_the_ID() );
 	<div class="col-12">
 		<p>
 			<?php foreach ($cats as $cat) : ?>
-		        <a href="javascript:void(0);" class="">
+		        <a href="javascript:void(0);" class="badge <?php echo $cat->slug ?>">
 		            <?php echo $cat->name ?>
 		        </a>
 		    <?php endforeach; ?>
