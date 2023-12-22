@@ -35,7 +35,7 @@ $cifras = cifras();
                         <a id="compartir" href="javascript:void(0);" class="btn btn-light d-inline-block mr-3 mr-md-4">
                             Compartir
                         </a>
-                        <a href="https://niunamuertevial.mx/wp-content/uploads/2020/11/informe-NUMV-2019.pdf" class="btn btn-primary d-inline-block" download="">
+                        <a href="http://niunamuertevial.mx/wp-content/uploads/2023/12/NUMV-21-diciembre-2023.xlsx" class="btn btn-primary d-inline-block" download="">
                             Descargar datos
                         </a>
                     </div>
